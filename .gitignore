@@ -1,0 +1,17 @@
+# OpenClaw / secrets / backups
+secrets/
+.openclaw/
+logs/
+*.tar.gz
+*.gpg
+*.sqlite
+*.db
+.env
+.env.*
+
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc

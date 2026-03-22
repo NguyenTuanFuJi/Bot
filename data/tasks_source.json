@@ -1,0 +1,280 @@
+[
+  {
+    "id": "JJC-20260320-001",
+    "title": "Thiết lập SOP phân công đăng bài website theo edict",
+    "official": "中书令",
+    "org": "中书省",
+    "state": "Zhongshu",
+    "now": "判定为正式旨意，正在整理分工与SOP要点",
+    "eta": "-",
+    "block": "无",
+    "output": "",
+    "ac": "",
+    "flow_log": [
+      {
+        "at": "2026-03-20T08:11:03.959539Z",
+        "from": "皇上",
+        "to": "中书省",
+        "remark": "太子整理旨意"
+      },
+      {
+        "at": "2026-03-20T08:11:07.655991Z",
+        "from": "太子",
+        "to": "中书省",
+        "remark": "📋 旨意传达：建立网站发文SOP与分工"
+      }
+    ],
+    "updatedAt": "2026-03-20T08:11:11.412522Z",
+    "todos": [
+      {
+        "id": "1",
+        "title": "分析消息类型",
+        "status": "completed"
+      },
+      {
+        "id": "2",
+        "title": "整理需求",
+        "status": "in-progress"
+      },
+      {
+        "id": "3",
+        "title": "创建任务",
+        "status": "completed"
+      },
+      {
+        "id": "4",
+        "title": "转交中书省",
+        "status": "completed"
+      }
+    ],
+    "progress_log": [
+      {
+        "at": "2026-03-20T08:11:11.412522Z",
+        "agent": "taizi",
+        "agentLabel": "太子",
+        "text": "判定为正式旨意，正在整理分工与SOP要点",
+        "todos": [
+          {
+            "id": "1",
+            "title": "分析消息类型",
+            "status": "completed"
+          },
+          {
+            "id": "2",
+            "title": "整理需求",
+            "status": "in-progress"
+          },
+          {
+            "id": "3",
+            "title": "创建任务",
+            "status": "completed"
+          },
+          {
+            "id": "4",
+            "title": "转交中书省",
+            "status": "completed"
+          }
+        ],
+        "state": "Zhongshu",
+        "org": "中书省"
+      }
+    ]
+  },
+  {
+    "id": "JJC-20260317-001",
+    "title": "Mở rộng skill Facebook: đăng bài, trả lời comment, lên lịch",
+    "official": "中书令",
+    "org": "中书省",
+    "state": "Zhongshu",
+    "now": "Đã triển khai MVP cho 1-2-3-4: post_create, media store, comment list, scheduler runner; còn bước cài cron + kiểm duyệt …",
+    "eta": "-",
+    "block": "无",
+    "output": "",
+    "ac": "",
+    "flow_log": [
+      {
+        "at": "2026-03-17T03:28:16.237586Z",
+        "from": "皇上",
+        "to": "中书省",
+        "remark": "太子整理旨意"
+      },
+      {
+        "at": "2026-03-17T03:33:41.022672Z",
+        "from": "太子",
+        "to": "中书省",
+        "remark": "Đã nhận thiết kế mở rộng skill Facebook, chuẩn bị chuyển giao triển khai"
+      },
+      {
+        "at": "2026-03-17T04:09:15.810492Z",
+        "from": "太子",
+        "to": "皇上",
+        "remark": "Đã lập tài liệu bàn giao AGENT_HANDOFF cho skill Facebook và phân công RACI từng bộ"
+      }
+    ],
+    "updatedAt": "2026-03-17T04:46:36.145751Z",
+    "todos": [
+      {
+        "id": "1",
+        "title": "Đăng bài+log",
+        "status": "completed"
+      },
+      {
+        "id": "2",
+        "title": "Comment",
+        "status": "completed"
+      },
+      {
+        "id": "3",
+        "title": "Media store",
+        "status": "completed"
+      },
+      {
+        "id": "4",
+        "title": "Scheduler runner",
+        "status": "completed"
+      },
+      {
+        "id": "5",
+        "title": "Cài cron",
+        "status": "in-progress"
+      },
+      {
+        "id": "6",
+        "title": "Checklist an toàn",
+        "status": "in-progress"
+      }
+    ],
+    "progress_log": [
+      {
+        "at": "2026-03-17T03:28:21.011329Z",
+        "agent": "taizi",
+        "agentLabel": "太子",
+        "text": "Đang phân rã yêu cầu và phân công các bộ phối hợp mở rộng skill Facebook",
+        "todos": [
+          {
+            "id": "1",
+            "title": "Phân rã yêu cầu",
+            "status": "in-progress"
+          },
+          {
+            "id": "2",
+            "title": "Tạo nhiệm vụ con",
+            "status": "not-started"
+          },
+          {
+            "id": "3",
+            "title": "Chuyển Trung Thư省",
+            "status": "not-started"
+          },
+          {
+            "id": "4",
+            "title": "Theo dõi tiến độ",
+            "status": "not-started"
+          }
+        ],
+        "state": "Zhongshu",
+        "org": "中书省"
+      },
+      {
+        "at": "2026-03-17T03:30:44.638942Z",
+        "agent": "taizi",
+        "agentLabel": "太子",
+        "text": "Đã phân công các bộ: thiết kế, triển khai đăng bài, comment, scheduler, kho media, kiểm duyệt và tài liệu",
+        "todos": [
+          {
+            "id": "1",
+            "title": "Phân rã yêu cầu",
+            "status": "completed"
+          },
+          {
+            "id": "2",
+            "title": "Phân công các bộ",
+            "status": "completed"
+          },
+          {
+            "id": "3",
+            "title": "Trung thư thiết kế",
+            "status": "in-progress"
+          },
+          {
+            "id": "4",
+            "title": "Triển khai/kiểm thử",
+            "status": "not-started"
+          }
+        ],
+        "state": "Zhongshu",
+        "org": "中书省"
+      },
+      {
+        "at": "2026-03-17T03:33:34.409484Z",
+        "agent": "taizi",
+        "agentLabel": "太子",
+        "text": "Trung thư đã hoàn tất thiết kế: cấu trúc thư mục, schema SQLite, endpoints + permissions, kế hoạch triển khai theo pha",
+        "todos": [
+          {
+            "id": "1",
+            "title": "Thiết kế kiến trúc",
+            "status": "completed"
+          },
+          {
+            "id": "2",
+            "title": "Triển khai đăng bài",
+            "status": "in-progress"
+          },
+          {
+            "id": "3",
+            "title": "Triển khai comment",
+            "status": "not-started"
+          },
+          {
+            "id": "4",
+            "title": "Triển khai scheduler+media store",
+            "status": "not-started"
+          }
+        ],
+        "state": "Zhongshu",
+        "org": "中书省"
+      },
+      {
+        "at": "2026-03-17T04:46:36.145751Z",
+        "agent": "taizi",
+        "agentLabel": "太子",
+        "text": "Đã triển khai MVP cho 1-2-3-4: post_create, media store, comment list, scheduler runner; còn bước cài cron + kiểm duyệt …",
+        "todos": [
+          {
+            "id": "1",
+            "title": "Đăng bài+log",
+            "status": "completed"
+          },
+          {
+            "id": "2",
+            "title": "Comment",
+            "status": "completed"
+          },
+          {
+            "id": "3",
+            "title": "Media store",
+            "status": "completed"
+          },
+          {
+            "id": "4",
+            "title": "Scheduler runner",
+            "status": "completed"
+          },
+          {
+            "id": "5",
+            "title": "Cài cron",
+            "status": "in-progress"
+          },
+          {
+            "id": "6",
+            "title": "Checklist an toàn",
+            "status": "in-progress"
+          }
+        ],
+        "state": "Zhongshu",
+        "org": "中书省"
+      }
+    ]
+  }
+]

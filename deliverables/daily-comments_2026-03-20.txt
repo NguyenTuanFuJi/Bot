@@ -1,0 +1,22 @@
+Daily comments (2026-03-20)
+
+Goal: Comment on 2 different posts.
+
+Quick checklist:
+1) Pick 2 posts (different authors/topics).
+2) Read fully; identify 1 specific detail to reference.
+3) Leave a short value-add comment (question / insight / resource).
+4) Avoid generic praise; avoid links unless truly relevant.
+
+Comment templates (Vietnamese):
+A) “Đoạn bạn nói về {chi_tiet} rất đúng. Mình từng gặp trường hợp tương tự và thấy {y_kien_ngan}. Bạn đã thử {cau_hoi_mo} chưa?”
+B) “Mình thích cách bạn trình bày {chi_tiet}. Nếu bổ sung thêm {goi_y} thì sẽ càng rõ. Bạn có dữ liệu/ ví dụ nào về {cau_hoi} không?”
+C) “Góc nhìn hay về {chu_de}. Theo bạn, yếu tố {yeu_to} ảnh hưởng nhiều nhất ở bối cảnh {boi_canh} không?”
+
+Comment templates (English):
+A) “Really liked the point on {detail}. In my experience, {insight}. Curious—how do you think {open_question} plays out in {context}?”
+B) “Great breakdown of {topic}, especially {detail}. One thing I’ve seen work is {suggestion}. Have you tried / measured {question}?”
+
+Notes:
+- Replace placeholders before posting.
+- Keep it 1–3 sentences.
