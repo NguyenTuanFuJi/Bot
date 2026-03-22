@@ -2,8 +2,15 @@
 secrets/
 .openclaw/
 logs/
+
+# Default: ignore archives (backup files)
 *.tar.gz
 *.gpg
+
+# Exception: allow cliproxyapi weekly snapshots folder
+!cliproxyapi_snapshots/
+!cliproxyapi_snapshots/*.tar.gz
+
 *.sqlite
 *.db
 .env
