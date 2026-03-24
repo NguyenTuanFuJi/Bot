@@ -14,7 +14,7 @@ from __future__ import annotations
 import argparse
 import sqlite3
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, UTC
 
 ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = ROOT / "memory" / "memory_fts.db"
@@ -83,7 +83,7 @@ def upsert_file(c: sqlite3.Connection, p: Path) -> None:
     body = p.read_text(encoding="utf-8", errors="ignore")
     title = first_heading(body)
     mtime = int(p.stat().st_mtime)
-    indexed_at = datetime.utcnow().isoformat() + "Z"
+    indexed_at = datetime.now(UTC).isoformat().replace("+00:00", "Z")
     c.execute(
         """
         INSERT INTO docs(path, title, mtime, body, indexed_at)
