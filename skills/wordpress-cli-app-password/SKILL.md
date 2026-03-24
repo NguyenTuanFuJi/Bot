@@ -29,11 +29,15 @@ Dùng khi không có quyền shell server.
 - Dễ triển khai từ xa
 - Phù hợp team content chỉ cần quản trị bài viết
 
-## Preflight bắt buộc trước thao tác
-1. Xác định mode: `wpcli` hay `rest`
-2. Kiểm tra cấu hình env đầy đủ
-3. Kiểm tra kết nối site
-4. Chỉ sau khi pass preflight mới chạy create/update/publish
+## Triage + Preflight bắt buộc trước thao tác
+1. Chạy triage để nhận diện dự án và công cụ:
+```bash
+bash scripts/wp_triage.sh <project_root>
+```
+2. Xác định mode: `wpcli` hay `rest`
+3. Kiểm tra cấu hình env đầy đủ
+4. Kiểm tra kết nối site bằng preflight
+5. Chỉ sau khi pass preflight mới chạy create/update/publish
 
 ## Lệnh nhanh
 
@@ -64,8 +68,14 @@ Agent nên trả về ngắn gọn:
 2. Kết quả chính (ID bài, URL, status)
 3. Việc đề xuất tiếp theo
 
+Mẫu:
+- Trạng thái: ...
+- Kết quả: ...
+- Việc tiếp theo đề xuất: ...
+
 ## Tham chiếu
 - `references/env-template.md`
 - `references/wordpress-content-workflow.md`
 - `references/wpcli-quick-ops.md`
 - `references/wpcli-safe-ops.md`
+- `references/wp-safe-checklist.md`
