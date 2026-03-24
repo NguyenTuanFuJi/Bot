@@ -66,9 +66,18 @@ def all_memory_files() -> list[Path]:
     if MEMORY_MD.exists():
         files.append(MEMORY_MD)
     if MEMORY_DIR.exists():
-        for p in sorted(MEMORY_DIR.glob("*.md")):
+        # include nested summaries, journals, and any markdown memory shards
+        for p in sorted(MEMORY_DIR.rglob("*.md")):
             files.append(p)
-    return files
+    # de-dup while preserving order
+    seen = set()
+    out = []
+    for f in files:
+        if f in seen:
+            continue
+        seen.add(f)
+        out.append(f)
+    return out
 
 
 def first_heading(text: str) -> str:
