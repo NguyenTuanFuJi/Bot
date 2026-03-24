@@ -90,3 +90,15 @@ Agent luôn xuất 3 phần:
 ## Tham chiếu
 - `references/facebook-content-checklist.md`
 - `references/facebook-weekly-plan-template.md`
+- `references/facebook-weekly-jobpack.md` (bộ công việc theo tuần)
+- `references/facebook-content-standard.md` (chuẩn hoá nội dung trước khi đăng)
+
+## Quy định khi người dùng yêu cầu “làm theo tuần”
+Agent phải ưu tiên đọc:
+1. `references/facebook-weekly-jobpack.md`
+2. `references/facebook-content-standard.md`
+
+Sau đó xuất ra:
+- Danh sách việc theo ngày trong tuần
+- 3 việc ưu tiên cao nhất
+- KPI cần theo dõi cuối tuần
