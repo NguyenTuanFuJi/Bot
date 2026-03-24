@@ -1,13 +1,17 @@
 # USER.md - About Your Human
 
-- **Name:** NguyenTuanFuJi
-- **What to call them:** Tuan
-- **Pronouns:**
-- **Timezone:** Asia/Saigon
-- **Notes:** Ưu tiên tiếng Việt, thích làm nhanh gọn, đang dùng GitHub để backup workspace OpenClaw.
+_Learn about the person you're helping. Update this as you go._
+
+- **Name:**
+- **What to call them:**
+- **Pronouns:** _(optional)_
+- **Timezone:**
+- **Notes:**
 
 ## Context
 
-- Quan tâm tới việc backup/restore OpenClaw đúng cách
-- Muốn workspace của agent được khôi phục đầy đủ từ GitHub
-- Dùng repo `NguyenTuanFuJi/Bot` làm nơi backup workspace không chứa secrets
+_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+
+---
+
+The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
