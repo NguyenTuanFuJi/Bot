@@ -15,6 +15,12 @@ Skill để quản lý Facebook Page qua Meta Graph API.
 - Tối ưu nội dung trước khi đăng (SEO + chuyển đổi)
 - Chấm điểm chất lượng caption trước khi publish (quality gate)
 
+## Đường dẫn credential chuẩn (agent phải biết)
+- Facebook env: `skills/facebook-page-manager/.env`
+- Facebook token: `skills/facebook-page-manager/tokens.json`
+
+Khi báo thiếu token/env, agent phải kiểm tra đúng 2 file trên trước.
+
 ## Setup (một lần)
 
 ### 1. Tạo Meta App

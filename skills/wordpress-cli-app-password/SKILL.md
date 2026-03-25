@@ -29,6 +29,12 @@ Dùng khi không có quyền shell server.
 - Dễ triển khai từ xa
 - Phù hợp team content chỉ cần quản trị bài viết
 
+## Đường dẫn credential chuẩn (agent phải biết)
+- WordPress env: `skills/wordpress-cli-app-password/.env`
+- Mẫu env: `skills/wordpress-cli-app-password/references/env-template.md`
+
+Khi thiếu app password/token, agent phải hướng người dùng cập nhật đúng file `.env` tại skill này.
+
 ## Triage + Preflight bắt buộc trước thao tác
 1. Chạy triage để nhận diện dự án và công cụ:
 ```bash
