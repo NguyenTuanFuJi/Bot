@@ -92,6 +92,8 @@ Agent luôn xuất 3 phần:
 - `references/facebook-weekly-plan-template.md`
 - `references/facebook-weekly-jobpack.md` (bộ công việc theo tuần)
 - `references/facebook-content-standard.md` (chuẩn hoá nội dung trước khi đăng)
+- `references/fuji-th-brand-profile.md` (thông tin thương hiệu dùng lâu dài)
+- `references/writing-style-randomization.md` (quy tắc random writing style chống trùng)
 
 ## Quy định khi người dùng yêu cầu “làm theo tuần”
 Agent phải ưu tiên đọc:
