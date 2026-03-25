@@ -54,7 +54,8 @@ Check: `which node rsync tar python3 openclaw`
 
 | Script | Purpose |
 |---|---|
-| `scripts/backup.sh [output-dir]` | Create backup (default: `/tmp/openclaw-backups/`) |
+| `scripts/backup.sh [output-dir]` | Create full backup (default: `/tmp/openclaw-backups/`) |
+| `scripts/backup-incremental.sh [output-dir]` | Create lightweight incremental backup (changed files only) |
 | `scripts/restore.sh <archive> [--dry-run] [--overwrite-gateway-token]` | Restore — **always dry-run first** |
 | `scripts/serve.sh start --token TOKEN [--port 7373]` | Start HTTP server — **token required** |
 | `scripts/serve.sh stop\|status` | Stop/check server |
@@ -75,8 +76,13 @@ See `references/what-gets-saved.md` for full details.
 ### Create backup
 
 ```bash
+# Full backup
 bash scripts/backup.sh /tmp/openclaw-backups
 # → /tmp/openclaw-backups/openclaw-backup_TIMESTAMP.tar.gz (chmod 600)
+
+# Incremental backup (changed files only)
+bash scripts/backup-incremental.sh /tmp/openclaw-backups
+# → /tmp/openclaw-backups/openclaw-incremental_TIMESTAMP.tar.gz (chmod 600)
 ```
 
 ### Restore — always dry-run first

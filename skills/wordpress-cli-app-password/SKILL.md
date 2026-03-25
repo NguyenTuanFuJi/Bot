@@ -14,20 +14,24 @@ Skill này giúp agent chọn đúng cách thao tác WordPress theo hạ tầng 
 
 ## 2 chế độ vận hành
 
-### Chế độ A — WP-CLI (ưu tiên)
-Dùng khi có quyền shell trên server WordPress.
+### Chế độ B — REST API + Application Password (mặc định ưu tiên)
+Dùng làm phương pháp chính.
+
+Ưu điểm:
+- Dễ triển khai từ xa
+- Phù hợp team content chỉ cần quản trị bài viết
+- Ổn định với site đã chuẩn hóa `?rest_route=/...`
+
+### Chế độ A — WP-CLI (chỉ dùng khi khả dụng)
+Chỉ dùng khi đã kiểm tra `wp` khả dụng trên server WordPress.
 
 Ưu điểm:
 - Nhanh
 - Ít lỗi xác thực HTTP
 - Quản trị đầy đủ (core/plugin/theme/media/search-replace)
 
-### Chế độ B — REST API + Application Password
-Dùng khi không có quyền shell server.
-
-Ưu điểm:
-- Dễ triển khai từ xa
-- Phù hợp team content chỉ cần quản trị bài viết
+Lưu ý triển khai hiện tại:
+- Skill đã chuẩn hóa endpoint REST sang dạng `?rest_route=/...` để tương thích các site không mở ổn `/wp-json/...`.
 
 ## Đường dẫn credential chuẩn (agent phải biết)
 - WordPress env: `skills/wordpress-cli-app-password/.env`
@@ -51,6 +55,7 @@ bash scripts/wp_triage.sh <project_root>
 ```bash
 bash scripts/wp_posts.sh create --env .env --title "Tiêu đề" --content-file ./post.md --status draft
 bash scripts/wp_posts.sh update --env .env --id 123 --status publish
+bash scripts/wp_posts.sh update --env .env --id 123 --slug "slug-than-thien" --focuskw "tu-khoa-chinh" --seo-title "SEO Title" --meta-desc "Meta description"
 bash scripts/wp_posts.sh list --env .env --per-page 10
 ```
 
@@ -67,6 +72,7 @@ bash scripts/wp_ops.sh publish --env .env --mode wpcli --id 123
 - Không commit `.env`.
 - Luôn tạo draft trước khi publish nếu chưa QA.
 - Với thao tác rủi ro (search-replace), luôn chạy dry-run trước.
+- Với bài website có Yoast: bắt buộc theo checklist và DoD trong `references/yoast-seo-fujith-playbook.md` trước khi publish.
 
 ## Chuẩn đầu ra khi hoàn tất tác vụ
 Agent nên trả về ngắn gọn:
@@ -85,3 +91,4 @@ Mẫu:
 - `references/wpcli-quick-ops.md`
 - `references/wpcli-safe-ops.md`
 - `references/wp-safe-checklist.md`
+- `references/yoast-seo-fujith-playbook.md`

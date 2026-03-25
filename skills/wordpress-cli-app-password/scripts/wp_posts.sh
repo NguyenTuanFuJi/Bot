@@ -8,12 +8,15 @@ ENV_FILE=""
 TITLE=""
 CONTENT_FILE=""
 CONTENT=""
-STATUS="draft"
+STATUS=""
 POST_ID=""
 PER_PAGE="10"
 DATE_GMT=""
 EXCERPT=""
 SLUG=""
+FOCUSKW=""
+SEO_TITLE=""
+META_DESC=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -27,6 +30,9 @@ while [[ $# -gt 0 ]]; do
     --date-gmt) DATE_GMT="$2"; shift 2;;
     --excerpt) EXCERPT="$2"; shift 2;;
     --slug) SLUG="$2"; shift 2;;
+    --focuskw) FOCUSKW="$2"; shift 2;;
+    --seo-title) SEO_TITLE="$2"; shift 2;;
+    --meta-desc) META_DESC="$2"; shift 2;;
     *) echo "Unknown arg: $1"; exit 1;;
   esac
 done
@@ -44,20 +50,9 @@ source "$ENV_FILE"
 : "${WP_APP_PASSWORD:?WP_APP_PASSWORD is required}"
 
 BASE="${WP_BASE_URL%/}"
-ROOT_API="${BASE}/wp-json"
-
-# Fallback for hosts without pretty-permalink rewrite
-if ! curl -sS -o /tmp/wp_api_probe.json -w "%{http_code}" "${ROOT_API}/" | grep -q '^200$'; then
-  ROOT_API="${BASE}/?rest_route="
-fi
-
-if [[ "$ROOT_API" == *"?rest_route=" ]]; then
-  API="${ROOT_API}/wp/v2/posts"
-  API_QSEP="&"
-else
-  API="${ROOT_API}/wp/v2/posts"
-  API_QSEP="?"
-fi
+# Chuẩn hóa cố định REST route để tương thích site không dùng /wp-json/*
+API="${BASE}/?rest_route=/wp/v2/posts"
+API_QSEP="&"
 
 AUTH="$WP_USER:$WP_APP_PASSWORD"
 
@@ -76,12 +71,19 @@ build_payload_create() {
   content_json=$(json_escape "$CONTENT")
   excerpt_json=$(json_escape "$EXCERPT")
 
+  local create_status
+  create_status="${STATUS:-draft}"
+
   jq -n \
     --argjson title "$title_json" \
     --argjson content "$content_json" \
-    --arg status "$STATUS" \
+    --arg status "$create_status" \
     --argjson excerpt "$excerpt_json" \
     --arg date_gmt "$DATE_GMT" \
+    --arg slug "$SLUG" \
+    --arg focuskw "$FOCUSKW" \
+    --arg seo_title "$SEO_TITLE" \
+    --arg meta_desc "$META_DESC" \
     '{
       title: $title,
       content: $content,
@@ -89,6 +91,14 @@ build_payload_create() {
     }
     + (if $excerpt != "" then {excerpt: $excerpt} else {} end)
     + (if $date_gmt != "" then {date_gmt: $date_gmt} else {} end)
+    + (if $slug != "" then {slug: $slug} else {} end)
+    + (if ($focuskw != "" or $seo_title != "" or $meta_desc != "") then {
+        meta: ({ }
+          + (if $focuskw != "" then {"_yoast_wpseo_focuskw": $focuskw} else {} end)
+          + (if $seo_title != "" then {"_yoast_wpseo_title": $seo_title} else {} end)
+          + (if $meta_desc != "" then {"_yoast_wpseo_metadesc": $meta_desc} else {} end)
+        )
+      } else {} end)
   '
 }
 
@@ -110,6 +120,9 @@ build_payload_update() {
     --argjson excerpt "$excerpt_json" \
     --arg date_gmt "$DATE_GMT" \
     --arg slug "$SLUG" \
+    --arg focuskw "$FOCUSKW" \
+    --arg seo_title "$SEO_TITLE" \
+    --arg meta_desc "$META_DESC" \
     '{ }
     + (if $title != "" then {title: $title} else {} end)
     + (if $content != "" then {content: $content} else {} end)
@@ -117,6 +130,16 @@ build_payload_update() {
     + (if $excerpt != "" then {excerpt: $excerpt} else {} end)
     + (if $date_gmt != "" then {date_gmt: $date_gmt} else {} end)
     + (if $slug != "" then {slug: $slug} else {} end)
+    + (if ($focuskw != "" or $seo_title != "" or $meta_desc != "") then {
+        meta: ({ }
+          + (if $focuskw != "" then {"_yoast_wpseo_focuskw": $focuskw} else {} end)
+          + (if $seo_title != "" then {"_yoast_wpseo_title": $seo_title} else {} end)
+          + (if $meta_desc != "" then {"_yoast_wpseo_metadesc": $meta_desc} else {} end)
+        )
+      } else {} end)
+    + (if (.title|type=="string" and (.title|length)==0) then del(.title) else . end)
+    + (if (.content|type=="string" and (.content|length)==0) then del(.content) else . end)
+    + (if (.excerpt|type=="string" and (.excerpt|length)==0) then del(.excerpt) else . end)
   '
 }
 
@@ -144,8 +167,8 @@ case "$ACTION" in
   *)
     cat <<EOF
 Usage:
-  bash scripts/wp_posts.sh create --env .env --title "..." --content-file post.md --status draft
-  bash scripts/wp_posts.sh update --env .env --id 123 --title "..." --status publish
+  bash scripts/wp_posts.sh create --env .env --title "..." --content-file post.md --status draft [--slug ...] [--focuskw ...] [--seo-title ...] [--meta-desc ...]
+  bash scripts/wp_posts.sh update --env .env --id 123 --title "..." --status publish [--slug ...] [--focuskw ...] [--seo-title ...] [--meta-desc ...]
   bash scripts/wp_posts.sh list --env .env --per-page 10
 EOF
     exit 1

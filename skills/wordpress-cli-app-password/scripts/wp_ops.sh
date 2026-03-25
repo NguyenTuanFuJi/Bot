@@ -9,12 +9,15 @@ MODE="wpcli"
 TITLE=""
 CONTENT_FILE=""
 CONTENT=""
-STATUS="draft"
+STATUS=""
 POST_ID=""
 PER_PAGE="10"
 DATE_GMT=""
 EXCERPT=""
 SLUG=""
+FOCUSKW=""
+SEO_TITLE=""
+META_DESC=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -29,6 +32,9 @@ while [[ $# -gt 0 ]]; do
     --date-gmt) DATE_GMT="$2"; shift 2;;
     --excerpt) EXCERPT="$2"; shift 2;;
     --slug) SLUG="$2"; shift 2;;
+    --focuskw) FOCUSKW="$2"; shift 2;;
+    --seo-title) SEO_TITLE="$2"; shift 2;;
+    --meta-desc) META_DESC="$2"; shift 2;;
     *) echo "Unknown arg: $1"; exit 1;;
   esac
 done
@@ -52,22 +58,13 @@ run_rest() {
       : "${WP_APP_PASSWORD:?WP_APP_PASSWORD is required}"
 
       base="${WP_BASE_URL%/}"
+      root_api="$base/?rest_route=/"
 
-      # detect REST root (pretty permalink or rest_route fallback)
-      root_api="$base/wp-json/"
       code_root=$(curl -sS -o /tmp/wp_pre_root.json -w "%{http_code}" "$root_api")
-      if [[ "$code_root" != "200" ]]; then
-        root_api="$base/?rest_route=/"
-        code_root=$(curl -sS -o /tmp/wp_pre_root.json -w "%{http_code}" "$root_api")
-      fi
       [[ "$code_root" == "200" ]] || { echo "REST preflight FAIL: REST root http=$code_root"; exit 1; }
 
-      # check authenticated posts endpoint readable
-      if [[ "$root_api" == *"?rest_route=/" ]]; then
-        posts_url="$base/?rest_route=/wp/v2/posts&per_page=1&_fields=id,status"
-      else
-        posts_url="$base/wp-json/wp/v2/posts?per_page=1&_fields=id,status"
-      fi
+      # check authenticated posts endpoint readable (rest_route only)
+      posts_url="$base/?rest_route=/wp/v2/posts&per_page=1&_fields=id,status"
 
       code_posts=$(curl -sS -u "$WP_USER:$WP_APP_PASSWORD" -o /tmp/wp_pre_posts.json -w "%{http_code}" "$posts_url")
       [[ "$code_posts" == "200" ]] || { echo "REST preflight FAIL: posts endpoint http=$code_posts"; exit 1; }
@@ -84,6 +81,9 @@ run_rest() {
       [[ -n "$EXCERPT" ]] && args+=(--excerpt "$EXCERPT")
       [[ -n "$DATE_GMT" ]] && args+=(--date-gmt "$DATE_GMT")
       [[ -n "$SLUG" ]] && args+=(--slug "$SLUG")
+      [[ -n "$FOCUSKW" ]] && args+=(--focuskw "$FOCUSKW")
+      [[ -n "$SEO_TITLE" ]] && args+=(--seo-title "$SEO_TITLE")
+      [[ -n "$META_DESC" ]] && args+=(--meta-desc "$META_DESC")
       bash "$script_dir/wp_posts.sh" "${args[@]}"
       ;;
 
@@ -95,6 +95,9 @@ run_rest() {
       [[ -n "$EXCERPT" ]] && args+=(--excerpt "$EXCERPT")
       [[ -n "$DATE_GMT" ]] && args+=(--date-gmt "$DATE_GMT")
       [[ -n "$SLUG" ]] && args+=(--slug "$SLUG")
+      [[ -n "$FOCUSKW" ]] && args+=(--focuskw "$FOCUSKW")
+      [[ -n "$SEO_TITLE" ]] && args+=(--seo-title "$SEO_TITLE")
+      [[ -n "$META_DESC" ]] && args+=(--meta-desc "$META_DESC")
       bash "$script_dir/wp_posts.sh" "${args[@]}"
       ;;
 
