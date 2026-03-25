@@ -14,6 +14,7 @@ POST_ID=""
 PER_PAGE="10"
 DATE_GMT=""
 EXCERPT=""
+SLUG=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -27,6 +28,7 @@ while [[ $# -gt 0 ]]; do
     --per-page) PER_PAGE="$2"; shift 2;;
     --date-gmt) DATE_GMT="$2"; shift 2;;
     --excerpt) EXCERPT="$2"; shift 2;;
+    --slug) SLUG="$2"; shift 2;;
     *) echo "Unknown arg: $1"; exit 1;;
   esac
 done
@@ -48,7 +50,30 @@ run_rest() {
       : "${WP_BASE_URL:?WP_BASE_URL is required}"
       : "${WP_USER:?WP_USER is required}"
       : "${WP_APP_PASSWORD:?WP_APP_PASSWORD is required}"
-      curl -sS -u "$WP_USER:$WP_APP_PASSWORD" "${WP_BASE_URL%/}/wp-json/wp/v2/users/me" | jq -e '.id' >/dev/null
+
+      base="${WP_BASE_URL%/}"
+
+      # detect REST root (pretty permalink or rest_route fallback)
+      root_api="$base/wp-json/"
+      code_root=$(curl -sS -o /tmp/wp_pre_root.json -w "%{http_code}" "$root_api")
+      if [[ "$code_root" != "200" ]]; then
+        root_api="$base/?rest_route=/"
+        code_root=$(curl -sS -o /tmp/wp_pre_root.json -w "%{http_code}" "$root_api")
+      fi
+      [[ "$code_root" == "200" ]] || { echo "REST preflight FAIL: REST root http=$code_root"; exit 1; }
+
+      # check authenticated posts endpoint readable
+      if [[ "$root_api" == *"?rest_route=/" ]]; then
+        posts_url="$base/?rest_route=/wp/v2/posts&per_page=1&_fields=id,status"
+      else
+        posts_url="$base/wp-json/wp/v2/posts?per_page=1&_fields=id,status"
+      fi
+
+      code_posts=$(curl -sS -u "$WP_USER:$WP_APP_PASSWORD" -o /tmp/wp_pre_posts.json -w "%{http_code}" "$posts_url")
+      [[ "$code_posts" == "200" ]] || { echo "REST preflight FAIL: posts endpoint http=$code_posts"; exit 1; }
+
+      # 3) ensure response is JSON array
+      jq -e 'type=="array"' /tmp/wp_pre_posts.json >/dev/null
       echo "REST preflight: OK"
       ;;
 
@@ -58,6 +83,7 @@ run_rest() {
       [[ -n "$CONTENT" ]] && args+=(--content "$CONTENT")
       [[ -n "$EXCERPT" ]] && args+=(--excerpt "$EXCERPT")
       [[ -n "$DATE_GMT" ]] && args+=(--date-gmt "$DATE_GMT")
+      [[ -n "$SLUG" ]] && args+=(--slug "$SLUG")
       bash "$script_dir/wp_posts.sh" "${args[@]}"
       ;;
 
@@ -68,6 +94,7 @@ run_rest() {
       [[ -n "$CONTENT" ]] && args+=(--content "$CONTENT")
       [[ -n "$EXCERPT" ]] && args+=(--excerpt "$EXCERPT")
       [[ -n "$DATE_GMT" ]] && args+=(--date-gmt "$DATE_GMT")
+      [[ -n "$SLUG" ]] && args+=(--slug "$SLUG")
       bash "$script_dir/wp_posts.sh" "${args[@]}"
       ;;
 

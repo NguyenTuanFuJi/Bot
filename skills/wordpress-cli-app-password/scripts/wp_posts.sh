@@ -13,6 +13,7 @@ POST_ID=""
 PER_PAGE="10"
 DATE_GMT=""
 EXCERPT=""
+SLUG=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -25,6 +26,7 @@ while [[ $# -gt 0 ]]; do
     --per-page) PER_PAGE="$2"; shift 2;;
     --date-gmt) DATE_GMT="$2"; shift 2;;
     --excerpt) EXCERPT="$2"; shift 2;;
+    --slug) SLUG="$2"; shift 2;;
     *) echo "Unknown arg: $1"; exit 1;;
   esac
 done
@@ -41,7 +43,22 @@ source "$ENV_FILE"
 : "${WP_USER:?WP_USER is required}"
 : "${WP_APP_PASSWORD:?WP_APP_PASSWORD is required}"
 
-API="${WP_BASE_URL%/}/wp-json/wp/v2/posts"
+BASE="${WP_BASE_URL%/}"
+ROOT_API="${BASE}/wp-json"
+
+# Fallback for hosts without pretty-permalink rewrite
+if ! curl -sS -o /tmp/wp_api_probe.json -w "%{http_code}" "${ROOT_API}/" | grep -q '^200$'; then
+  ROOT_API="${BASE}/?rest_route="
+fi
+
+if [[ "$ROOT_API" == *"?rest_route=" ]]; then
+  API="${ROOT_API}/wp/v2/posts"
+  API_QSEP="&"
+else
+  API="${ROOT_API}/wp/v2/posts"
+  API_QSEP="?"
+fi
+
 AUTH="$WP_USER:$WP_APP_PASSWORD"
 
 json_escape() {
@@ -92,12 +109,14 @@ build_payload_update() {
     --arg status "$STATUS" \
     --argjson excerpt "$excerpt_json" \
     --arg date_gmt "$DATE_GMT" \
+    --arg slug "$SLUG" \
     '{ }
     + (if $title != "" then {title: $title} else {} end)
     + (if $content != "" then {content: $content} else {} end)
     + (if $status != "" then {status: $status} else {} end)
     + (if $excerpt != "" then {excerpt: $excerpt} else {} end)
     + (if $date_gmt != "" then {date_gmt: $date_gmt} else {} end)
+    + (if $slug != "" then {slug: $slug} else {} end)
   '
 }
 
@@ -116,8 +135,10 @@ case "$ACTION" in
     ;;
 
   list)
-    curl -sS -u "$AUTH" "$API?per_page=$PER_PAGE&_fields=id,date,status,title,link" \
-      | jq -r '.[] | "\(.id)\t\(.date)\t\(.status)\t\(.title.rendered)\t\(.link)"'
+    code=$(curl -sS -u "$AUTH" -o /tmp/wp_list.json -w "%{http_code}" "${API}${API_QSEP}per_page=$PER_PAGE&_fields=id,date,status,title,link")
+    [[ "$code" == "200" ]] || { echo "WP list FAIL http=$code"; head -c 300 /tmp/wp_list.json; echo; exit 1; }
+    jq -e 'type=="array"' /tmp/wp_list.json >/dev/null
+    jq -r '.[] | "\(.id)\t\(.date)\t\(.status)\t\(.title.rendered)\t\(.link)"' /tmp/wp_list.json
     ;;
 
   *)
