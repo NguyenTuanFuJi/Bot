@@ -37,7 +37,7 @@ Khi báo thiếu token/env, agent phải kiểm tra đúng 2 file trên trước
 
 ### 3. Cấu hình .env
 ```bash
-cd skills/facebook-page
+cd skills/facebook-page-manager
 cp .env.example .env
 # Edit .env với App ID và Secret
 ```
@@ -129,6 +129,33 @@ node cli.js comments delete --comment COMMENT_ID
 - `pages_read_engagement` - đọc posts/comments
 - `pages_manage_posts` - đăng/sửa/xoá bài
 - `pages_manage_engagement` - quản lý comments
+
+## Cron-safe posting (bắt buộc khi hẹn lịch)
+Khi chạy qua cron, phải dùng script wrapper để tránh lỗi thiếu env/tokens/path.
+
+### Preflight trước khi add cron
+```bash
+bash scripts/preflight.sh
+# phải ra PRECHECK_OK
+```
+
+### Lệnh cron-safe đăng bài
+```bash
+bash scripts/cron-safe-post.sh --page PAGE_ID --message-file /abs/path/message.txt
+# hoặc
+bash scripts/cron-safe-post.sh --page PAGE_ID --message "Caption" --photo /abs/path/image.jpg
+```
+
+### Mẫu cron đề xuất
+```cron
+# mỗi ngày 08:30
+30 8 * * * cd /home/tuan/.openclaw/workspace/skills/facebook-page-manager && /usr/bin/env bash scripts/preflight.sh && /usr/bin/env bash scripts/cron-safe-post.sh --page 695286863979169 --message-file /home/tuan/.openclaw/workspace/tmp/fb-message.txt >> /home/tuan/.openclaw/workspace/skills/facebook-page-manager/logs/cron.log 2>&1
+```
+
+Quy tắc bắt buộc:
+- Dùng đường dẫn tuyệt đối cho `--message-file` và `--photo`
+- Không phụ thuộc shell profile của cron
+- Chạy `preflight.sh` trước khi post
 
 ## Lưu ý
 - Token Page không hết hạn (nếu lấy từ long-lived user token)
