@@ -141,9 +141,13 @@ bash scripts/preflight.sh
 
 ### Lệnh cron-safe đăng bài
 ```bash
+# Bài text / 1 ảnh
 bash scripts/cron-safe-post.sh --page PAGE_ID --message-file /abs/path/message.txt
 # hoặc
 bash scripts/cron-safe-post.sh --page PAGE_ID --message "Caption" --photo /abs/path/image.jpg
+
+# Bài album nhiều ảnh
+bash scripts/cron-safe-post-album.sh --page PAGE_ID --message-file /abs/path/message.txt --photo /abs/1.jpg --photo /abs/2.jpg --photo /abs/3.jpg
 ```
 
 ### Mẫu cron đề xuất
