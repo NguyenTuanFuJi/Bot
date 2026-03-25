@@ -81,6 +81,12 @@ Agent luôn xuất 3 phần:
 - Mỗi việc có đầu ra cụ thể
 - Không đề xuất quá 5 việc/lần để tránh quá tải
 
+## Quy tắc tự động sau khi duyệt nội dung
+Khi người dùng đã duyệt nội dung và chốt giờ đăng:
+- Agent tự lên lịch đăng, không hỏi lại bước xác nhận trung gian.
+- Đến giờ đăng, agent tự thực thi đăng bài.
+- Sau khi đăng xong, agent tự báo kết quả (thành công/thất bại + link bài nếu có).
+
 ## Mẫu đầu ra đề xuất nhanh
 - Việc 1 (Ưu tiên cao): ...
 - Việc 2: ...

@@ -36,3 +36,9 @@
 - 30% case/chứng thực
 - 20% chuyển đổi
 - 10% thương hiệu/hậu trường
+
+## 7) Quy tắc lịch đăng sau duyệt
+- Khi nội dung đã được duyệt, coi là lệnh triển khai.
+- Agent tự đặt lịch theo giờ đã chốt, không hỏi lại.
+- Khi bài lên thành công, phải gửi báo kết quả ngay.
+- Nếu lỗi, gửi đúng lỗi và đề xuất xử lý nhanh.
