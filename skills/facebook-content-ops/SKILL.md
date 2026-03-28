@@ -18,6 +18,11 @@ Skill này giúp agent **tự đề xuất công việc** và vận hành nội 
 
 ## Quy trình chuẩn
 
+### Bước 0 (bắt buộc): Áp dụng SOP Viết → Duyệt → Đăng
+Trước mọi tác vụ nội dung, agent phải đọc và tuân thủ:
+- `references/sop-viet-duyet-dang.md`
+- `references/prepublish-gate.md`
+
 ### Bước 1: Chốt mục tiêu tuần
 Agent phải hỏi/chốt nhanh:
 - Mục tiêu chính tuần này: `reach | engagement | inbox | lead | sale`
@@ -98,6 +103,8 @@ Khi người dùng đã duyệt nội dung và chốt giờ đăng:
 - `references/facebook-weekly-plan-template.md`
 - `references/facebook-weekly-jobpack.md` (bộ công việc theo tuần)
 - `references/facebook-content-standard.md` (chuẩn hoá nội dung trước khi đăng)
+- `references/sop-viet-duyet-dang.md` (quy trình bắt buộc viết-duyệt-đăng)
+- `references/prepublish-gate.md` (cổng kiểm trước duyệt/đăng)
 - `references/fuji-th-brand-profile.md` (thông tin thương hiệu dùng lâu dài)
 - `references/writing-style-randomization.md` (quy tắc random writing style chống trùng)
 
