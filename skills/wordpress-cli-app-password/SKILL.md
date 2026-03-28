@@ -72,6 +72,7 @@ bash scripts/wp_ops.sh publish --env .env --mode wpcli --id 123
 - Không commit `.env`.
 - Luôn tạo draft trước khi publish nếu chưa QA.
 - Với thao tác rủi ro (search-replace), luôn chạy dry-run trước.
+- Trước khi publish/schedule, bắt buộc tối ưu ảnh SEO (tên file + alt + title/caption/description + featured image).
 - Với bài website có Yoast: bắt buộc theo checklist và DoD trong `references/yoast-seo-fujith-playbook.md` trước khi publish.
 
 ## Chuẩn đầu ra khi hoàn tất tác vụ

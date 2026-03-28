@@ -8,7 +8,12 @@
    - Excerpt
    - Nội dung hiển thị
    - Link/CTA
-4. Publish hoặc schedule
+4. Tối ưu ảnh SEO trước khi publish:
+   - Tên file ảnh có từ khóa (không dấu, nối bằng `-`)
+   - Alt text mô tả đúng nội dung ảnh
+   - Title/Caption/Description ảnh đầy đủ
+   - Gắn ảnh đại diện (featured image) đã tối ưu
+5. Publish hoặc schedule
 
 ## Mẫu lệnh
 
