@@ -16,10 +16,17 @@ Skill để quản lý Facebook Page qua Meta Graph API.
 - Chấm điểm chất lượng caption trước khi publish (quality gate)
 
 ## Đường dẫn credential chuẩn (agent phải biết)
-- Facebook env: `skills/facebook-page-manager/.env`
-- Facebook token: `skills/facebook-page-manager/tokens.json`
+Skill này dùng profile tách riêng theo ứng dụng:
+- FUJI TH: `skills/facebook-page-manager/credentials/facebook_fujith/.env`
+- FUJI TH token: `skills/facebook-page-manager/credentials/facebook_fujith/tokens.json`
+- App2 env: `skills/facebook-page-manager/credentials/facebook_app2/.env`
+- App2 token: `skills/facebook-page-manager/credentials/facebook_app2/tokens.json`
 
-Khi báo thiếu token/env, agent phải kiểm tra đúng 2 file trên trước.
+Khi chạy lệnh, bắt buộc chỉ định profile để tránh dùng nhầm:
+```bash
+FB_PROFILE=facebook_fujith node cli.js pages
+FB_PROFILE=facebook_app2 node cli.js pages
+```
 
 ## Setup (một lần)
 
