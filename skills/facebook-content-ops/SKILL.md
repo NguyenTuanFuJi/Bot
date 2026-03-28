@@ -47,6 +47,9 @@ node skills/facebook-page-manager/scripts/fb_content_optimize.js --input <payloa
 - Hậu kiểm 30–120 phút sau đăng.
 - Cuối tuần xuất: việc đã làm, KPI, 3 ưu tiên tuần sau.
 
+### Bước 5: Đa kênh rút gọn (khi cần)
+Nếu chạy Facebook + Website cùng lúc, bắt buộc tuân thủ `references/multichannel-lite.md` để giảm context và tránh lỗi API.
+
 ## Quy tắc đề xuất công việc
 - Đề xuất ngắn, rõ, có thứ tự ưu tiên
 - Mỗi việc có đầu ra cụ thể
@@ -73,6 +76,7 @@ Khi người dùng đã duyệt nội dung và chốt giờ đăng:
 - `references/prepublish-gate.md` (cổng kiểm trước duyệt/đăng)
 - `references/fuji-th-brand-profile.md` (thông tin thương hiệu dùng lâu dài)
 - `references/writing-style-randomization.md` (quy tắc random writing style chống trùng)
+- `references/multichannel-lite.md` (quy trình đa kênh rút gọn, giảm context/API lỗi)
 
 ## Quy định khi người dùng yêu cầu “làm theo tuần”
 Agent phải ưu tiên đọc:
