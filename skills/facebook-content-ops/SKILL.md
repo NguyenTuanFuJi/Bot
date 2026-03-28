@@ -35,8 +35,9 @@ Sinh backlog theo `references/facebook-weekly-jobpack.md` (tối đa 5 việc/l�
 ### Bước 3: Viết + duyệt + đăng
 - Viết theo chuẩn nội dung và random style.
 - Chạy prepublish gate trước khi gửi duyệt.
-- Chỉ đăng khi đã duyệt; đăng xong báo kết quả + link.
-
+- Chỉ đăng khi đã duyệt.
+- Sau đăng bắt buộc báo: trạng thái + link bài (hoặc lỗi + hướng xử lý).
+- Tuân thủ chống flood theo `references/sop-viet-duyet-dang.md` (cooldown, limit/ngày, retry).
 Nếu workspace có script tối ưu nội dung, ưu tiên dùng:
 ```bash
 node skills/facebook-page-manager/scripts/fb_content_optimize.js --input <payload.json>

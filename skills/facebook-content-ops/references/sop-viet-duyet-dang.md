@@ -27,7 +27,10 @@ Chỉ khi có tín hiệu duyệt rõ ràng (ví dụ: “duyệt”, “ok đă
 ## Bước 3: Đăng
 - Đăng ngay hoặc lên lịch theo giờ đã duyệt
 - Không hỏi lại bước xác nhận trung gian
-- Đăng xong phải báo kết quả + link bài
+- Đăng xong phải báo kết quả theo mẫu bắt buộc:
+  - Trạng thái: Thành công/Thất bại
+  - Link bài: URL cụ thể (nếu thành công)
+  - Lý do lỗi + cách xử lý (nếu thất bại)
 
 ## Hậu kiểm bắt buộc (30–120 phút)
 1. Kiểm tra bài đã lên đúng nội dung chưa
@@ -40,3 +43,10 @@ Chỉ khi có tín hiệu duyệt rõ ràng (ví dụ: “duyệt”, “ok đă
 - Không dùng lại nguyên bộ hashtag quá 2 bài liên tiếp
 - Không đăng khi thiếu CTA hoặc thiếu từ khóa chính
 - Không bỏ qua bước duyệt
+
+## Chống flood và giới hạn đăng (bắt buộc)
+- Cooldown tối thiểu giữa 2 bài cùng page: 90 phút (trừ khi người dùng yêu cầu khẩn).
+- Mỗi page tối đa 4 bài/ngày theo lịch chuẩn.
+- Không retry liên tục: tối đa 2 lần retry kỹ thuật, mỗi lần cách nhau >= 5 phút.
+- Nếu gặp lỗi API/giới hạn, chuyển trạng thái chờ và báo người dùng, không spam lệnh đăng.
+- Trước khi đăng, phải kiểm tra trong 24h gần nhất có bài cùng chủ đề/hashtag chính hay chưa để tránh flood nội dung.
