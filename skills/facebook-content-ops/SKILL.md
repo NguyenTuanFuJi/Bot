@@ -16,70 +16,35 @@ Skill này giúp agent **tự đề xuất công việc** và vận hành nội 
 2. Tăng tương tác chất lượng
 3. Tăng chuyển đổi (inbox/lead/đơn)
 
-## Quy trình chuẩn
+## Quy trình chuẩn (rút gọn, tránh trùng lặp)
 
-### Bước 0 (bắt buộc): Áp dụng SOP Viết → Duyệt → Đăng
-Trước mọi tác vụ nội dung, agent phải đọc và tuân thủ:
+### Bước 0 (bắt buộc)
+Trước mọi tác vụ nội dung, phải đọc và tuân thủ:
 - `references/sop-viet-duyet-dang.md`
 - `references/prepublish-gate.md`
+- `references/facebook-content-standard.md`
 
 ### Bước 1: Chốt mục tiêu tuần
-Agent phải hỏi/chốt nhanh:
-- Mục tiêu chính tuần này: `reach | engagement | inbox | lead | sale`
+- Mục tiêu chính: `reach | engagement | inbox | lead | sale`
 - Sản phẩm/dịch vụ ưu tiên
 - Tệp khách hàng chính
 
-### Bước 2: Tự đề xuất backlog công việc
-Agent luôn đề xuất theo nhóm việc:
-1. **Chiến lược**
-   - Chốt 3 cụm chủ đề tuần
-   - Chốt 1 ưu đãi/chào mời chính
-2. **Sản xuất nội dung**
-   - 2 bài giáo dục
-   - 1 bài case/chứng thực
-   - 1 bài chuyển đổi
-3. **Tối ưu SEO Facebook**
-   - Từ khóa chính/phụ cho từng bài
-   - Hook + CTA + hashtag cụm
-4. **Vận hành sau đăng**
-   - Kịch bản phản hồi comment
-   - Kịch bản kéo inbox
-5. **Đo lường**
-   - Reach, engagement, comment chất lượng, inbox/lead
+### Bước 2: Đề xuất backlog theo tuần
+Sinh backlog theo `references/facebook-weekly-jobpack.md` (tối đa 5 việc/lần).
 
-### Bước 3: Tạo bài theo khung chuẩn
-Mỗi bài phải có:
-- Hook (dòng đầu)
-- Nỗi đau/bối cảnh
-- Giải pháp (bullet)
-- Bằng chứng ngắn
-- CTA duy nhất
-- 3–5 hashtag
+### Bước 3: Viết + duyệt + đăng
+- Viết theo chuẩn nội dung và random style.
+- Chạy prepublish gate trước khi gửi duyệt.
+- Chỉ đăng khi đã duyệt; đăng xong báo kết quả + link.
 
-### Bước 4: Preflight trước đăng
-Trước khi đăng, agent phải tự kiểm:
-- Có từ khóa chính chưa
-- CTA có rõ chưa
-- Độ dài có dễ đọc không
-- Hashtag có bị nhồi quá không
-
-Nếu workspace có skill `facebook-page` và script tối ưu nội dung, ưu tiên dùng:
+Nếu workspace có script tối ưu nội dung, ưu tiên dùng:
 ```bash
 node skills/facebook-page-manager/scripts/fb_content_optimize.js --input <payload.json>
 ```
-Chỉ đăng khi chất lượng đạt ngưỡng.
 
-### Bước 5: Hậu kiểm sau đăng (30–120 phút)
-Agent đề xuất ngay các việc:
-- Trả lời comment ưu tiên cao
-- Ghim comment CTA
-- Tổng hợp câu hỏi lặp lại để tạo bài tiếp theo
-
-### Bước 6: Báo cáo tuần
-Agent luôn xuất 3 phần:
-1. Việc đã làm
-2. Kết quả theo KPI
-3. Việc tuần sau (ưu tiên cao nhất)
+### Bước 4: Hậu kiểm + báo cáo
+- Hậu kiểm 30–120 phút sau đăng.
+- Cuối tuần xuất: việc đã làm, KPI, 3 ưu tiên tuần sau.
 
 ## Quy tắc đề xuất công việc
 - Đề xuất ngắn, rõ, có thứ tự ưu tiên
