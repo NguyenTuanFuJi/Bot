@@ -1,0 +1,11 @@
+## Session: test-001 | 2026-03-24 21:17
+- Mục tiêu: Mục tiêu là giảm context gọi API.
+- Quyết định:
+  - Hãy tự động ghi nhớ quyết định quan trọng.
+  - Chuẩn, ta đồng ý hướng này.
+- Việc dang dở:
+  - Hãy tự động ghi nhớ quyết định quan trọng.
+- Ràng buộc:
+  - Ưu tiên markdown và sqlite.
+  - Không được dùng vector db.
+- Từ khoá: [mục, tiêu, giảm, context, gọi, api, hãy, động, ghi, nhớ, quyết, định]

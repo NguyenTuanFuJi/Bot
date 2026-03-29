@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text-flat-xml">
+  <office:automatic-styles>
+    <style:style style:name="P1" style:family="paragraph"><style:paragraph-properties fo:text-align="center"/><style:text-properties fo:font-weight="bold" fo:font-size="16pt"/></style:style>
+    <style:style style:name="P2" style:family="paragraph"><style:text-properties fo:font-weight="bold"/></style:style>
+    <style:style style:name="P3" style:family="paragraph"><style:paragraph-properties fo:text-align="end"/></style:style>
+    <style:style style:name="Table1" style:family="table"/>
+    <style:style style:name="Table1.A" style:family="table-column" style:column-width="0.8in"/>
+    <style:style style:name="Table1.B" style:family="table-column" style:column-width="3.5in"/>
+    <style:style style:name="Table1.C" style:family="table-column" style:column-width="0.8in"/>
+    <style:style style:name="Table1.D" style:family="table-column" style:column-width="0.6in"/>
+    <style:style style:name="Table1.E" style:family="table-column" style:column-width="1.4in"/>
+    <style:style style:name="Table1.F" style:family="table-column" style:column-width="1.4in"/>
+    <style:style style:name="TableCell" style:family="table-cell"><style:table-cell-properties fo:border="0.06pt solid #000000" fo:padding="0.04in"/></style:style>
+  </office:automatic-styles>
+  <office:body>
+    <office:text>
+      <text:p text:style-name="P2">CÔNG TY TNHH FUJI TH</text:p>
+      <text:p>Trụ sở chính: Số 10/117, Mai Phúc, phường Phúc Lợi, TP.Hà Nội</text:p>
+      <text:p>VP Hà Giang: số 9, đường Phùng Hưng, phường Hà Giang 2, Tuyên Quang</text:p>
+      <text:p>MST: 0109220557</text:p>
+      <text:p>Nhà máy sx: thôn Gia Cốc, xã Kiêu Kỵ, thành phố Hà Nội</text:p>
+      <text:p>Hotline: 0924286386 - 0989397282</text:p>
+      <text:p>Số: BG-TH0328</text:p>
+      <text:p text:style-name="P3">Hà Nội, ngày 28 tháng 03 năm 2026</text:p>
+      <text:p text:style-name="P1">BẢNG BÁO GIÁ THANG MÁY</text:p>
+      <text:p><text:span text:style-name="P2">Kính gửi:</text:span> Anh Hà</text:p>
+      <text:p><text:span text:style-name="P2">Địa chỉ:</text:span> Hà Giang 2</text:p>
+      <text:p>Công ty chúng tôi xin trân trọng gửi đến Quý khách bản báo giá cho việc cung cấp và lắp đặt mới 01 thang máy tải khách kính có phòng máy với các thiết bị được nhập khẩu đồng bộ hiệu “FUJI TH ELEVATOR”, cho công trình tại Hà Giang 2, với các nội dung như sau:</text:p>
+      <text:p text:style-name="P2">A. CÔNG VIỆC</text:p>
+      <text:p text:style-name="P2">Việc cung cấp và lắp đặt thang máy bao gồm các đề mục thuộc trách nhiệm của chúng tôi:</text:p>
+      <text:p>- Khảo sát và thiết lập bản vẽ của hố thang trên cơ sở hố thang đã có sẵn tại công trình.</text:p>
+      <text:p>- Tư vấn việc xây dựng hố thang theo đúng các tiêu chuẩn, yêu cầu kỹ thuật.</text:p>
+      <text:p>- Nhập khẩu và cung cấp các thiết bị thang máy theo bản đặc tính kỹ thuật nêu ở phần phụ lục bản báo giá, catalogue và tiến hành việc giao hàng đến công trình.</text:p>
+      <text:p>- Vận chuyển, lắp ráp các thiết bị thang máy vào hố thang và hiệu chỉnh, đưa thang máy vào hoạt động.</text:p>
+      <text:p>- Bảo dưỡng thiết bị và sửa chữa miễn phí đối với thang máy trên trong thời hạn 24 tháng kể từ ngày nghiệm thu bàn giao.</text:p>
+      <text:p>- Kiểm định kỹ thuật và xin giấy phép sử dụng thang máy về An toàn Lao động.</text:p>
+      <text:p>- Đào tạo và hướng dẫn vận hành, xử lý các sự cố đơn giản và thực hiện cứu hộ thang máy trong trường hợp khẩn cấp.</text:p>
+      <text:p text:style-name="P2">Những phần việc thuộc trách nhiệm của chủ đầu tư công trình:</text:p>
+      <text:p>- Xây dựng hố thang và phòng máy theo đúng bản vẽ thiết kế.</text:p>
+      <text:p>- Cung cấp kho chứa khi thiết bị được chuyển đến công trình.</text:p>
+      <text:p>- Cung cấp dây tiếp địa, nguồn điện 3 pha đấu sẵn atomat 3 phase đủ công suất đến phòng máy và lắp hệ thống chiếu sáng cho phòng máy.</text:p>
+      <text:p>- Cung cấp điện để thi công.</text:p>
+      <text:p>- Thực hiện các phần xây dựng còn lại của hố thang sau khi lắp đặt xong thiết bị.</text:p>
+      <text:p text:style-name="P2">B. TRỊ GIÁ VÀ ĐẶC TÍNH KỸ THUẬT THANG MÁY</text:p>
+      <text:p text:style-name="P2">1. Thông số cơ bản</text:p>
+      <text:p>Loại thang: Thang máy kính tải khách</text:p>
+      <text:p>Tải trọng: 350kg</text:p>
+      <text:p>Số điểm dừng: 03 tầng</text:p>
+      <text:p>Kích thước hố thang: 1600 x 1600 mm</text:p>
+      <text:p>Tiến độ chuẩn bị vật tư: 90 ngày</text:p>
+      <text:p>Thiết bị chính: Đồng bộ theo tiêu chuẩn thang máy FUJI TH</text:p>
+      <table:table table:name="BangGia" table:style-name="Table1">
+        <table:table-column table:style-name="Table1.A"/>
+        <table:table-column table:style-name="Table1.B"/>
+        <table:table-column table:style-name="Table1.C"/>
+        <table:table-column table:style-name="Table1.D"/>
+        <table:table-column table:style-name="Table1.E"/>
+        <table:table-column table:style-name="Table1.F"/>
+        <table:table-row>
+          <table:table-cell table:style-name="TableCell"><text:p>STT</text:p></table:table-cell>
+          <table:table-cell table:style-name="TableCell"><text:p>Loại thang</text:p></table:table-cell>
+          <table:table-cell table:style-name="TableCell"><text:p>ĐVT</text:p></table:table-cell>
+          <table:table-cell table:style-name="TableCell"><text:p>SL</text:p></table:table-cell>
+          <table:table-cell table:style-name="TableCell"><text:p>Đơn giá (VND)</text:p></table:table-cell>
+          <table:table-cell table:style-name="TableCell"><text:p>Thành tiền (VND)</text:p></table:table-cell>
+        </table:table-row>
+        <table:table-row>
+          <table:table-cell table:style-name="TableCell"><text:p>1</text:p></table:table-cell>
+          <table:table-cell table:style-name="TableCell"><text:p>Thang máy kính tải khách 350kg, 3 tầng, khung thép chịu lực, kính an toàn, hoàn thiện theo tiêu chuẩn FUJI TH</text:p></table:table-cell>
+          <table:table-cell table:style-name="TableCell"><text:p>Bộ</text:p></table:table-cell>
+          <table:table-cell table:style-name="TableCell"><text:p>01</text:p></table:table-cell>
+          <table:table-cell table:style-name="TableCell"><text:p>420.000.000</text:p></table:table-cell>
+          <table:table-cell table:style-name="TableCell"><text:p>420.000.000</text:p></table:table-cell>
+        </table:table-row>
+      </table:table>
+      <text:p><text:span text:style-name="P2">Tổng cộng:</text:span> 420.000.000 đồng</text:p>
+      <text:p><text:span text:style-name="P2">Bằng chữ:</text:span> Bốn trăm hai mươi triệu đồng</text:p>
+      <text:p>Giá trên là trọn gói chìa khóa trao tay, bao gồm: cung cấp thiết bị, vận chuyển, lắp đặt, vận hành, kiểm định. Chưa bao gồm thuế VAT.</text:p>
+      <text:p text:style-name="P2">C. THỜI HẠN</text:p>
+      <text:p>1. Thời gian bên B chuẩn bị vật tư, thiết bị trước khi tập kết vận chuyển về chân công trình kể từ khi bên B nhận được thanh toán kỳ 1 là: 90 ngày.</text:p>
+      <text:p>2. Thời gian bên B tiến hành thi công lắp đặt hoàn chỉnh và kiểm định an toàn cho thang máy đưa vào sử dụng kể từ khi bên B nhận được tiền thanh toán kỳ 2 là 30 ngày.</text:p>
+      <text:p>3. Tiến độ bên B vận chuyển tập kết hàng về chân công trình phụ thuộc vào việc bên A thực hiện xây dựng hố thang, xác nhận hố thang đủ điều kiện cho bên B vào thi công và có kho chứa thiết bị tại công trình.</text:p>
+      <text:p text:style-name="P2">D. ĐIỀU KIỆN THANH TOÁN</text:p>
+      <text:p>- Kỳ 1: Tạm ứng 40% trị giá hợp đồng ngay sau khi ký hợp đồng.</text:p>
+      <text:p>- Kỳ 2: Thanh toán 50% trị giá hợp đồng sau khi bên B tập kết toàn bộ thiết bị về công trình.</text:p>
+      <text:p>- Kỳ 3: Thanh toán 10% trị giá hợp đồng còn lại ngay sau khi bên B thi công, lắp đặt và vận hành thang máy vào hoạt động bình thường.</text:p>
+      <text:p text:style-name="P2">E. CÁC ĐIỀU KIỆN VÀ ĐIỀU KHOẢN KHÁC</text:p>
+      <text:p>Sẽ được thương lượng tại thời điểm ký kết hợp đồng.</text:p>
+      <text:p text:style-name="P2">F. THỜI HẠN HIỆU LỰC</text:p>
+      <text:p>Bản báo giá này có hiệu lực 30 ngày kể từ ngày ký báo giá. Sau thời hạn trên, chúng tôi xin được quyền điều chỉnh các nội dung chi tiết của bản báo giá này cho phù hợp với thực tế.</text:p>
+      <text:p>Chúng tôi xin chân thành cảm ơn và rất mong được hợp tác với Quý khách.</text:p>
+    </office:text>
+  </office:body>
+</office:document>

@@ -2,7 +2,7 @@
 
 _Learn about the person you're helping. Update this as you go._
 
-- **Name:** Nguyễn Văn Tuân (FUJI TH)
+- **Name:** Chuyến - Phạm Bạch Hổ
 - **What to call them:** sếp
 - **Pronouns:** anh
 - **Timezone:** Asia/Ho_Chi_Minh
@@ -16,6 +16,7 @@ _Learn about the person you're helping. Update this as you go._
   - Khi làm bài website, luôn ưu tiên checklist SEO: meta description chuẩn, ảnh đại diện + alt chuẩn SEO, và liên kết nội bộ giữa các bài cùng nhóm.
   - Khi đăng website, luôn tối ưu theo tiêu chí Yoast SEO (focus keyphrase, SEO title, meta description, slug, internal link) và kiểm tra tránh trùng lặp nội dung trước khi publish.
   - Với WordPress, luôn dùng REST API làm phương pháp chính; chỉ dùng WP-CLI khi đã kiểm tra khả dụng.
+  - Khi ghi số điện thoại trong nội dung, luôn viết liền 10 số, không tách khoảng trắng/chấm/gạch.
 
 ## Context
 

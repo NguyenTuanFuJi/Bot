@@ -1,0 +1,5 @@
+Mục tiêu là giảm context gọi API.
+Hãy tự động ghi nhớ quyết định quan trọng.
+Ưu tiên markdown và sqlite.
+Không được dùng vector db.
+Chuẩn, ta đồng ý hướng này.

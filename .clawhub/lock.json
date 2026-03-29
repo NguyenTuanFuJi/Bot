@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "skills": {
+    "memory-tiering": {
+      "version": "1.0.0",
+      "installedAt": 1774360322651
+    },
+    "facebook-page-manager": {
+      "version": "1.0.0",
+      "installedAt": 1774363452379
+    },
+    "content-strategy": {
+      "version": "0.1.0",
+      "installedAt": 1774369337111
+    },
+    "content-generation": {
+      "version": "1.0.0",
+      "installedAt": 1774369340527
+    }
+  }
+}
