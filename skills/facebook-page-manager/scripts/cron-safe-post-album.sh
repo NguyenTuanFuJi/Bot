@@ -7,7 +7,8 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SKILL_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
-TOKENS_FILE="$SKILL_DIR/tokens.json"
+PROFILE="${FB_PROFILE:-facebook_fujith}"
+TOKENS_FILE="${FB_TOKENS_FILE:-$SKILL_DIR/credentials/$PROFILE/tokens.json}"
 LOG_DIR="$SKILL_DIR/logs"
 mkdir -p "$LOG_DIR"
 LOG_FILE="$LOG_DIR/cron-post-$(date +%Y%m%d).log"
