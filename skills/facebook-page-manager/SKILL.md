@@ -1,174 +1,95 @@
 ---
 name: facebook-page
-description: Manage Facebook Pages via Meta Graph API. Post content (text, photos, links), list posts, manage comments (list/reply/hide/delete). Use when user wants to publish to Facebook Page, check Page posts, or handle comments.
+description: Manage Facebook Pages through Meta Graph API. Use when the user wants to publish a Facebook post, post photos or links, list page posts, review or manage comments, check page access, or schedule Facebook publishing through the workspace automation flow.
 ---
 
 # Facebook Page
 
-Skill để quản lý Facebook Page qua Meta Graph API.
+Use this skill to operate Facebook Pages safely through the existing scripts and credentials in this skill folder.
 
-## Chức năng
-- List các Page mà user quản lý
-- Đăng bài (text, ảnh, link)
-- List bài đăng của Page
-- List/reply/hide/delete comment
-- Tối ưu nội dung trước khi đăng (SEO + chuyển đổi)
-- Chấm điểm chất lượng caption trước khi publish (quality gate)
+## Main use cases
+- List managed pages
+- Publish text posts
+- Publish photo posts or albums
+- Publish link posts
+- List recent posts
+- List, reply to, hide, or delete comments
+- Run cron-safe Facebook posting
 
-## Đường dẫn credential chuẩn (agent phải biết)
-Skill này dùng profile tách riêng theo ứng dụng:
-- FUJI TH: `skills/facebook-page-manager/credentials/facebook_fujith/.env`
-- FUJI TH token: `skills/facebook-page-manager/credentials/facebook_fujith/tokens.json`
-- App2 env: `skills/facebook-page-manager/credentials/facebook_app2/.env`
-- App2 token: `skills/facebook-page-manager/credentials/facebook_app2/tokens.json`
+## Profiles and credentials
+This skill uses profile-specific credentials.
+Common profiles:
+- `facebook_fujith`
+- `facebook_app2`
 
-Khi chạy lệnh, bắt buộc chỉ định profile để tránh dùng nhầm:
-```bash
-FB_PROFILE=facebook_fujith node cli.js pages
-FB_PROFILE=facebook_app2 node cli.js pages
-```
+Use the matching credential files under:
+- `credentials/<profile>/.env`
+- `credentials/<profile>/tokens.json`
 
-## Setup (một lần)
+When running commands, set `FB_PROFILE` explicitly to avoid using the wrong Page credentials.
 
-### 1. Tạo Meta App
-1. Vào https://developers.facebook.com/apps/ → Create App
-2. Chọn **"Other"** → **"Business"** (hoặc Consumer tuỳ use-case)
-3. Điền tên app, email
-4. Vào **App settings > Basic**: lấy **App ID** và **App Secret**
+## Normal workflow
 
-### 2. Cấu hình OAuth
-1. Vào **Add Product** → thêm **Facebook Login**
-2. Trong **Facebook Login > Settings**:
-   - Valid OAuth Redirect URIs: để trống (dùng manual code flow)
-3. Vào **App Roles > Roles** → thêm account làm Admin/Developer
-
-### 3. Cấu hình .env
-```bash
-cd skills/facebook-page-manager
-cp .env.example .env
-# Edit .env với App ID và Secret
-```
-
-### 4. Cài dependencies và lấy token
-```bash
-cd scripts
-npm install
-node auth.js login
-```
-Script sẽ:
-1. In ra URL để user mở browser, đăng nhập, approve permissions
-2. User copy URL sau khi approve (chứa `code=...`)
-3. Paste URL vào terminal
-4. Script exchange code → long-lived token → page tokens
-5. Lưu tokens vào `~/.config/fbpage/tokens.json`
-
-## Tối ưu nội dung trước khi đăng (khuyến nghị)
-
-1. Chuẩn bị payload JSON với các trường:
-- `goal`
-- `keyword_main`
-- `keyword_subs` (mảng)
-- `hook`
-- `pain`
-- `solutions` (mảng)
-- `proof`
-- `cta`
-- `hashtag_brand`
-
-2. Chạy tối ưu + chấm điểm:
-```bash
-node scripts/fb_content_optimize.js --input payload.json
-```
-
-3. Nếu `ok_to_post=true` và `score >= 75`, dùng caption đã tối ưu để đăng qua `cli.js post create`.
-
-Chi tiết phương pháp SEO + content: xem `references/facebook-seo-content-v2.md`.
+1. Pick the correct profile
+2. Run preflight before important posting jobs
+3. Publish with the existing CLI or cron-safe wrapper
+4. Confirm the post result or capture the error
+5. Report the post link or next action
 
 ## Commands
 
 ### List pages
 ```bash
-node cli.js pages
+FB_PROFILE=facebook_fujith node scripts/cli.js pages
 ```
 
-### Đăng bài text
+### Create post
 ```bash
-node cli.js post create --page PAGE_ID --message "Hello world"
+FB_PROFILE=facebook_fujith node scripts/cli.js post create --page PAGE_ID --message "Caption"
 ```
 
-### Đăng bài có ảnh
+### Create post with photo
 ```bash
-node cli.js post create --page PAGE_ID --message "Caption" --photo /path/to/image.jpg
-```
-
-### Đăng bài có link
-```bash
-node cli.js post create --page PAGE_ID --message "Check this out" --link "https://example.com"
+FB_PROFILE=facebook_fujith node scripts/cli.js post create --page PAGE_ID --message "Caption" --photo /abs/path/image.jpg
 ```
 
 ### List posts
 ```bash
-node cli.js post list --page PAGE_ID --limit 10
+FB_PROFILE=facebook_fujith node scripts/cli.js post list --page PAGE_ID --limit 10
 ```
 
-### List comments của post
+### Comment operations
 ```bash
-node cli.js comments list --post POST_ID
+FB_PROFILE=facebook_fujith node scripts/cli.js comments list --post POST_ID
+FB_PROFILE=facebook_fujith node scripts/cli.js comments reply --comment COMMENT_ID --message "Thanks"
+FB_PROFILE=facebook_fujith node scripts/cli.js comments hide --comment COMMENT_ID
+FB_PROFILE=facebook_fujith node scripts/cli.js comments delete --comment COMMENT_ID
 ```
 
-### Reply comment
-```bash
-node cli.js comments reply --comment COMMENT_ID --message "Thanks!"
-```
+## Cron-safe posting
+Use the wrapper scripts when scheduling via cron.
 
-### Hide comment
-```bash
-node cli.js comments hide --comment COMMENT_ID
-```
-
-### Delete comment
-```bash
-node cli.js comments delete --comment COMMENT_ID
-```
-
-## Permissions cần thiết
-- `pages_show_list` - list pages
-- `pages_read_engagement` - đọc posts/comments
-- `pages_manage_posts` - đăng/sửa/xoá bài
-- `pages_manage_engagement` - quản lý comments
-
-## Cron-safe posting (bắt buộc khi hẹn lịch)
-Khi chạy qua cron, phải dùng script wrapper để tránh lỗi thiếu env/tokens/path.
-
-### Preflight trước khi add cron
+### Preflight
 ```bash
 bash scripts/preflight.sh
-# phải ra PRECHECK_OK
 ```
+Expect `PRECHECK_OK` before scheduling.
 
-### Lệnh cron-safe đăng bài
+### Wrapper commands
 ```bash
-# Bài text / 1 ảnh
-bash scripts/cron-safe-post.sh --page PAGE_ID --message-file /abs/path/message.txt
-# hoặc
-bash scripts/cron-safe-post.sh --page PAGE_ID --message "Caption" --photo /abs/path/image.jpg
+FB_PROFILE=facebook_fujith bash scripts/cron-safe-post.sh --page PAGE_ID --message-file /abs/path/message.txt --photo /abs/path/image.jpg
 
-# Bài album nhiều ảnh
-bash scripts/cron-safe-post-album.sh --page PAGE_ID --message-file /abs/path/message.txt --photo /abs/1.jpg --photo /abs/2.jpg --photo /abs/3.jpg
+FB_PROFILE=facebook_fujith bash scripts/cron-safe-post-album.sh --page PAGE_ID --message-file /abs/path/message.txt --photo /abs/1.jpg --photo /abs/2.jpg
 ```
 
-### Mẫu cron đề xuất
-```cron
-# mỗi ngày 08:30
-30 8 * * * cd /home/tuan/.openclaw/workspace/skills/facebook-page-manager && /usr/bin/env bash scripts/preflight.sh && /usr/bin/env bash scripts/cron-safe-post.sh --page 695286863979169 --message-file /home/tuan/.openclaw/workspace/tmp/fb-message.txt >> /home/tuan/.openclaw/workspace/skills/facebook-page-manager/logs/cron.log 2>&1
-```
+## Rules
+- Use absolute paths for cron jobs
+- Do not print tokens in output
+- Prefer `FB_PROFILE` explicitly on every operational command
+- Run preflight before cron scheduling or bulk posting
+- Use the references folder for content quality guidance, not SKILL.md
 
-Quy tắc bắt buộc:
-- Dùng đường dẫn tuyệt đối cho `--message-file` và `--photo`
-- Không phụ thuộc shell profile của cron
-- Chạy `preflight.sh` trước khi post
+## Read references when needed
+- `references/facebook-seo-content-v2.md`
 
-## Lưu ý
-- Token Page không hết hạn (nếu lấy từ long-lived user token)
-- Không log/print token ra output
-- App ở Testing mode chỉ hoạt động với accounts trong Roles
+Use this skill for Page operations. Use `facebook-content-ops` when the user wants planning, content backlog, or KPI/process guidance.

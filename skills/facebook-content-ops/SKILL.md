@@ -1,89 +1,81 @@
 ---
 name: facebook-content-ops
-description: Vận hành nội dung Facebook theo hướng SEO + chuyển đổi. Dùng khi người dùng muốn lập kế hoạch nội dung, đề xuất việc cần làm, tối ưu bài trước khi đăng, quản lý comment sau đăng, và theo dõi KPI page.
+description: Plan and improve Facebook content operations for reach, engagement, inboxes, and lead generation. Use when the user wants a Facebook content plan, weekly backlog, pre-publish optimization, post-publish follow-up, KPI tracking, or a repeatable content workflow for a Facebook Page.
 ---
 
 # Facebook Content Ops
 
-Skill này giúp agent **tự đề xuất công việc** và vận hành nội dung Facebook theo chu trình rõ ràng.
+Use this skill for the planning and operating system around Facebook content.
 
-## Khi nào dùng
-- Người dùng nói về: kế hoạch content Facebook, SEO Facebook, lịch đăng bài, tối ưu caption, kéo inbox, quản lý comment, theo dõi hiệu quả bài đăng.
-- Người dùng yêu cầu: “đề xuất việc cần làm”, “lên kế hoạch tuần/tháng”, “tối ưu bài trước khi đăng”.
+## Use cases
+- Plan weekly or monthly Facebook content
+- Propose what to post next
+- Improve a caption before publishing
+- Create a review / approval / posting flow
+- Define follow-up tasks after posting
+- Track Facebook content KPIs
 
-## Mục tiêu
-1. Tăng tiếp cận tự nhiên (SEO trong Facebook Search + đề xuất)
-2. Tăng tương tác chất lượng
-3. Tăng chuyển đổi (inbox/lead/đơn)
+## Core workflow
 
-## Quy trình chuẩn (rút gọn, tránh trùng lặp)
+### 1. Set the goal
+Choose the main objective:
+- reach
+- engagement
+- inbox
+- lead
+- sale
 
-### Bước 0 (bắt buộc)
-Trước mọi tác vụ nội dung, phải đọc và tuân thủ:
+### 2. Define the weekly focus
+Clarify:
+- priority product or service
+- target audience
+- desired CTA
+- number of posts needed
+
+### 3. Build the backlog
+Propose up to 5 high-priority tasks or content pieces at a time.
+Each task should have a clear output.
+
+### 4. Write and review
+Before publishing:
+- optimize the hook
+- tighten the caption
+- match the CTA to the goal
+- check the prepublish standards in references
+
+### 5. Publish and follow up
+After publishing, report:
+- status
+- post link if available
+- follow-up action if needed
+
+### 6. Measure performance
+Track the KPI that matches the goal:
+- reach
+- engagement
+- inboxes
+- leads
+- sales signals
+
+## Read references first when doing operational planning
 - `references/sop-viet-duyet-dang.md`
 - `references/prepublish-gate.md`
 - `references/facebook-content-standard.md`
 
-### Bước 1: Chốt mục tiêu tuần
-- Mục tiêu chính: `reach | engagement | inbox | lead | sale`
-- Sản phẩm/dịch vụ ưu tiên
-- Tệp khách hàng chính
-
-### Bước 2: Đề xuất backlog theo tuần
-Sinh backlog theo `references/facebook-weekly-jobpack.md` (tối đa 5 việc/lần).
-
-### Bước 3: Viết + duyệt + đăng
-- Viết theo chuẩn nội dung và random style.
-- Chạy prepublish gate trước khi gửi duyệt.
-- Chỉ đăng khi đã duyệt.
-- Sau đăng bắt buộc báo: trạng thái + link bài (hoặc lỗi + hướng xử lý).
-- Tuân thủ chống flood theo `references/sop-viet-duyet-dang.md` (cooldown, limit/ngày, retry).
-Nếu workspace có script tối ưu nội dung, ưu tiên dùng:
-```bash
-node skills/facebook-page-manager/scripts/fb_content_optimize.js --input <payload.json>
-```
-
-### Bước 4: Hậu kiểm + báo cáo
-- Hậu kiểm 30–120 phút sau đăng.
-- Cuối tuần xuất: việc đã làm, KPI, 3 ưu tiên tuần sau.
-
-### Bước 5: Đa kênh rút gọn (khi cần)
-Nếu chạy Facebook + Website cùng lúc, bắt buộc tuân thủ `references/multichannel-lite.md` để giảm context và tránh lỗi API.
-
-## Quy tắc đề xuất công việc
-- Đề xuất ngắn, rõ, có thứ tự ưu tiên
-- Mỗi việc có đầu ra cụ thể
-- Không đề xuất quá 5 việc/lần để tránh quá tải
-
-## Quy tắc tự động sau khi duyệt nội dung
-Khi người dùng đã duyệt nội dung và chốt giờ đăng:
-- Agent tự lên lịch đăng, không hỏi lại bước xác nhận trung gian.
-- Đến giờ đăng, agent tự thực thi đăng bài.
-- Sau khi đăng xong, agent tự báo kết quả (thành công/thất bại + link bài nếu có).
-
-## Mẫu đầu ra đề xuất nhanh
-- Việc 1 (Ưu tiên cao): ...
-- Việc 2: ...
-- Việc 3: ...
-- Kết quả kỳ vọng: ...
-
-## Tham chiếu
-- `references/facebook-content-checklist.md`
+## Additional references
+- `references/facebook-weekly-jobpack.md`
 - `references/facebook-weekly-plan-template.md`
-- `references/facebook-weekly-jobpack.md` (bộ công việc theo tuần)
-- `references/facebook-content-standard.md` (chuẩn hoá nội dung trước khi đăng)
-- `references/sop-viet-duyet-dang.md` (quy trình bắt buộc viết-duyệt-đăng)
-- `references/prepublish-gate.md` (cổng kiểm trước duyệt/đăng)
-- `references/fuji-th-brand-profile.md` (thông tin thương hiệu dùng lâu dài)
-- `references/writing-style-randomization.md` (quy tắc random writing style chống trùng)
-- `references/multichannel-lite.md` (quy trình đa kênh rút gọn, giảm context/API lỗi)
+- `references/facebook-content-checklist.md`
+- `references/writing-style-randomization.md`
+- `references/multichannel-lite.md`
 
-## Quy định khi người dùng yêu cầu “làm theo tuần”
-Agent phải ưu tiên đọc:
-1. `references/facebook-weekly-jobpack.md`
-2. `references/facebook-content-standard.md`
+## Rules
+- Keep plans concise and prioritized
+- Do not overload the user with too many tasks at once
+- Use `facebook-page` for actual Page posting operations
+- Use this skill for planning, optimization, workflow, and KPI follow-up
 
-Sau đó xuất ra:
-- Danh sách việc theo ngày trong tuần
-- 3 việc ưu tiên cao nhất
-- KPI cần theo dõi cuối tuần
+When the user asks to “làm theo tuần”, produce:
+- a day-by-day weekly plan
+- the top 3 priorities
+- the KPI check at the end of the week
