@@ -8,7 +8,8 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SKILL_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
-TOKENS_FILE="$SKILL_DIR/tokens.json"
+PROFILE="${FB_PROFILE:-facebook_fujith}"
+TOKENS_FILE="${FB_TOKENS_FILE:-$SKILL_DIR/credentials/$PROFILE/tokens.json}"
 LOG_DIR="$SKILL_DIR/logs"
 mkdir -p "$LOG_DIR"
 LOG_FILE="$LOG_DIR/cron-post-$(date +%Y%m%d).log"
@@ -59,7 +60,7 @@ CMD=(node cli.js post create --page "$PAGE_ID")
 [[ -n "$PHOTO" ]] && CMD+=(--photo "$PHOTO")
 [[ -n "$LINK" ]] && CMD+=(--link "$LINK")
 
-echo "[$(date '+%F %T')] Running cron-safe post for page=$PAGE_ID" >> "$LOG_FILE"
-"${CMD[@]}" >> "$LOG_FILE" 2>&1
+echo "[$(date '+%F %T')] Running cron-safe post for page=$PAGE_ID profile=$PROFILE" >> "$LOG_FILE"
+FB_PROFILE="$PROFILE" FB_TOKENS_FILE="$TOKENS_FILE" "${CMD[@]}" >> "$LOG_FILE" 2>&1
 
 echo "[$(date '+%F %T')] OK" >> "$LOG_FILE"

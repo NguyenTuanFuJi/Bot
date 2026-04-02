@@ -3,8 +3,9 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SKILL_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
-ENV_FILE="$SKILL_DIR/.env"
-TOKENS_FILE="$SKILL_DIR/tokens.json"
+PROFILE="${FB_PROFILE:-facebook_fujith}"
+ENV_FILE="${FB_ENV_FILE:-$SKILL_DIR/credentials/$PROFILE/.env}"
+TOKENS_FILE="${FB_TOKENS_FILE:-$SKILL_DIR/credentials/$PROFILE/tokens.json}"
 
 [[ -f "$ENV_FILE" ]] || { echo "PRECHECK_FAIL: missing .env ($ENV_FILE)"; exit 1; }
 [[ -f "$TOKENS_FILE" ]] || { echo "PRECHECK_FAIL: missing tokens.json ($TOKENS_FILE)"; exit 1; }
@@ -19,7 +20,6 @@ if ! command -v jq >/dev/null 2>&1; then
   exit 1
 fi
 
-# quick JSON sanity
 jq -e '.pages and ( .pages | type == "object" )' "$TOKENS_FILE" >/dev/null || {
   echo "PRECHECK_FAIL: invalid tokens.json format"
   exit 1
