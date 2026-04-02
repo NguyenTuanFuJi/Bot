@@ -1,45 +1,54 @@
 ---
 name: memory-tiering
-description: Automated multi-tiered memory management (HOT, WARM, COLD). Use this skill to organize, prune, and archive context during memory operations or compactions.
+description: Organize memory into short-term, medium-term, and long-term layers during memory cleanup or compaction work. Use when reviewing what should stay active, what should become a stable preference or system fact, and what should be archived into durable summaries.
 ---
 
-# Memory Tiering Skill 🧠⚖️
+# Memory Tiering
 
-This skill implements a dynamic, three-tiered memory architecture to optimize context usage and retrieval efficiency.
+Use three layers:
 
-## The Three Tiers
+## HOT
+Keep only what is needed in the next few turns:
+- active task context
+- immediate follow-ups
+- temporary notes
+- short-lived reminders
 
-1.  **🔥 HOT (memory/hot/HOT_MEMORY.md)**:
-    *   **Focus**: Current session context, active tasks, temporary credentials, immediate goals.
-    *   **Management**: Updated frequently. Pruned aggressively once tasks are completed.
-2.  **🌡️ WARM (memory/warm/WARM_MEMORY.md)**:
-    *   **Focus**: User preferences (Hui's style, timezone), core system inventory, stable configurations, recurring interests.
-    *   **Management**: Updated when preferences change or new stable tools are added.
-3.  **❄️ COLD (MEMORY.md)**:
-    *   **Focus**: Long-term archive, historical decisions, project milestones, distilled lessons.
-    *   **Management**: Updated during archival phases. Detail is replaced by summaries.
+## WARM
+Store stable but still practical context:
+- user preferences
+- recurring workflows
+- important system setup details
+- ongoing projects that still matter
 
-## Workflow: `Organize-Memory`
+## COLD
+Archive durable summaries:
+- finished project summaries
+- long-term decisions
+- lessons learned
+- stable historical notes
 
-Whenever a memory reorganization is triggered (manual or post-compaction), follow these steps:
+## Workflow
 
-### Step 1: Ingest & Audit
-- Read all three tiers and recent daily logs (`memory/YYYY-MM-DD.md`).
-- Identify "Dead Context" (completed tasks, resolved bugs).
+1. Review recent memory and current task context
+2. Mark completed or stale details
+3. Move urgent items to HOT
+4. Move stable reusable facts to WARM
+5. Summarize finished items into COLD
+6. Remove dead context that no longer helps
 
-### Step 2: Tier Redistribution
-- **Move to HOT**: Anything requiring immediate attention in the next 2-3 turns.
-- **Move to WARM**: New facts about the user or system that are permanent.
-- **Move to COLD**: Completed high-level project summaries.
+## Rules
+- Keep HOT small
+- Prefer summaries over raw detail in long-term memory
+- Do not store raw secrets when a file path or system source is enough
+- Preserve user preferences and recurring operating rules carefully
+- When unsure, summarize instead of deleting
 
-### Step 3: Pruning & Summarization
-- Remove granular details from COLD.
-- Ensure credentials in HOT point to their root files rather than storing raw secrets (if possible).
+## Typical trigger phrases
+- run memory tiering
+- organize memory
+- prune memory
+- archive old context
+- compact memory notes
 
-### Step 4: Verification
-- Ensure no critical information was lost during the move.
-- Verify that `HOT` is now small enough for efficient context use.
-
-## Usage Trigger
-- Trigger manually with: "Run memory tiering" or "整理记忆层级".
-- Trigger automatically after any `/compact` command.
+Use this skill as a cleanup workflow, not as a replacement for normal memory recall.
