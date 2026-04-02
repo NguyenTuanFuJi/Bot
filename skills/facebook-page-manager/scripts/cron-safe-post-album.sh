@@ -48,15 +48,14 @@ if ! command -v node >/dev/null 2>&1 || ! command -v jq >/dev/null 2>&1 || ! com
   exit 127
 fi
 
-TOKEN="$(node - <<'NODE'
-const fs=require('fs');
-const f=process.argv[1];
-const page=process.argv[2];
-const t=JSON.parse(fs.readFileSync(f,'utf8'));
+TOKEN="$(TOKENS_FILE="$TOKENS_FILE" PAGE_ID="$PAGE_ID" node -e '
+const fs=require("fs");
+const f=process.env.TOKENS_FILE;
+const page=process.env.PAGE_ID;
+const t=JSON.parse(fs.readFileSync(f,"utf8"));
 if(!t.pages || !t.pages[page] || !t.pages[page].token){ process.exit(2); }
 process.stdout.write(t.pages[page].token);
-NODE
-"$TOKENS_FILE" "$PAGE_ID")"
+')"
 
 API="https://graph.facebook.com/v21.0"
 ATTACHED=()
