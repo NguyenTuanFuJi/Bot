@@ -50,6 +50,13 @@ Minimum checks:
 - validate business rules
 - preview final output
 
+## FUJI TH office replacement protocol
+- Main office task: replace customer name/address/content on existing templates.
+- Always locate exact target field first, then preserve local formatting at that field.
+- Identify all related occurrences in the document and replace completely.
+- Vietnamese content default font is **Times New Roman** unless user explicitly asks otherwise.
+- Default delivery format is `.doc` (not `.docx`) unless user explicitly asks otherwise.
+
 ## Key rules
 - Preserve template formatting integrity at replacement positions
 - For Vietnamese documents, default font must be **Times New Roman** unless the user explicitly requests another font

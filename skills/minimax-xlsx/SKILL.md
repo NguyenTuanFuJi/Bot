@@ -36,6 +36,13 @@ Use when checking formulas or workbook integrity.
 Read first:
 - `references/validate.md`
 
+## FUJI TH office replacement protocol
+- Main office task: replace customer name/address/content on existing templates.
+- Always locate exact target cell/range first, then preserve local formatting at that cell/range.
+- Identify all related occurrences in workbook and replace completely.
+- Vietnamese content default font is **Times New Roman** unless user explicitly asks otherwise.
+- Default delivery format is `.xls` (not `.xlsx`) unless user explicitly asks otherwise.
+
 ## Required rules
 - Always produce the output file the user asked for
 - For existing workbooks, preserve sheets, data, and formatting unless the task explicitly changes them
