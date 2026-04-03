@@ -52,6 +52,7 @@ Minimum checks:
 ## Key rules
 - Always use this skill for `.docx` work instead of ad-hoc text generation alone
 - Preserve formatting integrity on edit tasks
+- For Vietnamese documents, default font must be **Times New Roman** unless the user explicitly requests another font
 - For complex structural edits, prefer the OpenXML code path over fragile shortcuts
 - For template application, do not deliver until validation passes
 - If the task involves CJK or official formatting, read the matching reference before editing
