@@ -5,7 +5,7 @@ description: Create, edit, fill, or reformat Word documents in .docx format usin
 
 # MiniMax DOCX
 
-Use this skill whenever the final deliverable is a `.docx` file or a formal Word-style document.
+Use this skill whenever the task is Word-style document processing from a provided template or existing file.
 
 ## Core routing
 
@@ -36,7 +36,8 @@ Read first:
 
 2. Preview and inspect before editing existing files
 - `bash scripts/docx_preview.sh document.docx`
-- use the bundled analyze flow when the task requires structure awareness
+- identify exact replacement positions and local formatting (font, size, style)
+- map related sections that may contain the same customer data
 
 3. Choose the correct execution path
 - simple content operations -> use CLI
@@ -50,12 +51,13 @@ Minimum checks:
 - preview final output
 
 ## Key rules
-- Always use this skill for `.docx` work instead of ad-hoc text generation alone
-- Preserve formatting integrity on edit tasks
+- Preserve template formatting integrity at replacement positions
 - For Vietnamese documents, default font must be **Times New Roman** unless the user explicitly requests another font
+- Replace customer/address/content fields completely across all related sections, not only first occurrence
 - For complex structural edits, prefer the OpenXML code path over fragile shortcuts
 - For template application, do not deliver until validation passes
 - If the task involves CJK or official formatting, read the matching reference before editing
+- Default delivery format for office workflow: `.doc` (not `.docx`) unless user requests otherwise
 
 ## Read references as needed
 ### Core scenarios

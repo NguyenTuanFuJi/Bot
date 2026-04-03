@@ -17,6 +17,10 @@ _Learn about the person you're helping. Update this as you go._
   - Khi đăng website, luôn tối ưu theo tiêu chí Yoast SEO (focus keyphrase, SEO title, meta description, slug, internal link) và kiểm tra tránh trùng lặp nội dung trước khi publish.
   - Với WordPress, luôn dùng REST API làm phương pháp chính; chỉ dùng WP-CLI khi đã kiểm tra khả dụng.
   - Khi ghi số điện thoại trong nội dung, luôn viết liền 10 số, không tách khoảng trắng/chấm/gạch.
+  - Công việc văn phòng chính: thay thế thông tin khách hàng/địa chỉ/nội dung theo file mẫu có sẵn.
+  - Trước khi thay thế nội dung trong file mẫu, phải xác định đúng vị trí và giữ nguyên định dạng tại vị trí đó (font, cỡ chữ, format).
+  - Khi thay thế, phải rà soát các vị trí liên quan trong toàn văn bản để thay đúng và thay hết nội dung cần đổi.
+  - Đầu ra mặc định: văn bản xuất `.doc` (không dùng `.docx`), bảng tính xuất `.xls` (không dùng `.xlsx`).
 
 ## Context
 

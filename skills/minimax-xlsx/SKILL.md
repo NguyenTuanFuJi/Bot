@@ -40,9 +40,11 @@ Read first:
 - Always produce the output file the user asked for
 - For existing workbooks, preserve sheets, data, and formatting unless the task explicitly changes them
 - For Vietnamese spreadsheets, default text font must be **Times New Roman** unless the user explicitly requests another font
+- Identify exact replacement cells/ranges first, then replace all related occurrences for customer/address/content fields
 - Never use a lossy edit path for existing Excel files
 - Use formula-based outputs for calculated cells instead of hardcoded values
 - Validate before delivery when formulas or structural edits are involved
+- Default delivery format for office workflow: `.xls` (not `.xlsx`) unless user requests otherwise
 
 ## Preferred execution model
 - READ -> `xlsx_reader.py` and analysis tools
