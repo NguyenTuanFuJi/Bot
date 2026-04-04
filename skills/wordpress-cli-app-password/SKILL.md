@@ -72,9 +72,15 @@ bash scripts/wp_ops.sh preflight --env .env --mode rest
 - Optimize slug, focus keyphrase, SEO title, and meta description when relevant
 - Add internal links and image metadata when the workflow requires SEO completion
 
+## WP + SQL security rule (lite)
+- Với thay đổi code liên quan SQL/PHP, bắt buộc chạy quick security check trước khi chốt release.
+- Ưu tiên bắt lỗi SQLi/XSS/CSRF/Access control/File upload ở vùng thay đổi mới.
+- Không nối chuỗi SQL trực tiếp từ input người dùng; luôn sanitize + prepare.
+
 ## Read references when needed
 - `references/wordpress-content-workflow.md`
 - `references/wp-safe-checklist.md`
+- `references/wp-sql-security-lite.md`
 - `references/yoast-seo-fujith-playbook.md`
 - `references/wpcli-quick-ops.md`
 - `references/wpcli-safe-ops.md`
