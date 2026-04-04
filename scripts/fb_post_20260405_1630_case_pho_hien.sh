@@ -5,5 +5,5 @@ FB_PROFILE=facebook_fujith /usr/bin/env bash scripts/preflight.sh
 FB_PROFILE=facebook_fujith /usr/bin/env bash scripts/cron-safe-post.sh \
   --page 695286863979169 \
   --message-file /home/tuan/.openclaw/workspace/tmp/fb-20260405-1630-case-pho-hien.txt \
-  --photo /home/tuan/.openclaw/media/inbound/file_178---cc04e226-ca74-4503-b418-1e7be9e6e817.jpg \
+  --photo /home/tuan/.openclaw/media/inbound/file_183---bb90ac15-1fa8-45fa-83de-68f7e2a29cfa.jpg \
   >> /home/tuan/.openclaw/workspace/skills/facebook-page-manager/logs/cron.log 2>&1

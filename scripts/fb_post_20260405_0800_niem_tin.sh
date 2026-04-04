@@ -5,8 +5,9 @@ FB_PROFILE=facebook_fujith /usr/bin/env bash scripts/preflight.sh
 FB_PROFILE=facebook_fujith /usr/bin/env bash scripts/cron-safe-post-album.sh \
   --page 695286863979169 \
   --message-file /home/tuan/.openclaw/workspace/tmp/fb-20260405-0800-niem-tin.txt \
-  --photo /home/tuan/.openclaw/media/inbound/file_178---cc04e226-ca74-4503-b418-1e7be9e6e817.jpg \
-  --photo /home/tuan/.openclaw/media/inbound/file_179---7068b984-8898-42b2-976b-1a1b5741fd91.jpg \
-  --photo /home/tuan/.openclaw/media/inbound/file_180---a112eb4b-4ff3-4c93-83e7-259010aa29ba.jpg \
-  --photo /home/tuan/.openclaw/media/inbound/file_181---978927d1-04d4-494f-94cd-f0c07b69f431.jpg \
+  --photo /home/tuan/.openclaw/media/inbound/file_183---bb90ac15-1fa8-45fa-83de-68f7e2a29cfa.jpg \
+  --photo /home/tuan/.openclaw/media/inbound/file_184---07ef996c-eb38-4214-a425-3c5f7213061f.jpg \
+  --photo /home/tuan/.openclaw/media/inbound/file_185---f6484f18-c5f8-4f62-b1cf-6441ef76c7c2.jpg \
+  --photo /home/tuan/.openclaw/media/inbound/file_186---1e6d7cdf-81f5-41be-9f7e-9616706b29f0.jpg \
+    --photo /home/tuan/.openclaw/media/inbound/file_187---9855f8ef-2a01-49c7-9ab9-c35e75738af2.jpg \
   >> /home/tuan/.openclaw/workspace/skills/facebook-page-manager/logs/cron.log 2>&1
