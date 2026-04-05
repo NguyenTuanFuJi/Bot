@@ -16,6 +16,10 @@
     "content-generation": {
       "version": "1.0.0",
       "installedAt": 1774369340527
+    },
+    "self-improving-agent": {
+      "version": "3.0.12",
+      "installedAt": 1775178069036
     }
   }
 }
