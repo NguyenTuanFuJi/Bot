@@ -37,6 +37,17 @@ Archive durable summaries:
 5. Summarize finished items into COLD
 6. Remove dead context that no longer helps
 
+## BM25 Lite++ integration (áp dụng mặc định)
+Khi làm retrieval trên memory hiện có:
+1. Dùng pipeline nạp -> làm sạch/chunk -> index BM25
+2. Lọc theo metadata trước khi rank BM25 (nếu có điều kiện thời gian/loại/session)
+3. Normalize query ngắn gọn trước khi search
+4. Giới hạn top-k để tránh phình context
+5. Ghi log nhẹ để cải thiện dần chất lượng truy xuất
+
+Tham chiếu chi tiết:
+- `references/bm25-lite-plus.md`
+
 ## Rules
 - Keep HOT small
 - Prefer summaries over raw detail in long-term memory
