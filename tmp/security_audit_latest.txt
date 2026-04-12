@@ -1,0 +1,64 @@
+OpenClaw security audit
+Summary: 2 critical · 7 warn · 1 info
+Run deeper: openclaw security audit --deep
+
+CRITICAL
+skills.code_safety Skill "facebook-page" contains dangerous code patterns
+  Found 7 critical issue(s) in 6 scanned file(s) under /home/tuan/.openclaw/workspace/skills/facebook-page-manager:
+  - [env-harvesting] Environment variable access combined with network send — possible credential harvesting (scripts/auth.js:16)
+  - [env-harvesting] Environment variable access combined with network send — possible credential harvesting (scripts/cli.js:17)
+  - [env-harvesting] Environment variable access combined with network send — possible credential harvesting (scripts/fb_post.js:16)
+  - [dangerous-exec] Shell command execution detected (child_process) (scripts/x_digest_collect.js:20)
+  - [env-harvesting] Environment variable access combined with network send — possible credential harvesting (scripts/x_digest_collect.js:14)
+  - [dangerous-exec] Shell command execution detected (child_process) (scripts/x_digest_to_fb.js:41)
+  - [env-harvesting] Environment variable access combined with network send — possible credential harvesting (scripts/x_digest_to_fb.js:21)
+  Fix: Review the skill source code before use. If untrusted, remove "/home/tuan/.openclaw/workspace/skills/facebook-page-manager".
+skills.code_safety Skill "myclaw-backup" contains dangerous code patterns
+  Found 2 critical issue(s) in 1 scanned file(s) under /home/tuan/.openclaw/workspace/skills/myclaw-backup:
+  - [dangerous-exec] Shell command execution detected (child_process) (scripts/server.js:155)
+  - [env-harvesting] Environment variable access combined with network send — possible credential harvesting (scripts/server.js:25)
+  Fix: Review the skill source code before use. If untrusted, remove "/home/tuan/.openclaw/workspace/skills/myclaw-backup".
+
+WARN
+gateway.trusted_proxies_missing Reverse proxy headers are not trusted
+  gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client checks cannot be spoofed.
+  Fix: Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only.
+tools.exec.security_full_configured Exec security=full is configured
+  Full exec trust is enabled for: main.
+  Fix: Prefer tools.exec.security="allowlist" with ask prompts, and reserve "full" for tightly scoped break-glass agents only.
+tools.exec.auto_allow_skills_enabled autoAllowSkills is enabled for exec approvals
+  Implicit skill-bin allowlisting is enabled at:
+- agents.main.autoAllowSkills
+This widens host exec trust beyond explicit manual allowlist entries.
+  Fix: Disable autoAllowSkills in exec approvals and keep manual allowlists tight when you need explicit host-exec trust.
+tools.exec.allowlist_interpreter_without_strict_inline_eval Interpreter allowlist entries are missing strictInlineEval hardening
+  Interpreter/runtime allowlist entries were found without strictInlineEval enabled:
+- agents.main.allowlist: /usr/bin/python3
+  Fix: Set tools.exec.strictInlineEval=true (or per-agent tools.exec.strictInlineEval=true) when allowlisting interpreters like python, node, ruby, perl, php, lua, or osascript.
+tools.exec.safe_bins_interpreter_unprofiled safeBins includes interpreter/runtime binaries without explicit profiles
+  Detected interpreter-like safeBins entries missing explicit profiles:
+- tools.exec.safeBins: bash, python3
+These entries can turn safeBins into a broad execution surface when used with permissive argv profiles.
+  Fix: Remove interpreter/runtime bins from safeBins (prefer allowlist entries) or define hardened tools.exec.safeBinProfiles.<bin> rules.
+gateway.nodes.deny_commands_ineffective Some gateway.nodes.denyCommands entries are ineffective
+  gateway.nodes.denyCommands uses exact node command-name matching only (for example `system.run`), not shell-text filtering inside a command payload.
+- Unknown command names (not in defaults/allowCommands): camera.snap (did you mean: camera.list), camera.clip (did you mean: camera.list), screen.record, contacts.add, calendar.add, reminders.add (did you mean: reminders.list), sms.send
+  Fix: Use exact command names (for example: canvas.present, canvas.hide, canvas.navigate, canvas.eval, canvas.snapshot, canvas.a2ui.push, canvas.a2ui.pushJSONL, canvas.a2ui.reset). If you need broader restrictions, remove risky command IDs from allowCommands/default workflows and tighten tools.exec policy.
+security.trust_model.multi_user_heuristic Potential multi-user setup detected (personal-assistant model warning)
+  Heuristic signals indicate this gateway may be reachable by multiple users:
+- channels.telegram.groupPolicy="allowlist" with configured group targets
+Runtime/process tools are exposed without full sandboxing in at least one context.
+Potential high-impact tool exposure contexts:
+- agents.defaults (sandbox=off; runtime=[exec, process]; fs=[read, write, edit, apply_patch]; fs.workspaceOnly=false)
+- agents.list.main (sandbox=off; runtime=[exec, process]; fs=[read, write, edit, apply_patch]; fs.workspaceOnly=false)
+OpenClaw's default security model is personal-assistant (one trusted operator boundary), not hostile multi-tenant isolation on one shared gateway.
+  Fix: If users may be mutually untrusted, split trust boundaries (separate gateways + credentials, ideally separate OS users/hosts). If you intentionally run shared-user access, set agents.defaults.sandbox.mode="all", keep tools.fs.workspaceOnly=true, deny runtime/fs/web tools unless required, and keep personal/private identities + credentials off that runtime.
+
+INFO
+summary.attack_surface Attack surface summary
+  groups: open=0, allowlist=1
+tools.elevated: enabled
+hooks.webhooks: disabled
+hooks.internal: enabled
+browser control: enabled
+trust model: personal assistant (one trusted operator boundary), not hostile multi-tenant on one shared gateway

@@ -1,0 +1,82 @@
+OpenClaw status
+
+Overview
+┌──────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Item                 │ Value                                                                                         │
+├──────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Dashboard            │ http://127.0.0.1:18789/                                                                       │
+│ OS                   │ linux 6.8.0-106-generic (x64) · node 22.22.2                                                  │
+│ Tailscale            │ off                                                                                           │
+│ Channel              │ stable (default)                                                                              │
+│ Update               │ pnpm · up to date · npm latest 2026.4.5                                                       │
+│ Gateway              │ local · ws://127.0.0.1:18789 (local loopback) · reachable 78ms · auth token · tuan-PC-        │
+│                      │ VKF11U1B4 (192.168.0.109) app 2026.4.5 linux 6.8.0-106-generic                                │
+│ Gateway service      │ systemd installed · enabled · running (pid 2865, state active)                                │
+│ Node service         │ systemd not installed                                                                         │
+│ Agents               │ 1 · 1 bootstrap file present · sessions 3 · default main active 2m ago                        │
+│ Memory               │ 0 files · 0 chunks · sources memory · plugin memory-core · vector unknown · fts ready ·       │
+│                      │ cache on (0)                                                                                  │
+│ Plugin compatibility │ none                                                                                          │
+│ Probes               │ enabled                                                                                       │
+│ Events               │ none                                                                                          │
+│ Tasks                │ none                                                                                          │
+│ Heartbeat            │ 30m (main)                                                                                    │
+│ Last heartbeat       │ none                                                                                          │
+│ Sessions             │ 3 active · default gpt-5.4 (200k ctx) · ~/.openclaw/agents/main/sessions/sessions.json        │
+└──────────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Security audit
+Summary: 0 critical · 7 warn · 1 info
+  WARN Reverse proxy headers are not trusted
+    gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client c…
+    Fix: Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only.
+  WARN Exec security=full is configured
+    Full exec trust is enabled for: main.
+    Fix: Prefer tools.exec.security="allowlist" with ask prompts, and reserve "full" for tightly scoped break-glass agents only.
+  WARN autoAllowSkills is enabled for exec approvals
+    Implicit skill-bin allowlisting is enabled at: - agents.main.autoAllowSkills This widens host exec trust beyond explicit manual allowlist entries.
+    Fix: Disable autoAllowSkills in exec approvals and keep manual allowlists tight when you need explicit host-exec trust.
+  WARN Interpreter allowlist entries are missing strictInlineEval hardening
+    Interpreter/runtime allowlist entries were found without strictInlineEval enabled: - agents.main.allowlist: /usr/bin/python3
+    Fix: Set tools.exec.strictInlineEval=true (or per-agent tools.exec.strictInlineEval=true) when allowlisting interpreters like python, node, ruby, perl, php, lua, or osascript.
+  WARN safeBins includes interpreter/runtime binaries without explicit profiles
+    Detected interpreter-like safeBins entries missing explicit profiles: - tools.exec.safeBins: bash, python3 These entries can turn safeBins into a broad executi…
+    Fix: Remove interpreter/runtime bins from safeBins (prefer allowlist entries) or define hardened tools.exec.safeBinProfiles.<bin> rules.
+  WARN Some gateway.nodes.denyCommands entries are ineffective
+    gateway.nodes.denyCommands uses exact node command-name matching only (for example `system.run`), not shell-text filtering inside a command payload. - Unknown …
+    Fix: Use exact command names (for example: canvas.present, canvas.hide, canvas.navigate, canvas.eval, canvas.snapshot, canvas.a2ui.push, canvas.a2ui.pushJSONL, canvas.a2ui.reset). If you need broader restrictions, remove risky command IDs from allowCommands/default workflows and tighten tools.exec policy.
+… +1 more
+Full report: openclaw security audit
+Deep probe: openclaw security audit --deep
+
+Channels
+┌──────────┬─────────┬────────┬────────────────────────────────────────────────────────────────────────────────────────┐
+│ Channel  │ Enabled │ State  │ Detail                                                                                 │
+├──────────┼─────────┼────────┼────────────────────────────────────────────────────────────────────────────────────────┤
+│ Telegram │ ON      │ OK     │ token config (8380…6afE · len 46) · accounts 1/1                                       │
+└──────────┴─────────┴────────┴────────────────────────────────────────────────────────────────────────────────────────┘
+
+Sessions
+┌─────────────────────────────────────────────────┬────────┬─────────┬───────────────┬─────────────────────────────────┐
+│ Key                                             │ Kind   │ Age     │ Model         │ Tokens                          │
+├─────────────────────────────────────────────────┼────────┼─────────┼───────────────┼─────────────────────────────────┤
+│ agent:main:telegram:direct:5742…                │ direct │ 2m ago  │ gpt-5.3-codex │ 176k/200k (88%) · 🗄️ 1% cached  │
+│ agent:main:telegram:direct:8451…                │ direct │ 24h ago │ gpt-5.3-codex │ 150k/200k (75%) · 🗄️ 99% cached │
+│ agent:main:main                                 │ direct │ 7d ago  │ gpt-5.4       │ 17k/200k (8%)                   │
+└─────────────────────────────────────────────────┴────────┴─────────┴───────────────┴─────────────────────────────────┘
+
+Health
+┌──────────┬───────────┬───────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Item     │ Status    │ Detail                                                                                        │
+├──────────┼───────────┼───────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Gateway  │ reachable │ 442ms                                                                                         │
+│ Telegram │ OK        │ ok (@FujiTH_bot:default:442ms)                                                                │
+└──────────┴───────────┴───────────────────────────────────────────────────────────────────────────────────────────────┘
+
+FAQ: https://docs.openclaw.ai/faq
+Troubleshooting: https://docs.openclaw.ai/troubleshooting
+
+Next steps:
+  Need to share?      openclaw status --all
+  Need to debug live? openclaw logs --follow
+  Need to test channels? openclaw status --deep

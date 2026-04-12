@@ -3,8 +3,8 @@
 - Tên công ty: CÔNG TY TNHH FUJI TH
 - Đại diện: Ông NGUYỄN VĂN TUÂN
 - Chức vụ: Giám đốc
-- Địa chỉ: Số 10, ngõ 117, phố Mai Phúc, phường Phúc Lợi, Thành phố Hà Nội, Việt Nam
-- Điện thoại: 0989 397 282; 0924 286 386
+- Địa chỉ: Số 10 ngõ 117, Phố Mai Phúc, Phường Phúc Lợi, Thành phố Hà Nội, Việt Nam
+- Điện thoại: 0924286386; 0989397282
 - Mã số thuế: 0109220557
 - Số tài khoản: 1020896868
 - Ngân hàng: Ngân hàng TMCP Á Châu (ACB), chi nhánh Hà Nội

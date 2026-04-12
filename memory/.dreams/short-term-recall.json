@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-11T15:46:52.529Z",
+  "entries": {
+    "memory:memory/2026-04-07.md:1:7": {
+      "key": "memory:memory/2026-04-07.md:1:7",
+      "path": "memory/2026-04-07.md",
+      "startLine": 1,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "# Memory 2026-04-07 - User confirmed workflow for destructive DOCX edits: assistant must ask approval before deleting sections (user approved with \"Ok\" for deleting item 3 in equipment cost). - Ongoing quote job context: báo giá thang máy hố xây 630kg, 4 tầng cho công trình nhà A Luân (Hà Giang), hố thang 1800x1700, cabin 1400x1100, cửa 2CO 800x2100, giá 335 triệu, material preference switched from kính to inox sọc nhuyễn. - User explicitly requested quote content details include floor labels 1F, 2F, 3F, 4F; image should be placed in the “hình ảnh thang máy” section; quote date must be updated to current date. - User sent reference URL for potential follow-up content/spec extraction: http:/",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.8257906074673841,
+      "maxScore": 0.8257906074673841,
+      "firstRecalledAt": "2026-04-11T15:46:52.529Z",
+      "lastRecalledAt": "2026-04-11T15:46:52.529Z",
+      "queryHashes": [
+        "659b7cf210d9"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "follow-up",
+        "content/spec",
+        "user",
+        "confirmed",
+        "workflow",
+        "destructive",
+        "docx",
+        "edits"
+      ]
+    },
+    "memory:memory/2026-03-20.md:1:27": {
+      "key": "memory:memory/2026-03-20.md:1:27",
+      "path": "memory/2026-03-20.md",
+      "startLine": 1,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "# 2026-03-20 ## Facebook FUJI TH — đăng bài VOI HOTEL (Mèo Vạc) theo phương án A - User đã xác nhận: \"Ok đăng luôn cho nóng\". - Thực thi phương án A: đăng 2 bài riêng (do tool không gộp video + nhiều ảnh trong 1 post): - Bài VIDEO: Graph returned id `2377187649450161`. - Bài 5 ẢNH (multi-photos): post id `695286863979169_1415520900272006`. - Đã tạo comment chéo giữa 2 bài: - Comment dưới bài video: id `2377187649450161_2347158629128702`. - Comment dưới bài ảnh: id `1415520900272006_1625232735429322`. - Link đã gửi user: - Video permalink: https://www.facebook.com/permalink.php?story_fbid=2377187649450161&id=695286863979169 - Ảnh permalink: https://www.facebook.com/permalink.php?",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.7363906655144855,
+      "maxScore": 0.7363906655144855,
+      "firstRecalledAt": "2026-04-11T15:46:52.529Z",
+      "lastRecalledAt": "2026-04-11T15:46:52.529Z",
+      "queryHashes": [
+        "659b7cf210d9"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "multi-photos",
+        "695286863979169-1415520900272006",
+        "www.facebook.com/permalink.php",
+        "story-fbid",
+        "facebook",
+        "fuji",
+        "đăng",
+        "bài"
+      ]
+    }
+  }
+}
