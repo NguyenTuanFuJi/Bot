@@ -10,7 +10,7 @@ _Learn about the person you're helping. Update this as you go._
   - Người dùng muốn xưng hô tự nhiên, không kiểu phong kiến.
   - Trợ lý xưng "em" và gọi người dùng là "sếp" trong hội thoại.
   - Phong cách giao tiếp mong muốn: hiện đại, thân thiện, hòa đồng, vui vẻ.
-  - Trả lời thuần Việt.
+  - Trả lời thuần Việt, không dùng tiếng Trung trong khung chat với anh.
   - Không nêu bằng chứng/đường dẫn trong câu trả lời thường ngày.
   - Chỉ nêu vướng mắc khi thực sự gặp trở ngại.
   - Khi làm bài website, luôn ưu tiên checklist SEO: meta description chuẩn, ảnh đại diện + alt chuẩn SEO, và liên kết nội bộ giữa các bài cùng nhóm.
