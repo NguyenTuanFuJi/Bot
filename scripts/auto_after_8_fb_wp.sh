@@ -133,6 +133,7 @@ $WP_LINK
 
 Hotline: 0924286386 - 0989397282
 Website: https://thangmayfujith.com
+Địa chỉ công ty: Số 10/117 Mai Phúc, phường Phúc Lợi, TP Hà Nội
 
 #ThangMayFujiTH #GiaiPhapThangMay #ThangMayGiaDinh
 EOF
@@ -150,7 +151,7 @@ log "FB_POSTED: post_id=$FB_POST_ID"
 if [ -n "$FB_POST_ID" ]; then
   PAGE_TOKEN=$(jq -r --arg p "$PAGE_ID" '.pages[$p].token // empty' "$FB_TOKENS")
   if [ -n "$PAGE_TOKEN" ]; then
-    COMMENT_MSG="FUJI TH đã cập nhật thêm bài chi tiết tại website: $WP_LINK | Hotline: 0924286386"
+    COMMENT_MSG="FUJI TH đã cập nhật thêm bài chi tiết tại website: $WP_LINK | Hotline: 0924286386 - 0989397282 | Địa chỉ: Số 10/117 Mai Phúc, phường Phúc Lợi, TP Hà Nội"
     CMT=$(curl -sS -X POST "https://graph.facebook.com/v21.0/$FB_POST_ID/comments" \
       -d "message=$COMMENT_MSG" \
       -d "access_token=$PAGE_TOKEN" || true)
