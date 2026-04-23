@@ -13,4 +13,4 @@
 - Tất cả bài viết Facebook phải có ảnh (không đăng bài chỉ text).
 - Các bài đăng gần nhau không dùng trùng ảnh giữa 2 bài; nếu sếp chỉ định ảnh thì theo chỉ định, nếu không thì em tự chọn ảnh khác nhau.
 - Chỉ đăng bài khi sếp đã duyệt trước (không tự đăng ngay).
-- Quy ước xuất ảnh cố định: ảnh dọc (portrait) 3:4, ảnh ngang (landscape) 4:3.
+- Quy ước xuất ảnh cố định: ảnh dọc (portrait) 9:16, ảnh ngang (landscape) 16:9.
