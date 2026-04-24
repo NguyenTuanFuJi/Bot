@@ -12,12 +12,14 @@ metadata:
 
 Generate or edit images by calling the ChatGPT/Codex backend directly with OAuth credentials already stored on the machine. This calls the native Responses `image_generation` tool, does not start `codex app-server`, does not need the Codex CLI binary, and does not require `OPENAI_API_KEY`.
 
+Trong workspace này, mặc định dùng bridge script `codex-imagen-cliproxy-auth.mjs` để map auth Codex Plus từ cliproxyapi, tránh lệch profile OpenClaw local không có quyền image tool.
+
 ## Quick Start
 
 Run the helper through Node for macOS, Linux, and Windows compatibility:
 
 ```bash
-node {baseDir}/scripts/codex-imagen.mjs --timeout 300 'generate image follow this prompt, no refine: "a cinematic fantasy city at sunrise"'
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs --timeout 300 'generate image follow this prompt, no refine: "a cinematic fantasy city at sunrise"'
 ```
 
 Normal generation prints one generated image path per line. Diagnostics and progress go to stderr.
@@ -25,13 +27,13 @@ Normal generation prints one generated image path per line. Diagnostics and prog
 Use `--json` when the caller needs machine-readable metadata:
 
 ```bash
-node {baseDir}/scripts/codex-imagen.mjs --json --timeout 300 --prompt 'generate a small blue lotus icon'
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs --json --timeout 300 --prompt 'generate a small blue lotus icon'
 ```
 
 Ask for multiple outputs in the prompt. There is no `--count` flag:
 
 ```bash
-node {baseDir}/scripts/codex-imagen.mjs --timeout 300 -o out/ --prompt 'generate 3 images of a monk mage'
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs --timeout 300 -o out/ --prompt 'generate 3 images of a monk mage'
 ```
 
 Use `--verbose` or `--debug` for event-level progress, and `--quiet` when only stdout paths/JSON should be emitted.
@@ -66,7 +68,7 @@ The CLI reads existing OAuth JSON and sends `Authorization: Bearer <access>` plu
 Run a local auth check without generating:
 
 ```bash
-node {baseDir}/scripts/codex-imagen.mjs --smoke
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs --smoke
 ```
 
 Auth lookup order:

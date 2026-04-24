@@ -768,8 +768,30 @@ function profileRefresh(profile) {
   return profile.refresh ?? profile.refresh_token ?? null;
 }
 
+function accountIdFromAccessToken(accessToken) {
+  if (!accessToken || typeof accessToken !== "string") {
+    return null;
+  }
+  const payload = decodeJwtPayload(accessToken);
+  if (!payload || typeof payload !== "object") {
+    return null;
+  }
+  const auth = payload["https://api.openai.com/auth"];
+  if (auth && typeof auth === "object") {
+    const candidate = auth.chatgpt_account_id ?? auth.chatgptAccountId ?? null;
+    if (typeof candidate === "string" && candidate.trim()) {
+      return candidate.trim();
+    }
+  }
+  const direct = payload.chatgpt_account_id ?? payload.chatgptAccountId ?? null;
+  if (typeof direct === "string" && direct.trim()) {
+    return direct.trim();
+  }
+  return null;
+}
+
 function profileAccountId(profile) {
-  return profile.accountId ?? profile.account_id ?? profile.account ?? null;
+  return profile.accountId ?? profile.account_id ?? profile.account ?? accountIdFromAccessToken(profileAccess(profile)) ?? null;
 }
 
 function profileEmail(profile) {
