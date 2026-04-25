@@ -98,8 +98,8 @@ Profile selection follows OpenClaw first: explicit `--auth-profile`, `CODEX_IMAG
 Use `--out-dir` or `-o/--output` when the caller needs a specific artifact location:
 
 ```bash
-node {baseDir}/scripts/codex-imagen.mjs --out-dir ./openclaw-images --prompt 'generate three UI icon variants'
-node {baseDir}/scripts/codex-imagen.mjs -o out/ --prompt 'generate 3 images of a monk mage'
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs --out-dir ./openclaw-images --prompt 'generate three UI icon variants'
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs -o out/ --prompt 'generate 3 images of a monk mage'
 ```
 
 `--output image.png` writes exactly that path for one image. If multiple images arrive, outputs are numbered as `image-1.png`, `image-2.png`, and so on. If `--output` has no extension or ends in `/`, it is treated as a directory. Without `--output`, automatic names use `codex-imagen-<timestamp>-<optional-index>-<image-call-id>.png`.
@@ -119,9 +119,9 @@ Streaming is enabled by default and saves each image as soon as it arrives. If a
 Attach reference images explicitly. Do not use positional image paths; positional arguments are reserved for prompt text.
 
 ```bash
-node {baseDir}/scripts/codex-imagen.mjs --input-ref ref1.png --input-ref ref2.jpg --prompt 'generate 3 images of him livestreaming in this world'
-node {baseDir}/scripts/codex-imagen.mjs -i ref1.png -i ref2.jpg --prompt 'change the main character into a woman'
-node {baseDir}/scripts/codex-imagen.mjs --image-url 'https://example.com/ref.png' --prompt 'use this image as the world reference'
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs --input-ref ref1.png --input-ref ref2.jpg --prompt 'generate 3 images of him livestreaming in this world'
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs -i ref1.png -i ref2.jpg --prompt 'change the main character into a woman'
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs --image-url 'https://example.com/ref.png' --prompt 'use this image as the world reference'
 ```
 
 Local images are converted to `data:image/...;base64,...` and sent as `input_image` items. `--input-ref` accepts local paths, `http(s)` URLs, and `data:image/...` URLs. `-i/--image` is local-only, and `--image-url` is URL/data-URL only. Supported local formats are PNG, JPEG, GIF, and WebP. Use `--image-detail auto|low|high|original` when the model should receive lower or higher image detail; default is `high`. Use smaller JPEG references when high-fidelity pixel detail is not needed.
@@ -135,9 +135,9 @@ When auth is auto-discovered and the first auth file is irrecoverably stale, the
 Use these controls when needed:
 
 ```bash
-node {baseDir}/scripts/codex-imagen.mjs --refresh-only --json
-node {baseDir}/scripts/codex-imagen.mjs --force-refresh --smoke --json
-node {baseDir}/scripts/codex-imagen.mjs --no-refresh --prompt 'generate one image'
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs --refresh-only --json
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs --force-refresh --smoke --json
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs --no-refresh --prompt 'generate one image'
 ```
 
 For concurrent OpenClaw processes, prefer the active OpenClaw agent's `auth-profiles.json` so every caller uses the same profile identity. Use `--no-refresh` only when the caller already owns OAuth refresh and wants this helper to use the provided access token as-is.
@@ -149,7 +149,7 @@ Use `--base-url` only for a compatible Codex backend, and `--refresh-url` only f
 The helper is plain Node.js 22+ with no native dependencies. It uses `os.homedir()` and environment overrides for Windows, Linux, and macOS. In `cmd.exe`, single quotes are not shell quotes; use double quotes or write UTF-8 text to a file and use:
 
 ```bash
-node {baseDir}/scripts/codex-imagen.mjs --prompt-file prompt.txt
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs --prompt-file prompt.txt
 ```
 
 Use `--cwd <path>` when another agent launches this script from an unpredictable working directory.
