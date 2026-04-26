@@ -117,3 +117,106 @@ Chỉ dùng một kiểu lọc thời gian trong mỗi lần gọi web_search
 - Related Files: none
 
 ---
+
+## [ERR-20260420-001] wordpress-cli-app-password
+
+**Logged**: 2026-04-20T12:45:00+07:00
+**Priority**: medium
+**Status**: pending
+**Area**: docs
+
+### Summary
+Example command in skill used relative scripts/wp_triage.sh from workspace root, but actual script path is under skills/wordpress-cli-app-password/scripts/wp_triage.sh.
+
+### Error
+```
+bash: scripts/wp_triage.sh: No such file or directory
+```
+
+### Context
+- Command attempted from workspace root using example path from skill guidance
+- Correct path discovered via find under skill directory
+
+### Suggested Fix
+Document the absolute or skill-relative path explicitly in the workflow examples for OpenClaw workspace usage.
+
+### Metadata
+- Reproducible: yes
+- Related Files: skills/wordpress-cli-app-password/SKILL.md
+
+---
+
+## [ERR-20260421-001] web_search
+
+**Logged**: 2026-04-21T20:31:00+07:00
+**Priority**: low
+**Status**: pending
+**Area**: docs
+
+### Summary
+Brave web_search rejects combined freshness and explicit date range filters.
+
+### Error
+```
+conflicting_time_filters: freshness and date_after/date_before cannot be used together
+```
+
+### Context
+- Operation attempted: external research for daily web content ideation
+- Input used both `freshness=month` and `date_after/date_before`
+- Result: request failed before returning search results
+
+### Suggested Fix
+Use either freshness or explicit date range, not both, for Brave search calls.
+
+### Metadata
+- Reproducible: yes
+- Related Files: none
+
+---
+## [ERR-20260422-001] brave_web_search_ui_lang_and_rate_limit
+
+**Logged**: 2026-04-22T20:30:00+07:00
+**Priority**: medium
+**Status**: pending
+**Area**: docs
+
+### Summary
+Brave web_search rejected ui_lang=vi-VN and then hit free-plan 429 on a second immediate query.
+
+### Error
+```
+422 validation: ui_lang must be one of supported enums; vi-VN not accepted.
+429 rate limit exceeded for plan.
+```
+
+### Context
+- Attempted Vietnamese-market research with web_search.
+- First request failed on unsupported ui_lang value.
+- Second request succeeded with en-US UI locale.
+- Third immediate request hit plan rate limit.
+
+### Suggested Fix
+Use supported ui_lang values only (e.g. en-US) and serialize Brave queries more conservatively.
+
+### Metadata
+- Reproducible: yes
+- Related Files: n/a
+
+---
+## ERR-20260424-001
+- status: resolved
+- context: web cron chuẩn bị bài WordPress
+- issue: web_search dùng ui_lang=vi-VN không hợp lệ với Brave; web_fetch gặp 403 anti-bot ở site nguồn.
+- fix: đổi sang ui_lang=en-US khi cần Brave; dùng web_search snippets làm tín hiệu ý tưởng thay vì phụ thuộc fetch toàn trang.
+- See Also: wordpress web cron
+
+
+
+## ERR-20260425-001
+- status: resolved
+- context: Dò tên ảnh thư viện trong HTML bài WordPress gần nhất.
+- issue: Lệnh bash `grep -oE` bị vỡ quoting do trộn nhiều dấu nháy trong one-liner.
+- fix: Với pattern chứa quote phức tạp, ưu tiên tách sang Python hoặc dùng here-doc để tránh lỗi escape shell.
+
+- ERR-20260426-001 | status: resolved | context: web_search Brave API rejected ui_lang=vi-VN with 422 validation error during daily web-idea research. fix: use supported ui_lang (en-US) or web_fetch/direct source fallback.
