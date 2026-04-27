@@ -14,6 +14,23 @@ Generate or edit images by calling the ChatGPT/Codex backend directly with OAuth
 
 Trong workspace này, mặc định dùng bridge script `codex-imagen-cliproxy-auth.mjs` để map auth Codex Plus từ cliproxyapi, tránh lệch profile OpenClaw local không có quyền image tool.
 
+## Rule ảnh mặc định (FUJI TH)
+
+- Ảnh dọc (portrait): **9:16**
+- Ảnh ngang (landscape): **16:9**
+- Mặc định prompt cần ghi rõ tỉ lệ để model bám đúng khung.
+- Trừ khi sếp yêu cầu khác, luôn dùng đúng 2 tỉ lệ trên.
+
+Prompt mẫu nhanh:
+
+```bash
+# Dọc 9:16
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs --json --timeout 300 --prompt 'Ảnh marketing thang máy gia đình, phong cách hiện đại, không chữ, không logo, khung dọc 9:16'
+
+# Ngang 16:9
+node {baseDir}/scripts/codex-imagen-cliproxy-auth.mjs --json --timeout 300 --prompt 'Ảnh marketing thang máy gia đình, phong cách hiện đại, không chữ, không logo, khung ngang 16:9'
+```
+
 ## Quick Start
 
 Run the helper through Node for macOS, Linux, and Windows compatibility:

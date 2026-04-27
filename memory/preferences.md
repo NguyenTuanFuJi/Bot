@@ -14,3 +14,4 @@
 - Các bài đăng gần nhau không dùng trùng ảnh giữa 2 bài; nếu sếp chỉ định ảnh thì theo chỉ định, nếu không thì em tự chọn ảnh khác nhau.
 - Chỉ đăng bài khi sếp đã duyệt trước (không tự đăng ngay).
 - Quy ước xuất ảnh cố định: ảnh dọc (portrait) 9:16, ảnh ngang (landscape) 16:9.
+- Rule áp vào skill codex-imagen: prompt mặc định phải nêu rõ "khung dọc 9:16" hoặc "khung ngang 16:9"; chỉ đổi khi sếp yêu cầu.
