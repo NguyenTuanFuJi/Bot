@@ -1,0 +1,613 @@
+{
+  "timestamp": "20260427-204608",
+  "total_found": 30,
+  "updated": 30,
+  "skipped": 0,
+  "errors": 0,
+  "before": [
+    {
+      "id": 2751,
+      "title": "Thang máy cửa mở tay cho nhà cải tạo: Khi nào nên chọn để vừa gọn diện tích vừa dễ dùng?",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2749,
+      "title": "Tại sao thang máy FUJI TH là lựa chọn hàng đầu cho công trình của bạn?",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2748,
+      "title": "Lý do nhiều gia chủ chọn FUJI TH khi lắp thang máy gia đình: Không chỉ vì giá",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2739,
+      "title": "Checklist 24 giờ trước ngày lắp thang máy gia đình: 9 điểm cần chốt để thi công gọn và hạn chế phát sinh",
+      "categories": [
+        84,
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2738,
+      "title": "Khảo sát lắp thang máy nhà cải tạo cùng FUJI TH: chốt sớm để đỡ đục sửa và ít phát sinh",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2731,
+      "title": "Thang máy gia đình không phòng máy cho nhà phố 4–6 tầng: Gọn mái, êm nhà, đáng chốt sớm",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2728,
+      "title": "Giải pháp thang máy kính giữa giếng trời nhà cải tạo: gọn, sáng, ít đục sửa",
+      "categories": [
+        1
+      ],
+      "rule": "kinh",
+      "action": "update",
+      "new_categories": [
+        85
+      ]
+    },
+    {
+      "id": 2725,
+      "title": "Lắp thang máy cho nhà đang ở: 3 lợi ích khi chọn đơn vị khảo sát và thi công đồng bộ",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2724,
+      "title": "Lắp thang máy gia đình cho người lớn tuổi: 6 điểm nên chốt sớm để đi êm và an tâm mỗi ngày",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2720,
+      "title": "Sảnh chờ thang máy gia đình: 5 lỗi bố trí khiến nhà đẹp mà dùng vẫn vướng",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2717,
+      "title": "Thang máy gia đình không phòng máy cho nhà 4-6 tầng: 6 điểm nên chốt trước khi lắp",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2716,
+      "title": "ARD thang máy gia đình: 4 câu hỏi nên chốt sớm để an tâm khi mất điện",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2714,
+      "title": "Kích thước cabin thang máy gia đình 350kg: Chọn sao cho vừa nhà, đi lại thoải mái",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2708,
+      "title": "Đi thang máy bị chóng mặt: 5 nguyên nhân thường gặp và cách xử lý an toàn",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2701,
+      "title": "Thang máy nhập khẩu cho nhà 4-6 tầng: 7 điểm cần chốt để đi êm, an toàn",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2697,
+      "title": "Nhà 5 tầng có người lớn tuổi: nên chọn thang máy gia đình thế nào để đi êm, dễ dùng, đỡ phát sinh?",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2677,
+      "title": "Lắp thang máy cho nhà cải tạo: nên chốt 5 điểm nào để đỡ đập sửa?",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2572,
+      "title": "Kích thước thang máy gia đình 350kg cho nhà ống 4 tầng: cần chốt gì từ đầu?",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2559,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2542,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2515,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2507,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2506,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2500,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2499,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2482,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2465,
+      "title": "Thang máy 450kg cho nhà 4-5 tầng: nên chọn 2CO700 hay 2CO800?",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2430,
+      "title": "Thang máy kính FUJI TH dùng inox 304, động cơ TORIN, tủ Nice3000 cho nhà ở hiện đại",
+      "categories": [
+        1
+      ],
+      "rule": "kinh",
+      "action": "update",
+      "new_categories": [
+        85
+      ]
+    },
+    {
+      "id": 2423,
+      "title": "Thang máy gia đình Phố Hiến 450kg cho nhà 6 tầng: Êm ái, bền bỉ, sang trọng",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    },
+    {
+      "id": 2383,
+      "title": "Động cơ thang máy nhập khẩu: vì sao quyết định độ êm và độ bền?",
+      "categories": [
+        1
+      ],
+      "rule": "gia-dinh",
+      "action": "update",
+      "new_categories": [
+        84
+      ]
+    }
+  ],
+  "after": [
+    {
+      "id": 2751,
+      "title": "Thang máy cửa mở tay cho nhà cải tạo: Khi nào nên chọn để vừa gọn diện tích vừa dễ dùng?",
+      "categories": [
+        84
+      ],
+      "status": "draft"
+    },
+    {
+      "id": 2749,
+      "title": "Tại sao thang máy FUJI TH là lựa chọn hàng đầu cho công trình của bạn?",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2748,
+      "title": "Lý do nhiều gia chủ chọn FUJI TH khi lắp thang máy gia đình: Không chỉ vì giá",
+      "categories": [
+        84
+      ],
+      "status": "draft"
+    },
+    {
+      "id": 2739,
+      "title": "Checklist 24 giờ trước ngày lắp thang máy gia đình: 9 điểm cần chốt để thi công gọn và hạn chế phát sinh",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2738,
+      "title": "Khảo sát lắp thang máy nhà cải tạo cùng FUJI TH: chốt sớm để đỡ đục sửa và ít phát sinh",
+      "categories": [
+        84
+      ],
+      "status": "draft"
+    },
+    {
+      "id": 2731,
+      "title": "Thang máy gia đình không phòng máy cho nhà phố 4–6 tầng: Gọn mái, êm nhà, đáng chốt sớm",
+      "categories": [
+        84
+      ],
+      "status": "draft"
+    },
+    {
+      "id": 2728,
+      "title": "Giải pháp thang máy kính giữa giếng trời nhà cải tạo: gọn, sáng, ít đục sửa",
+      "categories": [
+        85
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2725,
+      "title": "Lắp thang máy cho nhà đang ở: 3 lợi ích khi chọn đơn vị khảo sát và thi công đồng bộ",
+      "categories": [
+        84
+      ],
+      "status": "draft"
+    },
+    {
+      "id": 2724,
+      "title": "Lắp thang máy gia đình cho người lớn tuổi: 6 điểm nên chốt sớm để đi êm và an tâm mỗi ngày",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2720,
+      "title": "Sảnh chờ thang máy gia đình: 5 lỗi bố trí khiến nhà đẹp mà dùng vẫn vướng",
+      "categories": [
+        84
+      ],
+      "status": "draft"
+    },
+    {
+      "id": 2717,
+      "title": "Thang máy gia đình không phòng máy cho nhà 4-6 tầng: 6 điểm nên chốt trước khi lắp",
+      "categories": [
+        84
+      ],
+      "status": "draft"
+    },
+    {
+      "id": 2716,
+      "title": "ARD thang máy gia đình: 4 câu hỏi nên chốt sớm để an tâm khi mất điện",
+      "categories": [
+        84
+      ],
+      "status": "draft"
+    },
+    {
+      "id": 2714,
+      "title": "Kích thước cabin thang máy gia đình 350kg: Chọn sao cho vừa nhà, đi lại thoải mái",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2708,
+      "title": "Đi thang máy bị chóng mặt: 5 nguyên nhân thường gặp và cách xử lý an toàn",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2701,
+      "title": "Thang máy nhập khẩu cho nhà 4-6 tầng: 7 điểm cần chốt để đi êm, an toàn",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2697,
+      "title": "Nhà 5 tầng có người lớn tuổi: nên chọn thang máy gia đình thế nào để đi êm, dễ dùng, đỡ phát sinh?",
+      "categories": [
+        84
+      ],
+      "status": "draft"
+    },
+    {
+      "id": 2677,
+      "title": "Lắp thang máy cho nhà cải tạo: nên chốt 5 điểm nào để đỡ đập sửa?",
+      "categories": [
+        84
+      ],
+      "status": "draft"
+    },
+    {
+      "id": 2572,
+      "title": "Kích thước thang máy gia đình 350kg cho nhà ống 4 tầng: cần chốt gì từ đầu?",
+      "categories": [
+        84
+      ],
+      "status": "draft"
+    },
+    {
+      "id": 2559,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2542,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2515,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2507,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2506,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2500,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2499,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2482,
+      "title": "Giải pháp thang máy an toàn và tối ưu cho công trình gia đình",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2465,
+      "title": "Thang máy 450kg cho nhà 4-5 tầng: nên chọn 2CO700 hay 2CO800?",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2430,
+      "title": "Thang máy kính FUJI TH dùng inox 304, động cơ TORIN, tủ Nice3000 cho nhà ở hiện đại",
+      "categories": [
+        85
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2423,
+      "title": "Thang máy gia đình Phố Hiến 450kg cho nhà 6 tầng: Êm ái, bền bỉ, sang trọng",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    },
+    {
+      "id": 2383,
+      "title": "Động cơ thang máy nhập khẩu: vì sao quyết định độ êm và độ bền?",
+      "categories": [
+        84
+      ],
+      "status": "publish"
+    }
+  ],
+  "error_items": []
+}
