@@ -220,3 +220,84 @@ Use supported ui_lang values only (e.g. en-US) and serialize Brave queries more 
 - fix: Với pattern chứa quote phức tạp, ưu tiên tách sang Python hoặc dùng here-doc để tránh lỗi escape shell.
 
 - ERR-20260426-001 | status: resolved | context: web_search Brave API rejected ui_lang=vi-VN with 422 validation error during daily web-idea research. fix: use supported ui_lang (en-US) or web_fetch/direct source fallback.
+
+---
+## [ERR-20260429-001] web_search
+
+**Logged**: 2026-04-29T08:00:00+07:00
+**Priority**: low
+**Status**: pending
+**Area**: docs
+
+### Summary
+web_search trả lỗi khi truyền đồng thời freshness và date_after/date_before trong lúc nghiên cứu ý tưởng bài Facebook.
+
+### Error
+```
+conflicting_time_filters: freshness and date_after/date_before cannot be used together
+```
+
+### Context
+- Operation: web_search
+- Query intent: tìm ý tưởng về thang máy gia đình khi mất điện / ARD
+- Cause: truyền cả freshness=year và date_after/date_before
+
+### Suggested Fix
+Chỉ dùng một kiểu lọc thời gian trong mỗi lần gọi web_search.
+
+### Metadata
+- Reproducible: yes
+- Related Files: none
+- See Also: ERR-20260418-001
+## ERR-20260501-001
+- Date: 2026-05-01
+- Status: open
+- Context: Dùng tool image_generate mặc định để tạo ảnh mẫu marketing.
+- Issue: Provider trả HTTP 400: tool choice image_generation không tồn tại trong tools parameter.
+- Impact: Không tạo ảnh được qua image_generate trong phiên này.
+- Workaround: Dùng skill codex-imagen qua script local node bridge thay cho image_generate.
+- Next step: Với tác vụ tạo ảnh, ưu tiên codex-imagen skill khi provider mặc định lỗi kiểu này.
+
+
+- ID: ERR-20260502-001
+  time: 2026-05-02 20:30 Asia/Saigon
+  tool: web_search
+  issue: Dùng đồng thời freshness và date_after gây lỗi conflicting_time_filters.
+  fix: Với Brave search chỉ dùng một kiểu lọc thời gian; retry bằng freshness hoặc date range, không kết hợp.
+  status: resolved
+
+- ID: ERR-20260502-002
+  time: 2026-05-02 20:31 Asia/Saigon
+  tool: web_search
+  issue: ui_lang=vi-VN không được Brave hỗ trợ.
+  fix: Dùng ui_lang=en-US khi tìm tiếng Việt nếu vi-VN bị từ chối.
+  status: resolved
+
+## [ERR-20260503-001] python_http_client_remote_disconnect
+
+**Logged**: 2026-05-03T09:06:00+07:00
+**Priority**: low
+**Status**: pending
+**Area**: integration
+
+### Summary
+Lệnh nền good-orb kết thúc code 1 với traceback Python http.client trong giai đoạn đọc response status.
+
+### Error
+```
+http.client.RemoteDisconnected / _read_status during response.begin()
+```
+
+### Context
+- Nguồn: exec completion event
+- Dấu hiệu: traceback Python 3.12 đi qua http.client.py -> _read_status
+- Hiện tại chưa có full stdout/stderr trong heartbeat nên không suy luận thêm nguyên nhân nghiệp vụ
+
+### Suggested Fix
+Khi gặp lại pattern này, kiểm tra service/endpoint phía xa có đóng kết nối sớm không và bọc retry/backoff cho request idempotent. Nếu là script dài, lưu log đầy đủ để lần sau chẩn đoán được nguyên nhân gốc.
+
+### Metadata
+- Reproducible: unknown
+- Related Files: none
+- Tags: python, http-client, remote-disconnect, exec-event
+

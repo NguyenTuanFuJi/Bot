@@ -1,0 +1,207 @@
+<!-- wp:flatsome/uxbuilder -->
+[section class="homepage-hero-compact"]
+
+[row]
+
+[col]
+
+[ux_html]
+<style>
+.homepage-hero-compact .flickity-viewport{max-height:none;overflow:visible;}
+.homepage-hero-compact .img-inner{background:#fff;text-align:center;}
+.homepage-hero-compact .img-inner img{width:100%;height:auto;object-fit:contain;background:#fff;display:block;}
+@media (max-width: 849px){
+  .homepage-hero-compact .img-inner img{height:auto;object-fit:contain;}
+}
+</style>
+[/ux_html]
+
+[ux_slider type="fade"]
+
+[ux_image id="2469"]
+
+[ux_image id="2447"]
+
+[ux_image id="2448"]
+
+[ux_image id="2450"]
+
+[ux_image id="2451"]
+
+[ux_image id="2452"]
+
+[ux_image id="2453"]
+
+[ux_image id="2454"]
+
+[ux_image id="2455"]
+
+[ux_image id="2456"]
+
+[ux_image id="2457"]
+
+[ux_image id="2458"]
+
+[/ux_slider]
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Giới thiệu"]
+
+[row]
+
+[col]
+
+<h2 class="fuji-section-title">Về FUJI TH</h2>
+<p>FUJI TH hướng đến hình ảnh doanh nghiệp rõ ràng, chuyên nghiệp và bền vững trong cách giới thiệu sản phẩm và phục vụ khách hàng.</p>
+<ul>
+<li>Tư vấn nhanh và rõ ràng</li>
+<li>Sản phẩm được giới thiệu dễ hiểu</li>
+<li>Ưu tiên sự chuyên nghiệp trong từng điểm chạm</li>
+<li>Đồng hành cùng khách hàng trong quá trình lựa chọn</li>
+</ul>
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Các sản phẩm" class="san-pham-pho-thong"]
+
+<h2 class="fuji-section-title">Thang máy các mẫu thang máy phổ thông</h2>
+[row]
+
+[col label="Thang máy gia đình" span="3" span__sm="12"]
+
+[ux_text font_size="1.45" text_align="center"]
+
+<h3>THANG MÁY GIA ĐÌNH</h3>
+[/ux_text]
+[blog_posts style="normal" col_spacing="small" columns="1" columns__md="2" depth="1" posts="1" tags="73" show_date="false"]
+
+
+[/col]
+[col label="Thang máy kính" span="3" span__sm="12"]
+
+[ux_text text_align="center"]
+
+<h3>THANG MÁY KÍNH</h3>
+[/ux_text]
+[blog_posts style="normal" col_spacing="small" columns="1" columns__md="2" depth="1" ids="2511,2381" posts="2" show_date="false"]
+
+
+[/col]
+[col label="Thang máy khách sạn" span="3" span__sm="12"]
+
+[ux_text text_align="center"]
+
+<h3>THANG MÁY KHÁCH SẠN</h3>
+[/ux_text]
+[blog_posts style="normal" col_spacing="small" columns="1" columns__md="2" depth="1" posts="1" tags="74" show_date="false"]
+
+
+[/col]
+[col label="Thang máy tải hàng kèm người" span="3" span__sm="12"]
+
+[ux_text text_align="center"]
+
+<h3>THANG MÁY TẢI HÀNG KÈM NGƯỜI</h3>
+[/ux_text]
+[blog_posts style="normal" col_spacing="small" columns="1" columns__md="2" depth="1" posts="1" cat="83" show_date="false"]
+
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Sản phẩm đã thực hiện"]
+
+<h2 class="&quot;fuji-section-title&quot;">Sản phẩm đã hoàn thành và bàn giao sử dụng</h2>
+<p class="&quot;fuji-section-intro&quot;">Một số sản phẩm chúng tôi đã thực hiện và bàn giao cho khách hàng.</p>
+[blog_posts style="normal" col_spacing="small" columns="3" columns__md="2" depth="1" posts="3" orderby="rand" tags="76" show_date="false"]
+
+
+[/section]
+[section label="Vì sao chọn FUJITH"]
+
+<h2 class="fuji-section-title">Vì sao chọn FUJI TH</h2>
+[row]
+
+[col]
+
+[ux_html]
+
+<section class="fuji-features">
+<div class="container">
+
+<div class="features-grid">
+
+<div class="feature-item">
+<div class="feature-icon">⚙️</div>
+<h6>Vận Hành Êm Ái</h6>
+<p>Sử dụng công nghệ VVVF và động cơ không hộp số mới nhất, đảm bảo vận hành êm ái, giảm thiểu tiếng ồn và rung lắc</p>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">✔️</div>
+<h6>An Toàn Tuyệt Đối</h6>
+<p>Trang bị đầy đủ hệ thống an toàn như cảm biến quá tải, cảm biến cửa, hệ thống dừng khẩn cấp và UPS dự phòng</p>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">🎨</div>
+<h6>Đa Dạng Mẫu Thang</h6>
+<p>Phân phối chính hãng các mẫu thang máy gia đình tốt nhất đến từ các thương hiệu Shap, Nipon, Montanri, ITG, Fuji</p>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">🔧</div>
+<h6>Bảo Trì Dễ Dàng</h6>
+<p>Thiết kế module giúp việc bảo trì, thay thế linh kiện trở nên dễ dàng và nhanh chóng, giảm thời gian ngừng hoạt động</p>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">🎯</div>
+<h6>Tùy Chỉnh Theo Yêu Cầu</h6>
+<p>Đa dạng lựa chọn về kích thước, màu sắc, vật liệu và thiết kế cabin để phù hợp với phong cách kiến trúc của công trình</p>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">📱</div>
+<h6>Kết Nối Thông Minh</h6>
+<p>Tích hợp công nghệ IoT, cho phép điều khiển từ xa và giám sát tình trạng hoạt động thông qua smartphone</p>
+</div>
+
+</div>
+
+</div>
+</section>
+[/ux_html]
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Tin tức - Bài viết - SEO"]
+
+<h2 class="fuji-section-title">Kinh nghiệm - Chia sẻ - Tin tức</h2>
+[row]
+
+[col label="Tin Tức" span__sm="12"]
+
+[blog_posts style="normal" col_spacing="xsmall" columns="3" columns__md="1" depth="1" animate="bounceInLeft" cat="72" ids="2511" posts="3" image_height="56.25%"]
+
+
+[/col]
+
+[/row]
+
+[/section]
+
+<!-- /wp:flatsome/uxbuilder -->
+
