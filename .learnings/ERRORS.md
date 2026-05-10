@@ -301,3 +301,43 @@ Khi gặp lại pattern này, kiểm tra service/endpoint phía xa có đóng k�
 - Related Files: none
 - Tags: python, http-client, remote-disconnect, exec-event
 
+
+## ERR-20260503-001 · WP REST update returns title in POST response but title empty on later edit fetch
+- Date: 2026-05-03
+- Status: open
+- Context: Updating WordPress draft post 2810 via REST/app-password. POST update response included title.raw/rendered correctly, but subsequent GET with context=edit returned title_raw/title_rendered empty while content and Yoast meta persisted.
+- Impact: Cannot trust REST title verification on this site; publishing should pause until title is verified by alternate path.
+- Safe workaround: When title matters, verify via front-end/admin or alternate API path before publish. Keep a local content backup before metadata-only updates because mixed updates can blank content/title unexpectedly.
+
+- ERR-20260504-001 | 2026-05-04 | web_search Brave validation lỗi khi dùng freshness cùng date_after/date_before và khi đặt ui_lang=vi-VN. Cách tránh: chỉ dùng 1 kiểu lọc thời gian; ui_lang dùng giá trị hợp lệ như en-US. | resolved
+
+## ERR-20260504-002
+- status: resolved
+- context: Báo giá công trình chú Luyện
+- issue: Tính sai hệ số nhôm và diện tích kính; đã lấy nhôm x4 thay vì x5 tầng, và dùng 40-50m² thay vì quy ước ước tính 15m/tầng khi người dùng nhắc.
+- correction: Với báo giá thang kính theo tầng, khi user nêu quy tắc theo tầng thì ưu tiên nhân theo số tầng cho nhôm và kính, không giữ số cũ nếu đã bị user sửa.
+
+- ERR-20260506-001 | trạng thái: open | bối cảnh: tạo ảnh Facebook | lỗi: gọi sai đường dẫn script codex-imagen ở /workspace/scripts/... không tồn tại | hướng sửa: tìm đúng vị trí script trước khi chạy, hoặc ưu tiên tool image_generate nếu đủ đáp ứng.
+- ERR-20260506-002 | trạng thái: open | bối cảnh: đăng album Facebook | lỗi: script cron-safe-post-album.sh lỗi curl option - unknown khi nhận message file nhiều dòng | hướng sửa: đọc script/cli hiện có và dùng đường publish phù hợp hoặc vá script sau khi xác nhận.
+
+
+## ERR-20260507-001
+- Date: 2026-05-07
+- Status: open
+- Context: Tạo 3 ảnh minh hoạ tay vịn thang máy cho bài Facebook/web.
+- Issue: Tool `image_generate` trả lỗi HTTP 400: `Tool choice 'image_generation' not found in 'tools' parameter`.
+- Impact: Không tạo được ảnh bằng tool ảnh mặc định trong lượt này.
+- Workaround: Dùng skill `codex-imagen` qua script `codex-imagen-cliproxy-auth.mjs` khi `image_generate` lỗi backend.
+- See Also: codex-imagen skill
+
+
+## ERR-20260507-002
+- Date: 2026-05-07
+- Status: open
+- Context: Sửa file hợp đồng .docx theo hàng/cột bảng đặc tính.
+- Issue: Dùng chỉ số `table.cell(row, col)` sai vì bảng có merge/structure khác kỳ vọng, gây `IndexError`.
+- Impact: Chỉnh sửa thất bại ở lượt đầu, dễ làm sai vị trí khi sửa hợp đồng mẫu.
+- Workaround: Luôn duyệt `row.cells` thực tế theo từng hàng trước khi ghi, không giả định số cột cố định từ lần inspect trước.
+- See Also: ERR-20260507-001
+
+- ERR-20260508-001 | resolved | Python subprocess không nhận WP_* env sau khi source .env nếu chưa export; dùng `set -a; source ...; set +a` trước khi gọi Python hoặc truyền env tường minh.

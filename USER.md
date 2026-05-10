@@ -22,6 +22,7 @@ _Learn about the person you're helping. Update this as you go._
   - Trước khi thay thế nội dung trong file mẫu, phải xác định đúng vị trí và giữ nguyên định dạng tại vị trí đó (font, cỡ chữ, format).
   - Khi thay thế, phải rà soát các vị trí liên quan trong toàn văn bản để thay đúng và thay hết nội dung cần đổi.
   - Đầu ra mặc định: văn bản xuất `.doc` (không dùng `.docx`), bảng tính xuất `.xls` (không dùng `.xlsx`).
+  - Khi sếp muốn “xem giá”, ưu tiên trình bày kiểu liệt kê từng hạng mục theo mẫu: `đơn giá x số lượng = thành tiền`, viết gọn, dễ đọc, không kẻ bảng.
 
 ## Context
 

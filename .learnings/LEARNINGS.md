@@ -50,3 +50,4 @@ Keep USER.md and memory/preferences.md aligned with the latest conversation-leve
 - Tags: preferences, language, tone, correction
 
 ---
+- LRN-20260506-001 | trạng thái: open | khi sếp hỏi “tính giá sơ bộ” phải bám đúng công thức giá nội bộ đã lưu, không được cộng lại từ file bảng tính nếu cách đó lệch phương pháp kiểm soát của sếp.

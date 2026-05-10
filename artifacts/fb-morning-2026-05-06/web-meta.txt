@@ -1,0 +1,4 @@
+TITLE=Thang máy gia đình cao cấp cho không gian sống hiện đại
+SLUG=thang-may-gia-dinh-cao-cap-cho-khong-gian-song-hien-dai
+META_DESCRIPTION=Khám phá giải pháp thang máy gia đình cao cấp với thiết kế hiện đại, vận hành êm ái, an toàn và phù hợp nhiều không gian nhà ở.
+FOCUS_KEYPHRASE=thang máy gia đình cao cấp
