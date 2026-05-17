@@ -3,6 +3,34 @@
 Command failures and integration errors.
 
 ---
+## [ERR-20260510-001] brave_search_conflicting_time_filters
+
+**Logged**: 2026-05-10T22:00:00+07:00
+**Priority**: low
+**Status**: resolved
+**Area**: integration
+
+### Summary
+Gọi Brave search với cả `freshness` và `date_after` cùng lúc làm request bị từ chối.
+
+### Error
+```
+conflicting_time_filters: freshness and date_after/date_before cannot be used together
+```
+
+### Context
+- Operation: tìm link bài web để tổng hợp báo cáo cuối ngày
+- Tool: web_search
+- Cause: truyền đồng thời bộ lọc tương đối (`freshness`) và khoảng ngày (`date_after`)
+
+### Suggested Fix
+Chỉ dùng một kiểu lọc thời gian cho mỗi request: hoặc `freshness`, hoặc `date_after/date_before`.
+
+### Metadata
+- Reproducible: yes
+- Tags: brave, web_search, filters
+
+---
 
 ## [ERR-20260403-001] clawhub_install_rate_limit
 
