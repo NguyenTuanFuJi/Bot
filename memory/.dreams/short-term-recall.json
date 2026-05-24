@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-16T03:30:23.042Z",
+  "updatedAt": "2026-05-23T15:01:00.420Z",
   "entries": {
     "memory:memory/2026-04-07.md:1:7": {
       "key": "memory:memory/2026-04-07.md:1:7",
@@ -54,13 +54,13 @@
       "endLine": 27,
       "source": "memory",
       "snippet": "# 2026-03-20 ## Facebook FUJI TH — đăng bài VOI HOTEL (Mèo Vạc) theo phương án A - User đã xác nhận: \"Ok đăng luôn cho nóng\". - Thực thi phương án A: đăng 2 bài riêng (do tool không gộp video + nhiều ảnh trong 1 post): - Bài VIDEO: Graph returned id `2377187649450161`. - Bài 5 ẢNH (multi-photos): post id `695286863979169_1415520900272006`. - Đã tạo comment chéo giữa 2 bài: - Comment dưới bài video: id `2377187649450161_2347158629128702`. - Comment dưới bài ảnh: id `1415520900272006_1625232735429322`. - Link đã gửi user: - Video permalink: https://www.facebook.com/permalink.php?story_fbid=2377187649450161&id=695286863979169 - Ảnh permalink: https://www.facebook.com/permalink.php?",
-      "recallCount": 29,
+      "recallCount": 31,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 27.42757629022295,
+      "totalScore": 29.42757629022295,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-11T15:46:52.529Z",
-      "lastRecalledAt": "2026-05-16T00:30:36.190Z",
+      "lastRecalledAt": "2026-05-23T15:01:00.420Z",
       "queryHashes": [
         "659b7cf210d9",
         "a5c000c8767f",
@@ -90,10 +90,11 @@
         "b2c190815bab",
         "dcb8039c8dc7",
         "19fb66a778fa",
-        "bbc3bc64fdc2"
+        "bbc3bc64fdc2",
+        "2a0dfef67725",
+        "022b6d3505d3"
       ],
       "recallDays": [
-        "2026-04-11",
         "2026-04-13",
         "2026-04-17",
         "2026-04-18",
@@ -107,7 +108,9 @@
         "2026-04-28",
         "2026-04-29",
         "2026-04-30",
-        "2026-05-16"
+        "2026-05-16",
+        "2026-05-20",
+        "2026-05-23"
       ],
       "conceptTags": [
         "multi-photos",
@@ -127,13 +130,13 @@
       "endLine": 22,
       "source": "memory",
       "snippet": "- Đã mở auto approval exec (`tools.exec.ask=off`) và nới quyền thực thi (`tools.exec.security=full`), đồng thời allow `bash`, `curl` theo yêu cầu. - Đã hỗ trợ session ID 8451930371 bằng hướng dẫn credential path cho Facebook/WordPress và script chẩn đoán nhanh `scripts/agent_skill_doctor.sh`. - Đã cấu hình bảo trì máy chủ theo yêu cầu: dọn rác hàng tuần + kiểm tra dung lượng mỗi 3 ngày. - Người dùng duyệt áp dụng quy trình đa kênh rút gọn; đã thêm tài liệu `multichannel-lite` vào skill `facebook-content-ops` để giảm phình context và lỗi API khi chạy Facebook + Website. - Đã tạo bài website chủ đề “thời điểm lắp đặt thang máy lý tưởng”, hẹn đăng 09:00 ngày 2026-03-29, chuyên mục “Chia sẻ kinh",
-      "recallCount": 27,
+      "recallCount": 29,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 24.42690745238577,
+      "totalScore": 26.42690745238577,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-12T13:04:35.950Z",
-      "lastRecalledAt": "2026-04-30T02:00:14.297Z",
+      "lastRecalledAt": "2026-05-23T15:01:00.420Z",
       "queryHashes": [
         "bd3c0a2b44b6",
         "bf53f98f609a",
@@ -161,10 +164,11 @@
         "b2c190815bab",
         "c98f5a1335e5",
         "dcb8039c8dc7",
-        "19fb66a778fa"
+        "19fb66a778fa",
+        "2a0dfef67725",
+        "022b6d3505d3"
       ],
       "recallDays": [
-        "2026-04-12",
         "2026-04-13",
         "2026-04-15",
         "2026-04-17",
@@ -178,7 +182,9 @@
         "2026-04-27",
         "2026-04-28",
         "2026-04-29",
-        "2026-04-30"
+        "2026-04-30",
+        "2026-05-20",
+        "2026-05-23"
       ],
       "conceptTags": [
         "tools.exec.ask",
@@ -198,13 +204,13 @@
       "endLine": 15,
       "source": "memory",
       "snippet": "# Memory 2026-03-28 - Người dùng xác nhận phong cách trả lời: thuần Việt, ngắn gọn; không nêu bằng chứng/đường dẫn trong trả lời thường ngày; chỉ nêu vướng mắc khi thực sự gặp. - Đã chuẩn hóa quy trình Facebook trong skill `facebook-content-ops`: bắt buộc SOP Viết -> Duyệt -> Đăng + Prepublish Gate để tránh lặp lỗi, giảm trùng nội dung. - Quy tắc vận hành Facebook đã chốt: khi nội dung đã duyệt và chốt giờ đăng thì tự đăng, không hỏi lại; đăng xong phải báo kết quả và link bài. - Đã lưu hồ sơ thương hiệu FUJI TH vào skill để dùng lâu dài: thông tin công ty, cụm từ khóa SEO, guideline giọng thương hiệu. - Đã thêm hướng dẫn random writing style trong skill để giảm trùng lặp nội dung giữa các",
-      "recallCount": 30,
+      "recallCount": 32,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 27.590762928208413,
+      "totalScore": 29.590762928208413,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-12T13:04:35.950Z",
-      "lastRecalledAt": "2026-05-16T00:30:36.190Z",
+      "lastRecalledAt": "2026-05-23T15:01:00.420Z",
       "queryHashes": [
         "bd3c0a2b44b6",
         "bf53f98f609a",
@@ -235,11 +241,11 @@
         "dcb8039c8dc7",
         "19fb66a778fa",
         "a0ce893716ae",
-        "bbc3bc64fdc2"
+        "bbc3bc64fdc2",
+        "2a0dfef67725",
+        "022b6d3505d3"
       ],
       "recallDays": [
-        "2026-04-16",
-        "2026-04-17",
         "2026-04-18",
         "2026-04-19",
         "2026-04-20",
@@ -253,7 +259,9 @@
         "2026-04-29",
         "2026-04-30",
         "2026-05-15",
-        "2026-05-16"
+        "2026-05-16",
+        "2026-05-20",
+        "2026-05-23"
       ],
       "conceptTags": [
         "chứng/đường",
@@ -345,13 +353,13 @@
       "endLine": 19,
       "source": "memory",
       "snippet": "# 2026-03-18 ## FUJI TH – Quy ước làm việc (tổng hợp bền vững) - Luôn trả lời 100% bằng tiếng Việt (ưu tiên có dấu). - Mặc định mọi yêu cầu “viết bài” = viết bài Facebook theo khung seo-content (hook nhanh, keyword tự nhiên, bullet ✓, emoji vừa phải, CTA cuối, 3–5 hashtag, tránh spam). - Không dùng tiền tố \"[ALBUM]\". - Nội dung không được mang sắc thái phân biệt/loại trừ vùng miền. - Hyperlink website trên Facebook: không có anchor text kiểu markdown; dùng câu alias thân thiện + xuống dòng dán URL sạch để Facebook tự tạo link. - Quy ước độ dài: khi nói “tối ưu đọc 600–900 chữ” thì chỉ tính phần nội dung chính; phần giới thiệu công ty/CTA + website + hashtag không tính vào giới hạn. - Writin",
-      "recallCount": 30,
+      "recallCount": 33,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 28.148425778201148,
+      "totalScore": 31.148425778201148,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-13T02:30:31.111Z",
-      "lastRecalledAt": "2026-05-16T03:30:23.042Z",
+      "lastRecalledAt": "2026-05-21T15:00:20.735Z",
       "queryHashes": [
         "a5c000c8767f",
         "f167f40abfb6",
@@ -382,12 +390,11 @@
         "a0ce893716ae",
         "d49c535b27d4",
         "bbc3bc64fdc2",
-        "13f84d02c157"
+        "13f84d02c157",
+        "b9ff3e03a573",
+        "2a0dfef67725"
       ],
       "recallDays": [
-        "2026-04-16",
-        "2026-04-17",
-        "2026-04-18",
         "2026-04-19",
         "2026-04-20",
         "2026-04-22",
@@ -400,7 +407,10 @@
         "2026-04-29",
         "2026-04-30",
         "2026-05-15",
-        "2026-05-16"
+        "2026-05-16",
+        "2026-05-17",
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "seo-content",
@@ -496,26 +506,29 @@
       "endLine": 14,
       "source": "memory",
       "snippet": "# Memory 2026-04-11 ## WARM (ưu tiên giữ) - Sếp yêu cầu xử lý PDF theo hướng **giữ nguyên mẫu gốc khách gửi**, chỉ thay đúng phần được chỉ định; không tự ý chuyển sang “mẫu của mình” nếu chưa được yêu cầu rõ. - Với yêu cầu sửa báo giá/PDF: cần xác nhận phạm vi chỉnh sửa thật cụ thể (ví dụ: chỉ thay thông tin công ty, giữ nguyên bố cục/nội dung còn lại). - Sếp phản hồi nhanh theo thời gian thực và kỳ vọng bot trả lời liên tục; khi chậm phản hồi sẽ nhắn nhiều lần “Alo/Bot”. ## HOT (việc còn dở cần nhớ) - Có chuỗi tin nhắn 2026-04-10 đến 2026-04-11 hỏi trạng thái đăng bài và kiểm tra bài “thang cáp kéo” nhưng chưa được phản hồi đầy đủ trong hội thoại. - Cần ưu tiên phản hồi ngay khi sếp ping",
-      "recallCount": 6,
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5.436515820893,
+      "totalScore": 7.436515820893,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-14T01:14:22.974Z",
-      "lastRecalledAt": "2026-05-15T15:00:32.576Z",
+      "lastRecalledAt": "2026-05-21T15:00:20.735Z",
       "queryHashes": [
         "0d17f0600ec9",
         "9df648b24279",
         "11f365253da3",
         "72ab42ba31a2",
         "a0ce893716ae",
-        "d49c535b27d4"
+        "d49c535b27d4",
+        "b9ff3e03a573"
       ],
       "recallDays": [
         "2026-04-14",
         "2026-04-19",
         "2026-04-21",
-        "2026-05-15"
+        "2026-05-15",
+        "2026-05-17",
+        "2026-05-21"
       ],
       "conceptTags": [
         "giá/pdf",
@@ -535,26 +548,32 @@
       "endLine": 10,
       "source": "memory",
       "snippet": "# Memory 2026-04-03 - Chốt áp dụng quy trình session: khi session idle lâu sẽ đóng theo logic hệ thống, trước khi đóng phải lưu tóm tắt ngắn theo ID dạng keyword + bullet + mục tiêu. - Khi mở lại session mới theo cùng ID, ưu tiên nạp bản tóm tắt ngắn để khôi phục ngữ cảnh nhanh, tránh kéo dài context cũ. - Quy trình trên được yêu cầu áp dụng ổn định như một chuẩn vận hành lâu dài cho các ID Telegram của người dùng. - Đã kiểm tra luồng auto rollup: script tóm tắt hoạt động, có tạo tệp tóm tắt theo session ID trong memory/session_summaries/auto. - Đã khởi động lại tiến trình idle-daemon để duy trì tự động hóa sau khi phát hiện tiến trình cũ không còn chạy. - Không cần review định kỳ/báo cáo t",
-      "recallCount": 5,
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4.7696779546353785,
+      "totalScore": 7.7696779546353785,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-19T14:35:28.267Z",
-      "lastRecalledAt": "2026-05-16T03:30:23.042Z",
+      "lastRecalledAt": "2026-05-23T15:01:00.420Z",
       "queryHashes": [
         "11f365253da3",
         "b99920f57d4d",
         "7fd36b4629bd",
         "1c3c2913c5ac",
-        "13f84d02c157"
+        "13f84d02c157",
+        "2a0dfef67725",
+        "f6a82d8ab78b",
+        "022b6d3505d3"
       ],
       "recallDays": [
         "2026-04-19",
         "2026-04-22",
         "2026-04-25",
         "2026-04-28",
-        "2026-05-16"
+        "2026-05-16",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-23"
       ],
       "conceptTags": [
         "memory/session-summaries/auto",
@@ -574,13 +593,13 @@
       "endLine": 8,
       "source": "memory",
       "snippet": "# Memory 2026-04-20 - Sếp chốt quy ước vận hành: bài đã duyệt thì đến giờ tự động đăng; không cần duyệt sát giờ. - Sếp đã duyệt cho tự động đăng bài web ID 2701 vào buổi tối. - Sếp muốn preview trước bài Facebook tối nay (caption + ảnh) trước khi lên lịch/chạy đăng. - Sếp yêu cầu caption Facebook nên có thêm biểu tượng/emoji để dễ nhận biết và thu hút hơn. - Ngữ cảnh đang vận hành nội dung đa kênh cho FUJI TH, ưu tiên thao tác nhanh và phản hồi trực tiếp trong chat.",
-      "recallCount": 20,
+      "recallCount": 22,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 20,
+      "totalScore": 22,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-22T13:01:14.985Z",
-      "lastRecalledAt": "2026-05-16T00:30:36.190Z",
+      "lastRecalledAt": "2026-05-23T15:01:00.420Z",
       "queryHashes": [
         "63b8af555a7f",
         "e9d205c0e04e",
@@ -601,7 +620,9 @@
         "9f552d4434f4",
         "b2c190815bab",
         "dcb8039c8dc7",
-        "bbc3bc64fdc2"
+        "bbc3bc64fdc2",
+        "2a0dfef67725",
+        "022b6d3505d3"
       ],
       "recallDays": [
         "2026-04-22",
@@ -613,7 +634,9 @@
         "2026-04-28",
         "2026-04-29",
         "2026-04-30",
-        "2026-05-16"
+        "2026-05-16",
+        "2026-05-20",
+        "2026-05-23"
       ],
       "conceptTags": [
         "lịch/chạy",

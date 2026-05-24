@@ -1,0 +1,23 @@
+LOAI_BAI_WEB=gia-tri
+LOAI_BAI_FB=gia-tri
+WEB_TITLE=Lắp thang máy gia đình cho nhà đang ở: Quy trình 7 ngày chốt phương án cùng FUJI TH
+WEB_LINK=https://thangmayfujith.com/?p=2892
+WEB_IMAGES=https://thangmayfujith.com/wp-content/uploads/2026/05/thang-may-gia-dinh-mat-dien-an-tam-1.png|https://thangmayfujith.com/wp-content/uploads/2026/05/thang-may-gia-dinh-mat-dien-tu-van-an-toan-2.png|https://thangmayfujith.com/wp-content/uploads/2026/05/thang-may-gia-dinh-mat-dien-phuong-an-an-toan-3.png
+FB_IMAGES=https://thangmayfujith.com/wp-content/uploads/2026/05/file_83-4483a68b-97f5-40e3-858d-1ef6fe9274f3.jpg|https://thangmayfujith.com/wp-content/uploads/2026/05/file_84-fc2ccd48-30af-4a7d-8357-31699dd1b59f.jpg|https://thangmayfujith.com/wp-content/uploads/2026/05/thang-may-inox-champagne-biet-thu-fuji-th-03-2.png
+FB_CAPTION=NHÀ ĐANG Ở CÓ NÊN LẮP THANG MÁY NGAY KHÔNG?
+
+Nếu sếp đang phân vân vì sợ phát sinh, sợ ảnh hưởng sinh hoạt và chưa biết bắt đầu từ đâu, FUJI TH gợi ý cách chốt nhanh trong 7 ngày:
+
+1) Chốt nhu cầu sử dụng thực tế (người lớn tuổi, trẻ nhỏ, tần suất đi lại)
+2) Khảo sát hiện trạng tại nhà để khóa thông số kỹ thuật
+3) Đề xuất phương án phù hợp diện tích + tải trọng + thẩm mỹ
+4) Thi công theo mốc rõ ràng, cập nhật tiến độ từng bước
+5) Kiểm tra vận hành, hướng dẫn sử dụng và bàn giao đầy đủ
+
+Đi đúng quy trình từ đầu sẽ giảm rất nhiều rủi ro đục sửa và đổi phương án giữa chừng.
+
+FUJI TH nhận khảo sát và tư vấn theo hiện trạng thực tế công trình.
+Hotline: 0987654321
+Website: https://thangmayfujith.com/
+
+#thangmaygiadinh #thangmayfujith #thangmaynhapho #lapdatthangmay

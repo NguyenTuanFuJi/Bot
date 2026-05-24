@@ -1,0 +1,6 @@
+WEB_TITLE=Quy trình 7 bước lắp thang máy gia đình FUJI TH giúp giảm phát sinh khi thi công
+WEB_LINK=https://thangmayfujith.com/?p=2889
+WEB_TYPE=gia-tri
+WEB_IMAGES=https://thangmayfujith.com/wp-content/uploads/2026/05/thang-may-gia-dinh-cao-cap-fuji-th-01.png|https://thangmayfujith.com/wp-content/uploads/2026/05/thang-may-kinh-gia-dinh-hien-dai-fuji-th-02.png|https://thangmayfujith.com/wp-content/uploads/2026/05/thang-may-inox-champagne-biet-thu-fuji-th-03.png
+FB_TYPE=ban-hang
+FB_IMAGES=https://thangmayfujith.com/wp-content/uploads/2026/05/thang-may-gia-dinh-cao-cap-fuji-th-01-2.png|https://thangmayfujith.com/wp-content/uploads/2026/05/thang-may-kinh-gia-dinh-hien-dai-fuji-th-02-2.png|https://thangmayfujith.com/wp-content/uploads/2026/05/thang-may-am-tuong-cua-kinh-khoi-fuji-th-04.png
