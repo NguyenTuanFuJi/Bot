@@ -1,0 +1,26 @@
+LOAI_BAI_WEB=gia-tri
+LOAI_BAI_FB=ban-hang
+WEB_TITLE=Báo giá thang máy gia đình sao cho không đội chi phí: 6 bước FUJI TH triển khai từ khảo sát đến bàn giao
+WEB_LINK=https://thangmayfujith.com/?p=2912
+WEB_IMAGES=https://thangmayfujith.com/wp-content/uploads/2026/04/fujith-library-20260416-h-03.jpg|https://thangmayfujith.com/wp-content/uploads/2026/04/fujith-library-20260416-i-06.jpg|https://thangmayfujith.com/wp-content/uploads/2026/04/fujith-library-20260416-k-04.jpg
+FB_IMAGES=https://thangmayfujith.com/wp-content/uploads/2026/04/fujith-library-20260416-01.jpg|https://thangmayfujith.com/wp-content/uploads/2026/04/fujith-library-20260416-04.jpg|https://thangmayfujith.com/wp-content/uploads/2026/04/fujith-library-20260416-09.jpg
+FB_CAPTION=NHÀ ĐANG CÂN NHẮC LẮP THANG MÁY VÀ MUỐN CHỐT PHƯƠNG ÁN GỌN, ĐỠ PHÁT SINH?
+
+FUJI TH nhận khảo sát thực tế công trình trước khi báo giá để giúp anh/chị:
+- Chốt đúng tải trọng và kích thước cabin theo nhu cầu dùng thật
+- Rõ phần kỹ thuật liên quan hố thang, điện nguồn, tiến độ thi công
+- Có phương án phù hợp ngân sách, tránh đổi cấu hình giữa chừng
+
+Quy trình FUJI TH triển khai:
+1) Khảo sát hiện trạng tại nhà
+2) Tư vấn cấu hình phù hợp
+3) Báo giá minh bạch theo hạng mục
+4) Thi công theo mốc rõ ràng
+5) Bàn giao + hướng dẫn sử dụng
+6) Bảo trì định kỳ, hỗ trợ kỹ thuật khi cần
+
+Anh/chị cần tư vấn theo hiện trạng nhà phố/nhà cải tạo, FUJI TH hỗ trợ nhanh.
+Hotline: 0989397282 - 0924286386
+Website: https://thangmayfujith.com
+
+#thangmaygiadinh #thangmayfujith #lapdatthangmay #baogiathangmay

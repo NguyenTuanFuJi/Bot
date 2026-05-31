@@ -1,0 +1,24 @@
+LOAI_BAI_WEB=gia-tri
+LOAI_BAI_FB=gia-tri
+WEB_TITLE=Checklist chốt phương án thang máy gia đình trước khi thi công: 6 bước FUJI TH giảm phát sinh
+WEB_LINK=https://thangmayfujith.com/?p=2915
+WEB_IMAGES=https://thangmayfujith.com/wp-content/uploads/2026/04/fujith-library-20260416-e-07.jpg|https://thangmayfujith.com/wp-content/uploads/2026/04/fujith-library-20260416-f-08.jpg|https://thangmayfujith.com/wp-content/uploads/2026/04/fujith-library-20260416-g-09.jpg
+FB_IMAGES=https://thangmayfujith.com/wp-content/uploads/2026/04/fujith-library-20260416-b-02.jpg|https://thangmayfujith.com/wp-content/uploads/2026/04/fujith-library-20260416-c-07.jpg|https://thangmayfujith.com/wp-content/uploads/2026/04/fujith-library-20260416-h-10.jpg
+FB_CAPTION=NHÀ ĐANG CHUẨN BỊ LẮP THANG MÁY VÀ MUỐN CHỐT PHƯƠNG ÁN GỌN, ĐỠ PHÁT SINH?
+
+FUJI TH gợi ý cách làm thực tế để gia đình đi nhanh mà vẫn chắc:
+
+1) Khảo sát hiện trạng tại công trình
+2) Chốt tải trọng + kích thước cabin theo nhu cầu dùng thật
+3) Khóa thông số kỹ thuật trước thi công (hố thang, cửa tầng, điện nguồn)
+4) Thi công theo mốc rõ ràng, cập nhật tiến độ
+5) Kiểm tra vận hành trước bàn giao
+6) Bảo trì định kỳ, hỗ trợ kỹ thuật khi cần
+
+Làm đúng quy trình từ đầu sẽ giảm đáng kể rủi ro đổi phương án giữa chừng và phát sinh chi phí không cần thiết.
+
+FUJI TH nhận khảo sát, tư vấn theo hiện trạng nhà phố và nhà cải tạo.
+Hotline: 0989397282 - 0924286386
+Website: https://thangmayfujith.com
+
+#thangmaygiadinh #thangmayfujith #lapdatthangmay #kinhnghiemxaynha
