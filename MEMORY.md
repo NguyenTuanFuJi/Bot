@@ -8,4 +8,5 @@
 - Thông tin theo ngày: `memory/YYYY-MM-DD.md`
 - Sở thích/cách làm việc: `memory/preferences.md`
 - Dữ liệu công ty: `memory/company_fuji_th.md`
+- WordPress FUJI TH: `memory/wordpress_fujith.md`
 - Tóm tắt session: `memory/session_summaries/`

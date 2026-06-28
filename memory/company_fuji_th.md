@@ -5,9 +5,15 @@
 - Chức vụ: Giám đốc
 - Địa chỉ: Số 10 ngõ 117, Phố Mai Phúc, Phường Phúc Lợi, Thành phố Hà Nội, Việt Nam
 - Điện thoại: 0924286386; 0989397282
+- Email: fujith557@gmail.com
 - Mã số thuế: 0109220557
 - Số tài khoản: 1020896868
 - Ngân hàng: Ngân hàng TMCP Á Châu (ACB), chi nhánh Hà Nội
+
+## Website
+- URL: https://thangmayfujith.com
+- WordPress REST API + Application Password
+- Chi tiết vận hành: xem `memory/wordpress_fujith.md`
 
 ## Ghi chú sử dụng
 - Dùng làm thông tin chuẩn khi soạn bài giới thiệu doanh nghiệp, báo giá, hợp đồng, và nội dung truyền thông cho thương hiệu FUJI TH.
