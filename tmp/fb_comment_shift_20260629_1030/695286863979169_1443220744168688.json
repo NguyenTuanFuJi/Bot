@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "id": "1443220744168688_1932542760703357",
+      "message": "📍 Địa chỉ công ty: Số 10/117 Mai Phúc, phường Phúc Lợi, TP Hà Nội\n☎ Hotline: 0924286386 - 0989397282\n🌐 Website: https://thangmayfujith.com",
+      "from": {
+        "name": "Thang Máy FUJI TH",
+        "id": "695286863979169"
+      },
+      "created_time": "2026-04-23T13:54:27+0000",
+      "like_count": 0,
+      "is_hidden": false
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "before": "MQZDZD",
+      "after": "MQZDZD"
+    }
+  }
+}

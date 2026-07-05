@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "id": "1453425093148253_1002449415466419",
+      "message": "Anh chị đang tìm mẫu thang máy gia đình phù hợp cho nhà phố hoặc biệt thự có thể để lại số điện thoại hoặc nhắn tin trực tiếp để FUJI TH tư vấn nhanh nhé.",
+      "from": {
+        "name": "Thang Máy FUJI TH",
+        "id": "695286863979169"
+      },
+      "created_time": "2026-05-06T03:32:37+0000",
+      "like_count": 0,
+      "is_hidden": false
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "before": "MQZDZD",
+      "after": "MQZDZD"
+    }
+  }
+}

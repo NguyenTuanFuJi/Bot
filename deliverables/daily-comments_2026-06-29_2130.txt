@@ -1,0 +1,13 @@
+Báo cáo kiểm tra bình luận FUJI TH
+Thời điểm: 2026-06-29 21:30 (giờ VN)
+
+Kết quả:
+- Facebook đã quét 20 bài mới nhất.
+- Có 4 bình luận cũ đã nằm trong danh sách đã xử lý trước đó.
+- Không có bình luận Facebook mới cần xử lý.
+- Website không có bình luận mới ở đầu API comments.
+
+Ghi chú vận hành:
+- Lần kiểm tra trước đó trong ngày: 2026-06-29 10:36 (giờ VN), cũng không có bình luận mới.
+- Bình luận "Inbox" đã xử lý trước đó không cần trả lời lại.
+- Hiện tại không cần chốt lead mới từ comment.
