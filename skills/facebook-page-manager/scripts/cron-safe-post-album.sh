@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Cron-safe Facebook album post wrapper (multiple photos)
+# Cron-safe Facebook post wrapper (atomic mode)
+# Uses single-request approach to avoid orphan posts on timeout.
+# - 1 photo: POST /{page}/photos with message+source (atomic)
+# - N photos: upload unpublished with --max-time, create feed post, cleanup on failure
+#
 # Usage:
-#   bash scripts/cron-safe-post-album.sh --page <PAGE_ID> --message-file /abs/path/msg.txt --photo /abs/1.jpg --photo /abs/2.jpg [...]
+#   bash scripts/cron-safe-post-album.sh --page <PAGE_ID> --message-file /abs/path/msg.txt --photo /abs/1.jpg [--photo /abs/2.jpg ...]
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SKILL_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
@@ -58,38 +62,75 @@ process.stdout.write(t.pages[page].token);
 ')"
 
 API="https://graph.facebook.com/v21.0"
-ATTACHED=()
+ORPHAN_IDS=()
+
+# Cleanup function: delete orphan uploaded photos on failure
+cleanup_orphans() {
+  if [[ ${#ORPHAN_IDS[@]} -gt 0 ]]; then
+    echo "[$(date '+%F %T')] Cleaning up ${#ORPHAN_IDS[@]} orphan photo(s)..." >> "$LOG_FILE"
+    for oid in "${ORPHAN_IDS[@]}"; do
+      curl -sS --max-time 10 -X DELETE "$API/$oid?access_token=$TOKEN" >> "$LOG_FILE" 2>&1 || true
+    done
+  fi
+}
+trap cleanup_orphans ERR EXIT
 
 {
-  echo "[$(date '+%F %T')] Uploading ${#PHOTOS[@]} photo(s) for page=$PAGE_ID"
+  echo "[$(date '+%F %T')] Posting ${#PHOTOS[@]} photo(s) for page=$PAGE_ID (atomic mode)"
 } >> "$LOG_FILE"
 
-for p in "${PHOTOS[@]}"; do
-  PHOTO_ID="$(curl -sS -X POST "$API/$PAGE_ID/photos" \
-    -F "source=@$p" \
-    -F "published=false" \
-    -F "access_token=$TOKEN" | jq -r '.id // empty')"
+if [[ ${#PHOTOS[@]} -eq 1 ]]; then
+  # === SINGLE PHOTO: one atomic request ===
+  RESP="$(curl -sS --max-time 60 -X POST "$API/$PAGE_ID/photos" \
+    -F "source=@${PHOTOS[0]}" \
+    -F "message=$MESSAGE" \
+    -F "access_token=$TOKEN")"
 
-  if [[ -z "$PHOTO_ID" ]]; then
-    echo "[ERR] upload failed for $p" >> "$LOG_FILE"
+  POST_ID="$(echo "$RESP" | jq -r '.id // empty')"
+
+  if [[ -z "$POST_ID" ]]; then
+    echo "[ERR] create post failed: $RESP" >> "$LOG_FILE"
     exit 1
   fi
-  ATTACHED+=("$PHOTO_ID")
-  echo "[$(date '+%F %T')] uploaded: $p => $PHOTO_ID" >> "$LOG_FILE"
-done
 
-POST_CMD=(curl -sS -X POST "$API/$PAGE_ID/feed" --data-urlencode "message=$MESSAGE" --data-urlencode "access_token=$TOKEN")
-for i in "${!ATTACHED[@]}"; do
-  POST_CMD+=(--data-urlencode "attached_media[$i]={\"media_fbid\":\"${ATTACHED[$i]}\"}")
-done
+  echo "[$(date '+%F %T')] OK post_id=$POST_ID" >> "$LOG_FILE"
+  echo "POST_OK: $POST_ID"
 
-RESP="$(${POST_CMD[@]})"
-POST_ID="$(echo "$RESP" | jq -r '.id // empty')"
+else
+  # === MULTIPLE PHOTOS: upload unpublished, then feed post ===
+  ATTACHED=()
 
-if [[ -z "$POST_ID" ]]; then
-  echo "[ERR] create post failed: $RESP" >> "$LOG_FILE"
-  exit 1
+  for p in "${PHOTOS[@]}"; do
+    PHOTO_ID="$(curl -sS --max-time 30 -X POST "$API/$PAGE_ID/photos" \
+      -F "source=@$p" \
+      -F "published=false" \
+      -F "access_token=$TOKEN" | jq -r '.id // empty')"
+
+    if [[ -z "$PHOTO_ID" ]]; then
+      echo "[ERR] upload failed for $p" >> "$LOG_FILE"
+      exit 1
+    fi
+    ATTACHED+=("$PHOTO_ID")
+    ORPHAN_IDS+=("$PHOTO_ID")
+    echo "[$(date '+%F %T')] uploaded: $p => $PHOTO_ID" >> "$LOG_FILE"
+  done
+
+  # Create feed post with all attached media
+  POST_CMD=(curl -sS --max-time 30 -X POST "$API/$PAGE_ID/feed" --data-urlencode "message=$MESSAGE" --data-urlencode "access_token=$TOKEN")
+  for i in "${!ATTACHED[@]}"; do
+    POST_CMD+=(--data-urlencode "attached_media[$i]={\"media_fbid\":\"${ATTACHED[$i]}\"}")
+  done
+
+  RESP="$("${POST_CMD[@]}")"
+  POST_ID="$(echo "$RESP" | jq -r '.id // empty')"
+
+  if [[ -z "$POST_ID" ]]; then
+    echo "[ERR] create post failed: $RESP" >> "$LOG_FILE"
+    exit 1
+  fi
+
+  # Success: clear orphan IDs so trap doesn't delete them
+  ORPHAN_IDS=()
+  echo "[$(date '+%F %T')] OK post_id=$POST_ID" >> "$LOG_FILE"
+  echo "POST_OK: $POST_ID"
 fi
-
-echo "[$(date '+%F %T')] OK post_id=$POST_ID" >> "$LOG_FILE"
-echo "POST_OK: $POST_ID"
