@@ -1,5 +1,102 @@
 # Content Log — FUJI TH
 
+## 31/07/2026 (MỚI — cron 20h30 31/07)
+- **Web (GIÁ TRỊ):** "Chọn Thang Máy Gia Đình: 7 Tiêu Chí Quan Trọng Nhất Trước Khi Quyết Định"
+  - Post ID: 3166
+  - Slug: chon-thang-may-gia-dinh-7-tieu-chi
+  - Status: Draft (chờ duyệt)
+  - Category: 72 (Chia sẻ - Kinh nghiệm)
+  - Focus KW: chọn thang máy gia đình
+  - SEO title: Chọn thang máy gia đình: 7 tiêu chí quan trọng nhất trước khi quyết định — FUJI TH
+  - Meta desc: Hướng dẫn chọn thang máy gia đình: 7 tiêu chí từ nhu cầu, loại thang, tải trọng, vị trí, an toàn đến chi phí và nhà cung cấp. Cập nhật 2026.
+  - Images: thang-may-gia-dinh-cao-cap-fuji-th-01 (ID 2864), codex-imagen-khao-sat-01 (ID 2823), codex-imagen-chot-phuong-an (ID 2822)
+  - Internal links: so-sanh-thang-may-truc-vit-va-cap-keo, vi-tri-dat-thang-may-gia-dinh, chi-phi-bao-tri-thang-may-gia-dinh-hang-nam, bao-duong-thang-may-gia-dinh-dinh-ky
+
+---
+
+## 30/07/2026 (MỚI — cron 20h30 30/07)
+- **Web (BÁN HÀNG):** "Động Cơ Thang Máy Gia Đình: So Sánh 4 Loại Phổ Biến Và Loại Nào Phù Hợp Nhất"
+  - Post ID: 3155
+  - Slug: dong-co-thang-may-gia-dinh-4-loai
+  - Status: Draft (chờ duyệt)
+  - Category: 72 (Chia sẻ - Kinh nghiệm) + 1 (Về thang máy)
+  - Focus KW: động cơ thang máy gia đình
+  - SEO title: Động cơ thang máy gia đình: so sánh 4 loại phổ biến và lựa chọn tốt nhất — FUJI TH
+  - Meta desc: So sánh 4 loại động cơ thang máy gia đình: PMSM không hộp số, có hộp số, trục vít, DC chổi than. Xem ưu nhược điểm, chi phí và cách chọn phù hợp nhất.
+  - Images: fujith-motor-cong-nghe-moi-01 (ID 2994), fujith-dong-co-ben-bi-03 (ID 2996), fujith-clean-motor-1 (ID 2566)
+  - Internal links: so-sanh-thang-may-truc-vit-va-cap-keo, chi-phi-bao-tri-thang-may-gia-dinh
+
+---
+
+## 30/07/2026 (MỚI — cron 9h 30/07)
+- **Web (GIÁ TRỊ):** "Inox Thang Máy Gia Đình: So Sánh 304 Và 201, Chọn Đúng Vật Liệu Để Cabin Bền Đẹp Lâu Dài"
+  - Post ID: 3153
+  - Slug: inox-thang-may-gia-dinh-304-201
+  - Status: Draft (chờ duyệt)
+  - Category: 72 (Chia sẻ - Kinh nghiệm)
+  - Focus KW: inox thang máy gia đình
+  - SEO title: Inox thang máy gia đình: so sánh 304 và 201, chọn đúng vật liệu cabin bền đẹp
+  - Meta desc: So sánh inox 304 và 201 cho thang máy gia đình: chống ăn mòn, bề mặt gương/xước/PVD, cách chọn đúng để cabin bền đẹp 15-20 năm.
+  - Images: thang-may-inox-champagne-biet-thu-fuji-th-03-1 (ID 2871), thang-may-kinh-gia-dinh-hien-dai-fuji-th-02-2 (ID 2875), file_84 (ID 2886)
+
+---
+
+## 29/07/2026 (MỚI — cron 9h 29/07)
+- **Web (GIÁ TRỊ):** "Thang Máy Gia Đình Dùng Hàng Ngày: 6 Thói Quen Giúp Thang Bền, Êm Và Tiết Kiệm Điện"
+  - Post ID: 3143
+  - Slug: thoi-quen-dung-thang-may-gia-dinh-hang-ngay
+  - Status: Draft (chờ duyệt)
+  - Category: 72 (Chia sẻ - Kinh nghiệm)
+  - Focus KW: thói quen dùng thang máy gia đình
+  - SEO title: Thói quen dùng thang máy gia đình: 6 việc đơn giản giúp thang bền, êm và tiết kiệm điện
+  - Meta desc: 6 thói quen dùng thang máy gia đình giúp thang bền, êm và tiết kiệm điện. Hướng dẫn chi tiết cách sử dụng đúng để giảm chi phí bảo trì và kéo dài tuổi thọ thang.
+  - Images: fujith-library-20260416-i-01 (ID 2654), fujith-library-20260416-i-04 (ID 2657), fujith-library-20260416-g-02 (ID 2635)
+
+---
+
+## 28/07/2026 (MỚI — cron 20h30 28/07)
+- **Web (BÁN HÀNG):** "Thang Máy Gia Đình Không Phòng Máy (MRL): 5 Lợi Ích Và Lý Do FUJI TH Ưu Tiên Công Nghệ Này"
+  - Post ID: 3138
+  - Slug: thang-may-gia-dinh-khong-phong-may-mrl
+  - Status: Draft (chờ duyệt)
+  - Category: 86 (Tin tức) + 84 (Thang máy gia đình)
+  - Focus KW: thang máy gia đình không phòng máy
+  - SEO title: Thang máy gia đình không phòng máy (MRL): 5 lợi ích và lý do FUJI TH ưu tiên
+  - Meta desc: Thang máy gia đình không phòng máy (MRL) tiết kiệm diện tích, giảm chi phí thi công, vận hành êm. FUJI TH chuyên lắp đặt công nghệ MRL — tư vấn miễn phí 0989397282.
+  - Images: fujith-library-20260416-e-01 (ID 2614), thang-may-kinh-gia-dinh-hien-dai-fuji-th-02-3 (ID 2952), fujith-library-20260416-b-02 (ID 2585)
+
+---
+
+## 28/07/2026 (MỚI — cron 9h 28/07)
+- **Web (GIÁ TRỊ):** "Thời Gian Lắp Đặt Thang Máy Gia Đình: 4 Giai Đoạn Và Cách Chuẩn Bị Để Đúng Tiến Độ"
+  - Post ID: 3134
+  - Slug: thoi-gian-lap-dat-thang-may-gia-dinh-4-giai-doan
+  - Status: Draft (chờ duyệt)
+  - Category: 72 (Chia sẻ - Kinh nghiệm)
+  - Focus KW: thời gian lắp đặt thang máy gia đình
+  - SEO title: Thời gian lắp đặt thang máy gia đình: 4 giai đoạn và cách chuẩn bị để đúng tiến độ
+  - Meta desc: Thời gian lắp đặt thang máy gia đình gồm 4 giai đoạn: khảo sát, thiết kế, thi công hố thang, lắp đặt. Bảng tiến độ chi tiết giúp gia chủ chuẩn bị đúng, tránh chậm trễ.
+  - Images: thang-may-gia-dinh-cao-cap-fuji-th-01-1 (ID 2870), fujith-library-20260416-e-04 (ID 2617), fujith-library-20260416-b-02 (ID 2585)
+
+---
+
+## 27/07/2026 (MỚI — cron 21h 26/07)
+- **Web (BÁN HÀNG):** "Quy Trình Lắp Đặt Thang Máy Gia Đình Tại FUJI TH: 6 Bước Từ Khảo Sát Đến Bàn Giao"
+  - Post ID: 3127
+  - Slug: quy-trinh-6-buoc-lap-dat-thang-may-fuji-th
+  - Status: Draft (chờ duyệt)
+  - Category: 86 (Tin tức) + 84 (Thang máy gia đình)
+  - Focus KW: quy trình lắp đặt thang máy gia đình
+  - SEO title: Quy trình lắp đặt thang máy gia đình tại FUJI TH: 6 bước từ khảo sát đến bàn giao
+  - Meta desc: Quy trình lắp đặt thang máy gia đình FUJI TH: 6 bước từ khảo sát, thiết kế, thi công đến nghiệm thu bàn giao. Bảo hành 24-36 tháng. Hotline 0989397282.
+  - Images: quy-trinh-lap-dat-thang-may-1 (ID 3052), quy-trinh-lap-dat-thang-may-2 (ID 3053), quy-trinh-lap-dat-thang-may-3 (ID 3054)
+
+- **Facebook (GIÁ TRỊ):** "Mua thang máy về rồi — cần làm gì để thang bền, êm và an toàn lâu dài?"
+  - Images: fujith-library-20260416-k-01 (ID 2668), fujith-library-20260416-k-02 (ID 2669), fujith-library-20260416-k-03 (ID 2670)
+  - Status: Draft (chưa đăng)
+
+---
+
 ## 26/07/2026 (MỚI — cron 21h 25/07)
 - **Web (BÁN HÀNG):** "Tư Vấn Thang Máy Gia Đình MIỄN PHÍ: Quy Trình 6 Bước Tại FUJI TH — Từ Cuộc Gọi Đến Bàn Giao"
   - Post ID: 3115
@@ -289,6 +386,9 @@
 - 25/07: BÁN HÀNG (web, 9h) + GIÁ TRỊ (web, 20h30) + GIÁ TRỊ (fb)
 - 25/07 20h30: GIÁ TRỊ (web) ← cron 20h30
 - 26/07: BÁN HÀNG (web) + GIÁ TRỊ (fb)
+- 28/07: GIÁ TRỊ (web)
+- 29/07: GIÁ TRỊ (web)
+- 30/07: GIÁ TRỊ (web, 9h) + BÁN HÀNG (web, 20h30)
 
 ## 11/07/2026 (MỚI — cron 21:00 10/07)
 - **Web (GIÁ TRỊ):** "Lắp Thang Máy Gia Đình: 5 Sai Lầm Phổ Biến Gia Chủ Cần Tránh"
