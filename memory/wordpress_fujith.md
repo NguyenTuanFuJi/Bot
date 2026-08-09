@@ -12,6 +12,7 @@ Cập nhật: 2026-06-25
 ## Quy tắc bắt buộc
 - Luôn dùng đúng SĐT, địa chỉ, email từ thông tin công ty — KHÔNG tự ý bịa/thay đổi.
 - SĐT khi ghi nội dung: viết liền 10 số, không tách khoảng trắng/chấm/gạch.
+- **Chỉ làm thang cáp kéo** — KHÔNG đăng bài, tư vấn, hoặc gợi ý thang trục vít, thang thủy lực, thang không hố pit.
 
 ## Thông tin site
 - URL: https://thangmayfujith.com
@@ -114,3 +115,11 @@ bash scripts/wp_posts.sh list --env .env --per-page 10
 ## Ghi chú từ session 2026-06-25
 - Bài ID 2907, 2904, 2855 bị trống title.rendered (có thể do theme hoặc cấu hình hiển thị)
 - Cần kiểm tra thêm nếu sếp muốn sửa
+
+## 2026-08-04: Tự động đăng bài không chờ duyệt
+- REST API bị chặn (404), chuyển sang XML-RPC API
+- XML-RPC endpoint: https://thangmayfujith.com/xmlrpc.php
+- Auth: user=fuji-temp, pass=Kd1a iK2j KXAm cxMO HZjf KXDC
+- wp.newPost → tạo draft, wp.editPost(status=publish) → publish
+- Tất cả cron job đã cập nhật: tự đăng ngay, không gửi sếp duyệt
+- Báo kết quả + link qua Telegram sau khi đăng

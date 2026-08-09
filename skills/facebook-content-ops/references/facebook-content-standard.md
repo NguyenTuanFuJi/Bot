@@ -30,6 +30,9 @@
 - Nội dung có bullet, dễ quét
 - Hashtag 3–5, không spam
 - Độ dài vừa phải, tránh quá ngắn hoặc quá dài
+- **Bắt buộc có thông tin liên hệ cuối bài:** SĐT liên hệ (liền 10 số, không dấu cách/chấm/gạch), website, địa chỉ công ty
+- **Bắt buộc có icon trang trí:** tối thiểu 3 loại icon khác nhau trong bài (✅🔹💡📌📞📍💰🔧🏠⚠️📊🔒🔇🏗️✨🎁🤔💬📋 v.v.) — giúp bài dễ đọc, thu hút mắt
+- **Bắt buộc luân phiên kiểu mở bài:** kiểm tra bài trước đó, chọn 1 trong 5 kiểu: nêu vấn đề / câu hỏi gợi mở / tình huống thực tế / mini case / so sánh trước-sau
 
 ## 6) Tỉ lệ nội dung tuần
 - 40% giáo dục

@@ -1,5 +1,51 @@
 # Content Log — FUJI TH
 
+## 05/08/2026 (MỚI — cron 20h30 05/08)
+- **Web (GIÁ TRỊ):** "Tiết Kiệm Điện Thang Máy Gia Đình: 6 Cách Đơn Giản Giảm Hóa Đơn Điện Hàng Tháng"
+  - Post ID: 3220
+  - Slug: tiet-kiem-dien-thang-may-gia-dinh
+  - Status: Published
+  - Category: 72 (Chia sẻ - Kinh nghiệm)
+  - Focus KW: tiết kiệm điện thang máy gia đình
+  - SEO title: Tiết kiệm điện thang máy gia đình: 6 cách đơn giản giảm hóa đơn điện — FUJI TH
+  - Meta desc: 6 cách tiết kiệm điện thang máy gia đình giúp giảm 20-40% chi phí điện hàng tháng: chọn động cơ không hộp số, thang MRL, chế độ tiết kiệm, bảo trì định kỳ. Tư vấn miễn phí từ FUJI TH.
+  - Images: fujith-tietkiemdien-1 (ID 2919, featured), fujith-tietkiemdien-2 (ID 2920), fujith-tietkiemdien-3 (ID 2921)
+  - Internal links: dong-co-thang-may-gia-dinh-4-loai, thang-may-gia-dinh-khong-phong-may-mrl, cach-chon-trong-tai-thang-may-gia-dinh
+
+---
+
+## 04/08/2026 (MỚI — cron 9h 04/08)
+- **Web (GIÁ TRỊ):** "Cách Chọn Trọng Tải Thang Máy Gia Đình: 350kg, 450kg Hay 630kg?"
+  - Post ID: 3204
+  - Slug: cach-chon-trong-tai-thang-may-gia-dinh
+  - Status: Draft (chờ duyệt)
+  - Category: 72 (Chia sẻ - Kinh nghiệm) + 84 (Thang máy gia đình)
+  - Focus KW: trọng tải thang máy gia đình
+  - SEO title: Trọng tải thang máy gia đình: cách chọn 350kg, 450kg hay 630kg phù hợp — FUJI TH
+  - Meta desc: Hướng dẫn chọn trọng tải thang máy gia đình: so sánh 350kg, 450kg, 630kg theo số người, diện tích hố thang và ngân sách. Bảng chi tiết + tư vấn miễn phí từ FUJI TH.
+  - Images: trong-tai-thang-may-gia-dinh-01 (ID 3206, featured), trong-tai-thang-may-gia-dinh-02 (ID 3207), trong-tai-thang-may-gia-dinh-03 (ID 3208)
+  - Internal links: chon-thang-may-gia-dinh-7-tieu-chi, kich-thuoc-cabin-thang-may-gia-dinh-350kg-2, chi-phi-bao-tri-thang-may-gia-dinh-hang-nam, tieu-chuan-ky-thuat-thang-may-gia-dinh
+
+---
+
+## 04/08/2026 (MỚI — cron 21h 03/08)
+- **Web (BÁN HÀNG):** "Báo Giá Thang Máy Gia Đình 2026: Bảng Chi Tiết Từng Hạng Mục Và Cách FUJI TH Tối Ưu Chi Phí"
+  - Post ID: 3202
+  - Slug: bao-gia-thang-may-gia-dinh-2026
+  - Status: Draft (chờ duyệt)
+  - Category: 86 (Tin tức) + 84 (Thang máy gia đình)
+  - Focus KW: báo giá thang máy gia đình
+  - SEO title: Báo giá thang máy gia đình 2026: bảng chi tiết và cách tối ưu chi phí — FUJI TH
+  - Meta desc: Báo giá thang máy gia đình 2026: bảng chi tiết thiết bị, thi công, lắp đặt từ 360 triệu. FUJI TH khảo sát miễn phí, tư vấn tối ưu chi phí. Hotline 0989397282.
+  - Images: new-20260803-01 (ID 3196, featured), new-20260803-03 (ID 3197), new-20260803-05 (ID 3198)
+  - Internal links: chi-phi-van-hanh-thang-may-gia-dinh, lap-dat-thang-may-gia-dinh-tron-goi-fuji-th, chi-phi-bao-tri-thang-may-gia-dinh-hang-nam
+
+- **Facebook (GIÁ TRỊ):** "5 dấu hiệu thang máy gia đình cần được bảo dưỡng ngay — đừng bỏ qua!"
+  - Images: new-20260803-02 (ID 3199), new-20260803-04 (ID 3200), new-20260803-07 (ID 3201)
+  - Status: Draft (chưa đăng)
+
+---
+
 ## 31/07/2026 (MỚI — cron 20h30 31/07)
 - **Web (GIÁ TRỊ):** "Chọn Thang Máy Gia Đình: 7 Tiêu Chí Quan Trọng Nhất Trước Khi Quyết Định"
   - Post ID: 3166

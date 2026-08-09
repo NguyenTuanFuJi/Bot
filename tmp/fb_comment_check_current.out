@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-08-08T17:01:52.695Z",
+  "processed": 0,
+  "total_new": 0,
+  "items": [],
+  "channels": {
+    "facebook": {
+      "page_id": "695286863979169",
+      "posts_scanned": 20,
+      "new_comments": 0
+    },
+    "website": {
+      "endpoint": "https://thangmayfujith.com/?rest_route=/wp/v2/comments&per_page=20&orderby=date_gmt&order=desc&_fields=id,post,author_name,status,date_gmt,link,content",
+      "new_comments": 0,
+      "items": []
+    }
+  },
+  "note": "Không có bình luận Facebook mới; website không có bình luận mới."
+}

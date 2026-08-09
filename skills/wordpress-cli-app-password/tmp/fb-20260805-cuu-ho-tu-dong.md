@@ -1,0 +1,33 @@
+🚨 MẤT ĐIỆN MÀ CÓ NGƯỜI TRONG THANG MÁY — CHUYỆN GÌ XẢY RA?
+
+Nhiều gia chủ hỏi: "Nếu mất điện bất ngờ, người trong cabin có bị kẹt không?"
+
+Câu trả lời phụ thuộc vào nhà cung cấp bạn chọn.
+
+❌ Nhà cung cấp thông thường:
+→ Mất điện = cabin dừng đột ngột
+→ Người trong cabin phải chờ cứu hộ bên ngoài
+→ Không có cơ chế tự thoát hiểm
+→ Thời gian chờ: 15–60 phút (hoặc lâu hơn)
+
+✅ Thang máy FUJI TH:
+→ Hệ thống cứu hộ AUTOMATIC khởi động ngay khi mất điện
+→ Cabin tự động di chuyển đến tầng gần nhất
+→ Cửa mở tự động — người trong cabin thoát ra an toàn
+→ Thời gian cứu hộ: < 30 giây
+
+Đây không phải tính năng "thêm cho có" — đây là ranh giới giữa AN TOÁN và NGUY HIỂM.
+
+🔧 Hệ thống cứu hộ FUJI TH bao gồm:
+• Nguồn UPS dự phòng — hoạt động ngay khi mất điện
+• Motor DC tích hợp — điều khiển cabin chính xác
+• Cảm biến tầng tự động — xác định vị trí cabin trong tích tắc
+• Cửa mở cơ khí — không cần điện để mở
+
+📞 Bạn đang tìm hiểu thang máy gia đình có hệ thống cứu hộ tự động?
+Liên hệ FUJI TH ngay để được tư vấn miễn phí:
+
+☎️ Hotline: 0989397282
+🌐 Website: thangmayfujith.com
+
+#ThangMáyGiaĐình #FUJITH #ThangMáyAnToàn #HệThốngCứuHộ #ThangMáyMấtĐiện #ThangMáyNhậtBản

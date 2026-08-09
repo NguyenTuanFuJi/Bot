@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1200px;
+  height: 675px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+  background: #ffffff;
+}
+
+/* Top accent bar */
+.top-bar {
+  height: 8px;
+  background: linear-gradient(90deg, #1a56db, #3b82f6, #ffc107, #ff6b35);
+}
+
+.container {
+  padding: 40px 60px;
+  height: calc(100% - 8px);
+  display: flex;
+  gap: 40px;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.logo-box {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #1a56db, #3b82f6);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  font-weight: 900;
+}
+
+.company-info {
+  flex: 1;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0a1628;
+}
+
+.company-sub {
+  font-size: 13px;
+  color: #6b7280;
+  letter-spacing: 1px;
+}
+
+.recruit-badge {
+  background: #fee2e2;
+  color: #dc2626;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 6px 18px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+/* Title */
+.section-title {
+  font-size: 38px;
+  font-weight: 900;
+  color: #0a1628;
+  margin-bottom: 8px;
+  line-height: 1.15;
+}
+
+.section-title span {
+  color: #1a56db;
+}
+
+.desc {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+/* Two columns */
+.cols {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.col {
+  flex: 1;
+}
+
+.col-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1a56db;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.col ul {
+  list-style: none;
+}
+
+.col li {
+  font-size: 14px;
+  color: #374151;
+  padding: 5px 0;
+  line-height: 1.5;
+}
+
+.col li::before {
+  content: "✓";
+  color: #22c55e;
+  font-weight: 800;
+  margin-right: 8px;
+}
+
+/* Salary + quantity row */
+.stats {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  flex: 1;
+  padding: 18px 24px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.stat-card.salary {
+  background: linear-gradient(135deg, #1a56db, #2563eb);
+  color: white;
+}
+
+.stat-card.quantity {
+  background: #f0fdf4;
+  border: 2px solid #86efac;
+}
+
+.stat-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.stat-card.salary .stat-label { color: rgba(255,255,255,0.7); }
+.stat-card.quantity .stat-label { color: #16a34a; }
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.stat-card.salary .stat-value { color: #ffc107; }
+.stat-card.quantity .stat-value { color: #16a34a; }
+
+.stat-unit {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.stat-card.salary .stat-unit { color: rgba(255,255,255,0.6); }
+.stat-card.quantity .stat-unit { color: #6b7280; }
+
+/* Right panel */
+.apply-box {
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 32px 28px;
+  text-align: center;
+}
+
+.apply-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0a1628;
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.contact-item:last-child { border: none; }
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.ci-phone { background: #dbeafe; }
+.ci-email { background: #fef3c7; }
+.ci-web { background: #d1fae5; }
+.ci-addr { background: #fce7f3; }
+
+.contact-text {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.contact-text strong {
+  color: #0a1628;
+  display: block;
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #1a56db, #3b82f6);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 40px;
+  border-radius: 12px;
+  margin-top: 18px;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(26,86,219,0.3);
+}
+
+.qr-placeholder {
+  width: 120px;
+  height: 120px;
+  background: #e5e7eb;
+  border-radius: 12px;
+  margin: 15px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #9ca3af;
+}
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+
+  <div class="container">
+    <div class="left">
+      <div class="header">
+        <div class="logo-box">F</div>
+        <div class="company-info">
+          <div class="company-name">CÔNG TY TNHH FUJI TH</div>
+          <div class="company-sub">THANG MÁY • HÀ NỘI</div>
+        </div>
+        <div class="recruit-badge">TUYỂN DỤNG</div>
+      </div>
+
+      <div class="section-title">Kỹ thuật viên<br><span>Thang máy</span></div>
+      <div class="desc">Tham gia đội ngũ chuyên nghiệp — Cơ hội phát triển lâu dài</div>
+
+      <div class="stats">
+        <div class="stat-card salary">
+          <div class="stat-label">Mức lương</div>
+          <div class="stat-value">10 – 15 <span class="stat-unit">triệu/tháng</span></div>
+        </div>
+        <div class="stat-card quantity">
+          <div class="stat-label">Số lượng tuyển</div>
+          <div class="stat-value">2 <span class="stat-unit">người</span></div>
+        </div>
+      </div>
+
+      <div class="cols">
+        <div class="col">
+          <div class="col-title">📋 Yêu cầu</div>
+          <ul>
+            <li>Nam, 20–35 tuổi</li>
+            <li>Trung cấp/CĐ cơ điện, điện tử</li>
+            <li>Ưu tiên có kinh nghiệm</li>
+            <li>Đi công tác được</li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="col-title">🎁 Quyền lợi</div>
+          <ul>
+            <li>Lương + phụ cấp + thưởng</li>
+            <li>BHXH, BHYT, BHTN</li>
+            <li>Đào tạo nâng cao</li>
+            <li>Nghỉ T7, CN</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="apply-box">
+        <div class="apply-title">📞 ỨNG TUYỂN NGAY</div>
+
+        <div class="contact-item">
+          <div class="contact-icon ci-phone">📱</div>
+          <div class="contact-text">
+            <strong>Điện thoại</strong>
+            0989.397.282 – 0924.286.386
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon ci-email">✉️</div>
+          <div class="contact-text">
+            <strong>Email</strong>
+            fujith557@gmail.com
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon ci-web">🌐</div>
+          <div class="contact-text">
+            <strong>Website</strong>
+            thangmayfujith.com
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon ci-addr">📍</div>
+          <div class="contact-text">
+            <strong>Địa chỉ</strong>
+            Số 10, ngõ 117, phố Mai Phúc,<br>Phúc Lợi, Hà Nội
+          </div>
+        </div>
+
+        <div class="cta-btn">GỌI NGAY ĐỂ ỨNG TUYỂN</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
