@@ -1,5 +1,17 @@
 # Facebook Content Checklist
 
+## 0) Kiểm tra trùng lặp (BẮT BUỘC — trước mọi bài viết)
+
+Đọc `references/content-dedup-checklist.md` và thực hiện đầy đủ 4 bước:
+1. Tra cứu nội dung đã có trong 30 ngày (content-log.md)
+2. So sánh 3 tiêu chí: Topic Cluster + Focus Keyphrase + Content Angle
+3. Quyết định: proceed / báo sếp nếu trùng
+4. Ghi nhận vào content-log.md sau khi tạo bài
+
+→ Nếu phát hiện trùng lặp: KHÔNG viết, báo sếp rõ lý do và đề xuất góc thay thế.
+
+---
+
 ## 1) Trước khi viết
 - Mục tiêu bài đã rõ chưa?
 - Tệp khách hàng cụ thể chưa?

@@ -38,6 +38,10 @@ Each task should have a clear output.
 
 ### 4. Write and review
 Before publishing:
+- **Run dedup check against content-log.md** (see `references/content-dedup-checklist.md`)
+  - Compare: Topic Cluster + Focus Keyphrase + Content Angle
+  - If same cluster + same angle as existing post → stop, report to user
+  - If same cluster + different angle ≥ 45° → proceed with note
 - optimize the hook
 - tighten the caption
 - match the CTA to the goal

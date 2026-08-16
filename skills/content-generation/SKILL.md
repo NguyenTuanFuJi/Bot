@@ -79,6 +79,14 @@ Use this skill when the user asks to:
 
 ## Quality bar
 Before finalizing, check:
+
+### Duplication check (MANDATORY — before writing anything)
+- Read `memory/content-log.md` — compare posts from last 30 days
+- Compare Topic Cluster + Focus Keyphrase + Content Angle (see `skills/facebook-content-ops/references/content-dedup-checklist.md`)
+- If same topic + same angle already exists → STOP, report duplication to user with specific existing post reference
+- If same topic but different angle ≥ 45° → proceed with note
+
+### Content quality check
 - Is the opening strong enough?
 - Is the reader and goal clear?
 - Is the structure easy to scan?

@@ -1,8 +1,13 @@
 # Workflow nội dung WordPress (CLI + App Password)
 
 ## Luồng chuẩn
-1. Soạn nội dung markdown
-2. Tạo bài `draft`
+1. **Kiểm tra trùng lặp (BẮT BUỘC)**
+   - Đọc `memory/content-log.md` — lấy danh sách bài 30 ngày gần nhất
+   - So sánh Topic Cluster + Focus Keyphrase + Content Angle
+   - Nếu trùng keyphrase + góc → KHÔNG viết, báo sếp
+   - Chi tiết: xem `skills/facebook-content-ops/references/content-dedup-checklist.md`
+2. Soạn nội dung markdown
+3. Tạo bài `draft`
 3. QA nhanh:
    - Tiêu đề
    - Excerpt

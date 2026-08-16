@@ -13,6 +13,15 @@ Bài chỉ được phép chuyển sang duyệt khi đạt đủ các điều ki
 - [ ] Có CTA duy nhất
 - [ ] Không lặp câu chữ máy móc
 
+## B2. Kiểm tra trùng lặp (BẮT BUỘC)
+- [ ] Đã tra cứu `content-log.md` — bài trong 30 ngày gần nhất
+- [ ] So sánh Topic Cluster — không trùng cluster + góc với bài đã có
+- [ ] So sánh Focus Keyphrase — không trùng 100% keyphrase đã dùng
+- [ ] Nếu cùng cluster: góc tiếp cận phải khác ≥ 45°
+- [ ] Nếu trùng: đã báo sếp và có đề xuất thay thế
+
+→ Chi tiết: xem `references/content-dedup-checklist.md`
+
 ## C. Tuân thủ vận hành
 - [ ] Có đề xuất giờ đăng
 - [ ] Có phiên bản ngắn cho Facebook (nếu bản dài dùng cho website)
