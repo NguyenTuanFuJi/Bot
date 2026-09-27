@@ -1,26 +1,28 @@
-## 22/08/2026 (MỚI — cron 20h30)
-- **Web (GIÁ TRỊ):** "Thang Máy Gia Đình Cho Người Dùng Xe Đẩy: 6 Điểm Cần Tính Từ Đầu"
-  - Post ID: 3297
-  - Slug: thang-may-gia-dinh-cho-nguoi-dung-xe-day
+## 25/09/2026 — Web 20h30
+- **Web (GIÁ TRỊ):** "Tay Vịn Cabin Thang Máy Gia Đình: 6 Tiêu Chí Chọn An Toàn, Dễ Dùng"
+  - Post ID: 3327
+  - Slug: tay-vin-cabin-thang-may-gia-dinh
   - Status: Published
   - Category: 72 (Chia sẻ - Kinh nghiệm)
-  - Focus KW: thang máy gia đình cho người dùng xe đẩy
-  - SEO title: Thang máy gia đình cho người dùng xe đẩy: 6 điểm cần tính
-  - Meta desc: Thang máy gia đình cho người dùng xe đẩy: 6 điểm cần chốt về lối đi, cửa tầng, cabin, bảng điều khiển, sàn và bảo trì.
-  - Images: quy-trinh-lap-dat-thang-may-1.jpg, quy-trinh-lap-dat-thang-may-4.jpg, quy-trinh-lap-dat-thang-may-10.jpg
-  - Link: https://thangmayfujith.com/?p=3297
+  - Focus KW: tay vịn cabin thang máy
+  - SEO title: Tay vịn cabin thang máy: 6 tiêu chí chọn an toàn
+  - Meta desc: Tay vịn cabin thang máy gia đình cần vừa tầm tay, chắc chắn, dễ vệ sinh và không cản lối ra vào để sử dụng an toàn, thuận tiện mỗi ngày.
+  - Topic cluster: Cabin / tay vịn / an toàn / phụ kiện
+  - Content angle: 6 tiêu chí chọn và nghiệm thu tay vịn cabin, khác bài gần nhất về xử lý mất điện và bố trí thang nhà ống.
+  - Images: new-20260803-01.jpg, new-20260803-02.jpg, new-20260803-03.jpg
+  - Link: https://thangmayfujith.com/?p=3327 <!-- project: github-bot-backup/NguyenTuanFuJi/Bot -->
 
-
-## 20/09/2026 — Web 09h
-- **Web (GIÁ TRỊ):** "Lắp Thang Máy Cho Nhà Đang Cải Tạo: 7 Điểm Cần Chốt Trước Khi Thi Công"
-  - Post ID: 3305
-  - Slug: lap-thang-may-cho-nha-dang-cai-tao
+## 26/09/2026 — Web 09h00
+- **Web (GIÁ TRỊ):** "Ray dẫn hướng thang máy: 4 điểm cần kiểm tra trước khi nghiệm thu"
+  - Post ID: 3332
+  - Slug: ray-dan-huong-thang-may
   - Status: Published
   - Category: 72 (Chia sẻ - Kinh nghiệm)
-  - Focus KW: lắp thang máy cho nhà đang cải tạo
-  - SEO title: Lắp thang máy cho nhà đang cải tạo: 7 điểm cần chốt
-  - Meta desc: Lắp thang máy cho nhà đang cải tạo cần rà kết cấu, vị trí giếng thang, kích thước cabin, đường kỹ thuật, tiến độ và lối bảo trì từ đầu.
-  - Topic cluster: Cải tạo nhà / khảo sát / thiết kế và thi công
-  - Content angle: Checklist 7 điểm theo trình tự khảo sát thực tế, khác nhóm bài gần đây về phòng thờ, tầng lửng, xe đẩy và tay vịn cabin.
-  - Images: fujith-library-20260416-e-02.jpg, fujith-library-20260416-e-05.jpg, fujith-library-20260416-e-08.jpg
-  - Link: https://thangmayfujith.com/?p=3305 <!-- project: github-bot-backup/NguyenTuanFuJi/Bot -->
+  - Focus KW: ray dẫn hướng thang máy
+  - SEO title: Ray dẫn hướng thang máy: 4 điểm cần kiểm tra
+  - Meta desc: Ray dẫn hướng thang máy cần được kiểm tra đúng chủng loại, mối nối, độ thẳng và vệ sinh trước khi nghiệm thu để vận hành ổn định, an toàn.
+  - Topic cluster: Kỹ thuật / ray dẫn hướng / nghiệm thu / an toàn
+  - Content angle: Checklist nghiệm thu ray dẫn hướng, khác bài gần nhất về tay vịn cabin.
+  - Images: quy-trinh-lap-dat-thang-may-4.jpg, quy-trinh-lap-dat-thang-may-5.jpg, quy-trinh-lap-dat-thang-may-8.jpg
+  - Link: https://thangmayfujith.com/?p=3332 <!-- project: github-bot-backup/NguyenTuanFuJi/Bot -->
+
